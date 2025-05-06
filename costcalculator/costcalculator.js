@@ -36,7 +36,10 @@ products.forEach(product=> {
         <div class="item">
           <p class="name">${product.name}</p>
           <p class="product-cost">$${product.cost}</p>
-          <button>Order</button>
+          <button class = "order-button">Order</button>
         </div>`
 })
 document.querySelector('.food').innerHTML = allElements;
+let cost = 0;
+let calculatedCost = document.querySelector('.cost-indicator');
+
