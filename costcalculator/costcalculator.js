@@ -40,6 +40,12 @@ products.forEach(product=> {
         </div>`
 })
 document.querySelector('.food').innerHTML = allElements;
-let cost = 0;
+let cost = [];
 let calculatedCost = document.querySelector('.cost-indicator');
 
+document.querySelector('.order-button').forEach((button) =>  {
+  button.addEventListener('click', ()=>{
+    cost.push(product.cost)
+  })
+})
+console.log(cost)
