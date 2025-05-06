@@ -1,6 +1,7 @@
 body{
   background-color: rgb(227, 242, 227);
   padding-left: 30px;
+  padding-right: 30px;
 }
 .intro{
   text-align: center;
@@ -17,15 +18,12 @@ body{
 .tax-percentage{
   color: red;
 }
-.main-container{
-  display: flex;
-  flex-direction: column;
-}
-.beverage,
- .food{
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
+
+.food{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 30px;
 }
 .item{
   height: 180px;
@@ -33,7 +31,6 @@ body{
   border: 3px solid rgb(51, 77, 223);
   border-radius: 5px;
   background-color: white;
-  margin-right: 20px;
 }
 .item p{
   text-align: center;
