@@ -43,9 +43,9 @@ document.querySelector('.food').innerHTML = allElements;
 let cost = [];
 let calculatedCost = document.querySelector('.cost-indicator');
 
-document.querySelector('.order-button').forEach((button) =>  {
-  button.addEventListener('click', ()=>{
-    cost.push(product.cost)
+document.querySelectorAll('.order-button').forEach((buttony) =>  {
+  buttony.addEventListener('click', ()=>{
+    
   })
 })
 console.log(cost)
