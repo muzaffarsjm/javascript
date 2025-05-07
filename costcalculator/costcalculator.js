@@ -35,17 +35,26 @@ products.forEach(product=> {
   allElements += `
         <div class="item">
           <p class="name">${product.name}</p>
-          <p class="product-cost">$${product.cost}</p>
-          <button class = "order-button">Order</button>
+          <p class="product-cost"
+            data-product-cost = "${product.cost}"
+          >$${product.cost}</p>
+          <button class = "order-button"
+            data-item-name = "${product.name}">
+            Order</button>
         </div>`
 })
 document.querySelector('.food').innerHTML = allElements;
 let cost = [];
 let calculatedCost = document.querySelector('.cost-indicator');
-
+let orderBasket = [];
 document.querySelectorAll('.order-button').forEach((buttony) =>  {
   buttony.addEventListener('click', ()=>{
-    
+    const itemNames=buttony.dataset.itemName;
+    orderBasket.push(itemNames);
+    orderBasket.forEach((item) =>{
+      document.querySelector('.ordered-items').innerHTML = 
+      orderBasket;
+    })
   })
 })
-console.log(cost)
+console.log(5)
