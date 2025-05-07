@@ -45,15 +45,21 @@ products.forEach(product=> {
 })
 document.querySelector('.food').innerHTML = allElements;
 let cost = [];
+
 let calculatedCost = document.querySelector('.cost-indicator');
 let orderBasket = [];
-document.querySelectorAll('.order-button').forEach((buttony) =>  {
+
+document.querySelectorAll('.order-button')
+.forEach((buttony) =>  {
   buttony.addEventListener('click', ()=>{
+    let allOrders = '';
     const itemNames=buttony.dataset.itemName;
     orderBasket.push(itemNames);
     orderBasket.forEach((item) =>{
+      html = `<p>${item}</p>`
+      allOrders += html;
       document.querySelector('.ordered-items').innerHTML = 
-      orderBasket;
+      allOrders;
     })
   })
 })
