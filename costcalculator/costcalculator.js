@@ -67,11 +67,16 @@ function updateOrders(){
         </div>`;
       allOrders += html;
     });
-      document.querySelector('.ordered-items').innerHTML = 
+    let displayEl = document.querySelector('.ordered-items')
+    if(orderBasket.length ===0){
+      displayEl.innerHTML = 'No orders!'
+    }else {
+      displayEl.innerHTML = 
       allOrders;
-  };
+    };
+  }
   function removeOrder(index){
-    orderBasket.splice(index, 1)
+    orderBasket.splice(index, 1);
     updateOrders();
   };
 
