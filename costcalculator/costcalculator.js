@@ -49,22 +49,31 @@ let cost = [];
 let orderBasket = [];
 
 document.querySelectorAll('.order-button')
-.forEach((buttony) =>  {
-  buttony.addEventListener('click', ()=>{
-    let allOrders = '';
-    const itemNames=buttony.dataset.itemName;
-    orderBasket.push(itemNames);
+.forEach((button) =>  {
+  button.addEventListener('click', ()=>{
+    const itemName=button.dataset.itemName;
+    orderBasket.push(itemName);
+    updateOrders();
+  });
+});
+function updateOrders(){
+  let allOrders = '';
     orderBasket.forEach((item) =>{
       html = `<div class = "orders-container">
         ${item}
-        <button class = 'delete-button'>Delete</button>
-        </div>`
+        <button class = 'delete-button'
+        onclick = "removeOrder()"
+        >Delete</button>
+        </div>`;
       allOrders += html;
+    });
       document.querySelector('.ordered-items').innerHTML = 
       allOrders;
-    })
-  })
-})
+  };
+  function removeOrder(index){
+    orderBasket.splice(index, 1)
+    updateOrders();
+  };
 
 //cost calculator button code below
 let calculatedCost = document.querySelector('.cost-indicator');
