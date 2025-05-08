@@ -73,7 +73,7 @@ buttons.forEach((clicked) => {
   clicked.addEventListener('click', ()=>{
     const itemPrice = Number(clicked.dataset.productCost);
     totalCost += itemPrice;
-    calculatedCost.innerHTML = totalCost;
+    calculatedCost.innerHTML = `$${totalCost}`;
   });
 });
 
