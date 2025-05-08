@@ -55,7 +55,10 @@ document.querySelectorAll('.order-button')
     const itemNames=buttony.dataset.itemName;
     orderBasket.push(itemNames);
     orderBasket.forEach((item) =>{
-      html = `<p>${item}</p>`
+      html = `<div class = "orders-container">
+        ${item}
+        <button class = 'delete-button'>Delete</button>
+        </div>`
       allOrders += html;
       document.querySelector('.ordered-items').innerHTML = 
       allOrders;

@@ -88,3 +88,17 @@ body{
   font-weight: bold;
   color: blue;
 }
+.orders-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.delete-button{
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(37, 114, 230);
+  color: white;
+  font-size: 17px;
+}
