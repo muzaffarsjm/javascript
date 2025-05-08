@@ -69,6 +69,7 @@ function updateOrders(){
   let allOrders = '';
     orderBasket.forEach((item) =>{
       html = `<div class = "orders-container">
+        
         ${item}
         <button class = 'delete-button'
         onclick = "removeOrder()"
@@ -81,7 +82,7 @@ function updateOrders(){
       displayEl.innerHTML = 'No orders!'
     }else {
       displayEl.innerHTML = 
-      allOrders;
+      `Your orders: ${allOrders}`;
     };
   }
   function removeOrder(index){
