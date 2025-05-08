@@ -2,7 +2,10 @@ let products = [{
   name : 'Tea',
   cost: 2
 }, {
-  name : 'Coffee',
+  name : 'Americano',
+  cost: 2
+},{
+  name : 'Vanilla Latte',
   cost: 4
 }, {
   name : 'Coke',
@@ -11,7 +14,7 @@ let products = [{
   name : 'Fanta',
   cost: 1
 }, {
-  name : 'Water',
+  name : 'Bottled water 0.5L',
   cost: 1
 }, {
   name : 'Plov',
@@ -19,6 +22,9 @@ let products = [{
 }, {
   name : 'Shashlik',
   cost: 6
+}, {
+  name : 'Somsa',
+  cost: 3
 }, {
   name : 'Pizza',
   cost: 11
@@ -28,6 +34,9 @@ let products = [{
 }, {
   name : 'Pasta',
   cost: 10
+}, {
+  name : 'Bibimpap',
+  cost: 7
 }
 ];
 let allElements = '';

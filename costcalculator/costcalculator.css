@@ -26,6 +26,21 @@ body{
   row-gap: 30px;
   column-gap: 30px;
 }
+@media(max-width:600px){
+  .food{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(min-width:999px)and (max-width:599){
+  .food{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media(min-width:1000px){
+  .food{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
 .item{
   height: 180px;
   width: 160px;
@@ -92,6 +107,11 @@ body{
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  border: 1px solid rgb(14, 53, 207);
+  padding: 20px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  align-items: center;
 }
 .delete-button{
   width: 100px;
