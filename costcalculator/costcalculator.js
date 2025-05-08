@@ -36,17 +36,16 @@ products.forEach(product=> {
         <div class="item">
           <p class="name">${product.name}</p>
           <p class="product-cost"
-            data-product-cost = "${product.cost}"
           >$${product.cost}</p>
           <button class = "order-button"
-            data-item-name = "${product.name}">
+            data-item-name = "${product.name}"
+            data-product-cost = "${product.cost}">
             Order</button>
         </div>`
 })
 document.querySelector('.food').innerHTML = allElements;
 let cost = [];
 
-let calculatedCost = document.querySelector('.cost-indicator');
 let orderBasket = [];
 
 document.querySelectorAll('.order-button')
@@ -63,4 +62,18 @@ document.querySelectorAll('.order-button')
     })
   })
 })
-console.log(5)
+
+//cost calculator button code below
+let calculatedCost = document.querySelector('.cost-indicator');
+
+let totalCost = 0;
+const buttons = document.querySelectorAll('.order-button')
+
+buttons.forEach((clicked) => {
+  clicked.addEventListener('click', ()=>{
+    const itemPrice = Number(clicked.dataset.productCost);
+    totalCost += itemPrice;
+    calculatedCost.innerHTML = totalCost;
+  });
+});
+
