@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+  </head>
+  <body>
+    
+    <p>Heads and Tails Game</p>
+
+    <button class="js-play-game">Play Game</button>
+
+    <p class="js-result-display"></p>
+    <script>
+      
+      let buttonElement = document.querySelector('.js-play-game');
+      buttonElement.addEventListener('click', ()=> {gameStart()});
+      let result = '';
+      let resultElement = document.querySelector('.js-result-display');
+
+      function gameStart(){  
+        let randomNumber = Math.random();
+        if(randomNumber < 0.5){
+          result = 'heads';
+        }else{
+          result = 'tails';
+        };
+        resultElement.innerHTML = result;
+      };
+      
+    </script>
+  </body>
+</html>
