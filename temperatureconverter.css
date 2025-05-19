@@ -1,3 +1,8 @@
+.temperature-converter{
+  border: 1px solid blue;
+  width: 400px;
+}
+
 .styles-title{
   text-align: center;
   color: rgb(18, 18, 195);
@@ -10,8 +15,12 @@
   border: 1px solid black;
   padding-left: 8px;
   font-size: 16px;
+  margin-left: 90px;
 }
-button{
+.buttons-converter{
+  margin-left: 93px;
+}
+.temperature-converter button{
   background-color: rgb(14, 14, 199);
   color: white;
   width: 85px;
@@ -19,11 +28,11 @@ button{
   border: none;
   font-size: 16px;
   border-radius: 5px;
-  margin-left: 4px;
 }
 
 .result-displayer{
   margin-top: 30px;
-  margin-left: 50px;
+  text-align: center;
   font-size: 40px;
+  padding-bottom: 30px;
 }
