@@ -1,0 +1,12 @@
+.styles-title{
+  text-align: center;
+  color: rgb(18, 18, 195);
+}
+.temperature-input{
+  margin-bottom: 20px;
+  width: 170px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-left: 8px;
+}
