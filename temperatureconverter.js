@@ -8,4 +8,6 @@ function toCelcius(input){
 function toFaranheit(input){
   let result;
   result (input*9/5)+32;
+  let displayElement = document.querySelector('.result-displayer');
+  displayElement.innerHTML = result;
 };
