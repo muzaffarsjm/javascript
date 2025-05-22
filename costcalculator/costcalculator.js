@@ -92,7 +92,7 @@ function updateOrders(){
 
 //cost calculator button code below
 let calculatedCost = document.querySelector('.cost-indicator');
-
+// saves total cost using accumulator pattern
 let totalCost = 0;
 const buttons = document.querySelectorAll('.order-button')
 
