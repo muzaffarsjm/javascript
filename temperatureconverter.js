@@ -1,3 +1,5 @@
+
+//code to display the result
 let displayElement = document.querySelector('.result-displayer');
 //acepts in faranheit and changes to  celcius
 function toCelcius(){
