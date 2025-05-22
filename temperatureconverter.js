@@ -1,5 +1,5 @@
 let displayElement = document.querySelector('.result-displayer');
-
+//acepts in faranheit and changes to  celcius
 function toCelcius(){
   let userInput = document.querySelector('.temperature-input');
   let inputValue = userInput.value;
