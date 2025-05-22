@@ -6,7 +6,7 @@ function toCelcius(){
   let result = (inputValue - 32)*5/9;
   displayElement.innerHTML = Math.round(result);
 }
-
+//accepts in celcius and converts
 function toFaranheit(){
   let userInput = document.querySelector('.temperature-input');
   let inputValue = userInput.value;
