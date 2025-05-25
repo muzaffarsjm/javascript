@@ -46,6 +46,7 @@ let products = [{
 }
 ];
 let allElements = '';
+//creator function
 products.forEach(product=> {
   allElements += `
         <div class="item">
