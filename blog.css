@@ -73,8 +73,14 @@ body{
 }
 
 .style-menu-icon{
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   padding: 10px 7px;
   background-color: rgb(217, 222, 226);
+}
+
+.style-profile-icon{
+  height: 35px;
+  width: 35px;
+  padding: 10px 7px;
 }
