@@ -16,3 +16,32 @@ body{
   padding-bottom: 14px;
   margin: 0;
 }
+
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: red ;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.first-container{
+  background-color: pink;
+}
+.second-container{
+  background-color: pink;
+}
+.third-container{
+  background-color: pink;
+}
+.fourth-container{
+  background-color: pink;
+}
+.first-container p,
+.second-container p,
+.third-container p,
+.fourth-container p {
+  font-size: 17px;
+  padding-left: 8px;
+  color: red;
+}
