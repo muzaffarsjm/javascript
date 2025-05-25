@@ -61,7 +61,7 @@ products.forEach(product=> {
 })
 document.querySelector('.food').innerHTML = allElements;
 let cost = [];
-
+//accumulator pattern
 let orderBasket = [];
 
 document.querySelectorAll('.order-button')
