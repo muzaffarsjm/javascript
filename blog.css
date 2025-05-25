@@ -3,6 +3,8 @@ body{
   margin: 0;
 }
 .top-nav{
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(26, 138, 243);
   margin-top: 0;
 }
@@ -71,6 +73,9 @@ body{
 }
 
 .style-menu-icon{
-  height: 10px;
-  width: 10px;
+  height: 40px;
+  width: 40px;
+  padding: 10px 7px;
+  fill: rgb( 26, 138, 243);
+  /*color: rgb(26, 138, 243);*/
 }
