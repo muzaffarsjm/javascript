@@ -3,7 +3,7 @@ body{
   margin: 0;
 }
 .top-nav{
-  background-color: rgb(105, 174, 211);
+  background-color: rgb(26, 138, 243);
   margin-top: 0;
 }
 .blog-name{
@@ -22,36 +22,50 @@ body{
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
   padding-right: 10px;
-}
-.main-container div{
-  border: 8px;
 }
 .first-container{
   background-color: pink;
+  border-radius: 10px;
+  padding: 8px 9px;
 }
 .second-container{
   background-color: pink;
+  border-radius: 10px;
+  padding: 8px 9px;
 }
 .third-container{
   background-color: pink;
+  border-radius: 10px;
+  padding: 8px 9px;
 }
 .fourth-container{
   background-color: pink;
+  border-radius: 10px;
+  padding: 8px 9px;
 }
 .first-container h1,
 .second-container h1,
 .third-container h1,
 .fourth-container h1 {
-  font-size: 17px;
+  font-size: 21px;
   padding-left: 8px;
   color: red;
   text-align: center;
+  letter-spacing: 1px;
 }
 .main-container p{
   padding-left: 10px;
   padding-right: 6px;
   padding-bottom: 12px;
+}
+
+.style-footer{
+  background-color: rgb(26, 138, 243);
+  color: white;
+  font-style: italic;
+  padding: 6px 12px;
+  margin-top: 20px;
 }
