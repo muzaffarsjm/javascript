@@ -37,6 +37,12 @@ let products = [{
 }, {
   name : 'Bibimpap',
   cost: 7
+}, {
+  name: 'Turkish Kebab',
+  cost: 7
+},{
+  name: 'Ramyon',
+  cost: 6
 }
 ];
 let allElements = '';
