@@ -1,0 +1,11 @@
+body{
+  background-color: rgb(228, 230, 233);
+}
+.top-nav{
+  background-color: rgb(105, 174, 211);
+}
+.blog-name{
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
