@@ -5,14 +5,14 @@ body{
 .top-nav{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(26, 138, 243);
+  background-color: rgb(211, 219, 227);
   margin-top: 0;
 }
 .blog-name{
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: white;
+  color: rgb(48, 112, 214);
   text-align: center;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -76,6 +76,5 @@ body{
   height: 40px;
   width: 40px;
   padding: 10px 7px;
-  fill: rgb( 26, 138, 243);
-  /*color: rgb(26, 138, 243);*/
+  background-color: rgb(217, 222, 226);
 }
