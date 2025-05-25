@@ -41,11 +41,12 @@ body{
 .fourth-container{
   background-color: pink;
 }
-.first-container p,
-.second-container p,
-.third-container p,
-.fourth-container p {
+.first-container h1,
+.second-container h1,
+.third-container h1,
+.fourth-container h1 {
   font-size: 17px;
   padding-left: 8px;
   color: red;
+  text-align: center;
 }
