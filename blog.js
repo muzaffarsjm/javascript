@@ -38,15 +38,17 @@ function loginCreator(){
       </div>
     `;
     document.querySelector('.login-button-clicked').innerHTML = loginElements;
+
+    let clickedBack = document.querySelector('.js-back-button');
+    clickedBack.addEventListener('click', ()=>{
+    console.log(5)
+    window.location.href = "blog.html"
+  });
   });
     
 };
 
-let clickedBack = document.querySelector('.js-back-button');
-  clickedBack.addEventListener('click', ()=>{
-    console.log(5)
-    window.location.href = "blog.html"
-  });
+
 
 
 
