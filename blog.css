@@ -19,8 +19,8 @@ body{
 
   display: flex;
   justify-content: space-between;
-  background-color: rgb(211, 219, 227);
-  border-bottom: 2px solid rgb(9, 97, 220);
+  background-color: rgb(227, 235, 244);
+  border-bottom: 2px solid rgb(14, 78, 166);
 }
 .blog-name{
   font-size: 25px;
