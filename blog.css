@@ -169,3 +169,19 @@ body{
   border: none;
   padding: 5px 15px;
 }
+
+.styles-login-check input{
+  margin-bottom: 20px;
+  height: 25px;
+  padding-left: 6px;
+}
+
+.styles-login-account{
+  height: 40px;
+  width: 151px;
+  padding-left: 6px;
+  background-color: rgb(0, 81, 255);
+  color: white;
+  font-weight: bold;
+  border: none;
+}

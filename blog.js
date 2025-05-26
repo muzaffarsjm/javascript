@@ -32,7 +32,7 @@ function loginCreator(){
     let loginElements = `
       <div class = 'styles-login-check'>
         <button class= 'styles-back-button'>Back</button>
-        <input type = 'text' placeholder = 'username'></input>
+        <input type = 'text' placeholder = 'Username'></input>
         <input type = 'text' placeholder = 'Email'></input>
         <button class ='styles-login-account'>Login</button>
       </div>
