@@ -20,8 +20,8 @@ profileIcon.addEventListener('click', ()=>{
   document.querySelector('.login-page-displayer').innerHTML = loginPage;
 
   let loginCloser = document.querySelector('.js-login-closing-button');
-loginCloser.addEventListener('click', ()=>{
-  alert('clciked');
-});
+  loginCloser.addEventListener('click', ()=>{
+    window.location.href = "blog.html"
+  });
 });
 
