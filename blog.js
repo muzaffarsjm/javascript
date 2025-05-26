@@ -31,7 +31,7 @@ function loginCreator(){
   loginButton.addEventListener('click', ()=>{
     let loginElements = `
       <div class = 'styles-login-check'>
-        <button class= 'styles-back-button'>Back</button>
+        <button class= 'styles-back-button js-back-button'>Back</button>
         <input type = 'text' placeholder = 'Username'></input>
         <input type = 'text' placeholder = 'Email'></input>
         <button class ='styles-login-account'>Login</button>
@@ -39,5 +39,14 @@ function loginCreator(){
     `;
     document.querySelector('.login-button-clicked').innerHTML = loginElements;
   });
+    
 };
+
+let clickedBack = document.querySelector('.js-back-button');
+  clickedBack.addEventListener('click', ()=>{
+    console.log(5)
+    window.location.href = "blog.html"
+  });
+
+
 

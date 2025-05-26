@@ -96,7 +96,7 @@ body{
   position: fixed;
   visibility: hidden;
 }
-.login-button-check{
+.login-button-clicked{
   position: fixed;
   visibility: hidden;
 }
