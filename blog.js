@@ -10,8 +10,11 @@ profileIcon.addEventListener('click', ()=>{
   //login page creator html
   let loginPage = `
     <div class = 'styles-login-page'>
-      <button>Login</button>
-      <button>Sign Up</button>
+      <button class = 'styles-closing-button'>
+        X
+      </button>
+      <button class = 'login-button'>Login</button>
+      <button class = 'signup-button'>Sign Up</button>
     </div>
   `;
   document.querySelector('.login-page-displayer').innerHTML = loginPage;
