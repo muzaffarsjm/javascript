@@ -84,3 +84,30 @@ body{
   width: 35px;
   padding: 10px 7px;
 }
+
+/*login page styles start from here*/
+.login-page-displayer{
+  position: fixed;
+  visibility: hidden;
+}
+
+/*login page popup styles*/
+.styles-login-page{
+  visibility: visible;
+  height: 450px;
+  width: 450px;
+  background-color: red;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 150px;
+}
+
+.styles-login-page button{
+  height: 40px;
+  width: 180px;
+  margin-top: 20px;
+}
