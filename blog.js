@@ -23,5 +23,19 @@ profileIcon.addEventListener('click', ()=>{
   loginCloser.addEventListener('click', ()=>{
     window.location.href = "blog.html"
   });
+  loginCreator();
 });
+
+function loginCreator(){
+  let loginButton = document.querySelector('.login-button');
+  loginButton.addEventListener('click', ()=>{
+    let loginElements = `
+      <div class = 'styles-login-check'>
+        <input type = 'text'>Username</input>
+        <input type = 'text'>Email</input>
+      </div>
+    `;
+    document.querySelector('.login-button-clicked').innerHTML = loginElements;
+  });
+};
 
