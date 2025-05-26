@@ -31,8 +31,10 @@ function loginCreator(){
   loginButton.addEventListener('click', ()=>{
     let loginElements = `
       <div class = 'styles-login-check'>
-        <input type = 'text'>Username</input>
-        <input type = 'text'>Email</input>
+        <button class= 'styles-back-button'>Back</button>
+        <input type = 'text' placeholder = 'username'></input>
+        <input type = 'text' placeholder = 'Email'></input>
+        <button class ='styles-login-account'>Login</button>
       </div>
     `;
     document.querySelector('.login-button-clicked').innerHTML = loginElements;
