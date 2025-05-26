@@ -1,18 +1,24 @@
 body{
   background-color: rgb(228, 230, 233);
   margin: 0;
+  padding-top: 47px;
 }
 .top-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   display: flex;
   justify-content: space-between;
   background-color: rgb(211, 219, 227);
-  margin-top: 0;
+  border-bottom: 2px solid rgb(9, 97, 220);
 }
 .blog-name{
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: rgb(48, 112, 214);
+  color: rgb(3, 74, 188);
   text-align: center;
   padding-top: 14px;
   padding-bottom: 14px;
