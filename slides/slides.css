@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(228, 227, 217);
+  background-color: rgb(216, 200, 230);
   margin: 0;
   display: flex;
   justify-content: center;
@@ -10,9 +10,31 @@ body{
 .main-container{
   width: 500px;
   height: 140px;
-  background-color: slateblue;
+  background-color: rgb(105, 102, 120);
   border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-width: 400px;
+  padding: 70px 30px;
   margin: 5px;
   color: white;
   position: relative;
+}
+img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -28%;
+}
+.styles-quote-text{
+  font-size: 18px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+}
+.author-name{
+  font-size: 26px;
+  font-weight: 100;
 }
