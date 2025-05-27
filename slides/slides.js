@@ -16,3 +16,21 @@ const imgElement = document.querySelector('.img');
 const textElement = document.querySelector('.js-text');
 
 const authorElement = document.querySelector('.author-name');
+
+let index = 0;
+
+updateQuote();
+
+function updateQuote(){
+  const { name, photo, text } = quotesArray[index];
+  imgElement.src = photo;
+  textElement.innerHTML = text;
+  authorElement.innerHTML = name;
+  index++;
+  if(index === quotesArray.length){
+    index = 0;
+  };
+  setTimeout(()=>{
+    updateQuote();
+  }, 1000);
+};
