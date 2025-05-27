@@ -13,6 +13,11 @@ const quotesArray = [
     name: "Cho'lpon",
     photo:  'authorpics/cholpon.png',
     text: "Tiriksan, o‘lmagansan, Sen-da odam, sen-da insonsen, Kishan kiyma, bo`yin egma, Ki, sen ham hur tug‘ilg‘ansan"
+  },
+  {
+    name: 'Furqat',
+    photo: 'authorpics/furqat.png',
+    text: "Ko'ngillarning sururi ilmdandir,Ko'rar ko'zlarning nuri ilmdandir."
   }
 ];
 
