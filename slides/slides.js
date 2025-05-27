@@ -11,7 +11,7 @@ const quotesArray = [
   }
 ];
 
-const imgElement = document.querySelector('.img');
+const imgElement = document.querySelector('.photo-author');
 
 const textElement = document.querySelector('.js-text');
 
@@ -32,5 +32,5 @@ function updateQuote(){
   };
   setTimeout(()=>{
     updateQuote();
-  }, 1000);
+  }, 1500);
 };
