@@ -9,5 +9,10 @@ const quotesArray = [
     photo: 'authorpics/hamza.png',
     text: 'Olamning xurshiidi kundir, odamning xurshidi ilm, Olamnning zulmoti tundir, odamning nodori ilm.'
   }
-  
 ];
+
+const imgElement = document.querySelector('.img');
+
+const textElement = document.querySelector('.js-text');
+
+const authorElement = document.querySelector('.author-name');
