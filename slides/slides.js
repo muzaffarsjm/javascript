@@ -2,12 +2,17 @@ const quotesArray = [
   {
     name: 'Abdulla Avloniy',
     photo: 'authorpics/avloniy.png',
-    text: 'Tarbiya biz uchun yo hayot-yo mamot, yo najot-yoo halokat, yo saodat-yo falokat masalasidir'
+    text: 'Tarbiya biz uchun yo hayot-yo mamot, yo najot-yo halokat, yo saodat-yo falokat masalasidir'
   },
   {
     name: 'Hamza Hakimzoda Niyoziy',
     photo: 'authorpics/hamza.png',
     text: 'Olamning xurshiidi kundir, odamning xurshidi ilm, Olamnning zulmoti tundir, odamning nodori ilm.'
+  },
+  {
+    name: "Cho'lpon",
+    photo:  'authorpics/cholpon.png',
+    text: "Tiriksan, o‘lmagansan, Sen-da odam, sen-da insonsen, Kishan kiyma, bo`yin egma, Ki, sen ham hur tug‘ilg‘ansan"
   }
 ];
 
@@ -32,5 +37,5 @@ function updateQuote(){
   };
   setTimeout(()=>{
     updateQuote();
-  }, 1500);
+  }, 2500);
 };
