@@ -5,7 +5,7 @@ body{
   margin: 0 auto;
   max-width: 400px;
   text-align: center;
-  padding: 20px;
+  padding: 120px 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,8 +22,30 @@ body{
   font-weight: bold;
 }
 button{
-  font-size: 22px;
+  width: 100px;
+  font-size: 20px;
   padding: 10px 20px;
   margin: 10px;
   color: white;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
+}
+button:hover{
+  opacity: 0.7;
+}
+
+.start-button{
+  background-color: rgb(26, 178, 26);
+}
+
+.stop-button{
+  background-color: rgb(222, 31, 31);
+}
+
+.reset-button{
+  background-color: rgb(19, 102, 244);
 }
