@@ -4,4 +4,6 @@ const startElement = document.querySelector('.start-button');
 const stopElement = document.querySelector('.stop-button');
 const resetElement = document.querySelector('.reset-button');
 
-console.log(count)
+let timeInterval;
+//60*25=1500
+let timeLeft = 1500;
