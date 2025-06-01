@@ -43,6 +43,6 @@ function resetTimer() {
   updateTimer();
 }
 
-startElelement.addEventListener("click", startTimer);
+startElement.addEventListener("click", startTimer);
 stopElement.addEventListener("click", stopTimer);
 resetElement.addEventListener("click", resetTimer);
