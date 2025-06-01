@@ -8,6 +8,7 @@ let timeInterval;
 //60*25=1500
 let timeLeft = 1500;
 
+//visual timer format updater function
 function updateTimer(){
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
