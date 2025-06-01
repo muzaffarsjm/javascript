@@ -13,7 +13,7 @@ function updateTimer(){
   let seconds = timeLeft % 60;
   let formatedTime = `${
     minutes.toString().padStart(2, '0')
-  }:
+  } :
   ${
     seconds.toString().padStart(2, '0')
   }
