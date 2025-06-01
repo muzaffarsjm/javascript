@@ -20,4 +20,29 @@ function updateTimer(){
   `;
 
   count.innerHTML = formatedTime;
+};
+
+function startTimer() {
+  interval = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+    if (timeLeft === 0) {
+      clearInterval(interval);
+      alert("Time's up!");
+      timeLeft = 1500;
+      updateTimer();
+    }
+  }, 1000);
 }
+function stopTimer() {
+  clearInterval(interval);
+}
+function resetTimer() {
+  clearInterval(interval);
+  timeLeft = 1500;
+  updateTimer();
+}
+
+startElelement.addEventListener("click", startTimer);
+stopElement.addEventListener("click", stopTimer);
+resetElement.addEventListener("click", resetTimer);
