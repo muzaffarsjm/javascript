@@ -38,6 +38,7 @@ function startTimer() {
 function stopTimer() {
   clearInterval(interval);
 }
+//reset button function
 function resetTimer() {
   clearInterval(interval);
   timeLeft = 1500;
