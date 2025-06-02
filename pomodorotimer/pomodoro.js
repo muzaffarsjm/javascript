@@ -27,6 +27,7 @@ function startTimer() {
   interval = setInterval(() => {
     timeLeft--;
     updateTimer();
+    //checkin time
     if (timeLeft === 0) {
       clearInterval(interval);
       alert("Time's up!");
