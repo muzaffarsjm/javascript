@@ -22,4 +22,11 @@ body{
 
   margin-top: 40px;
   margin-left: 5vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.slides-container div{
+  border: 1px solid black;
 }
