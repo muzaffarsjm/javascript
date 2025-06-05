@@ -24,9 +24,10 @@ body{
   margin-left: 5vh;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .slides-container div{
   border: 1px solid black;
+  flex: 1;
 }
