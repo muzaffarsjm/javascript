@@ -5,15 +5,15 @@
   </head>
   <body>
     <p>Shopping Cart</p>
-    <button onclick="console.log(`${cartQuantity}`)"
+    <button onclick="console.log(`Cart Quantity :${cartQuantity}`)"
     >Show Quantity</button>
 
-    <button onclick="console.log(`${cartQuantity+=1}`);"
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity+=1}`);"
     >Add to Cart</button>
-    <button onclick="console.log(`${cartQuantity+=2}`);"
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity+=2}`);"
     >+2</button>
-    <button onclick="console.log(`${cartQuantity+=3}`);">+3</button>
-    <button onclick="console.log(`${cartQuantity = 0}`);">Reset Cart</button>
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity+=3}`);">+3</button>
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity = 0}`);">Reset Cart</button>
 
     <script>
       let cartQuantity = 4;
