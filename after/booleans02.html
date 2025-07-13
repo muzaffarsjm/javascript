@@ -21,7 +21,15 @@
       }else if( randomNumber >= 2/3 && randomNumber < 1){
         computerMove = 'scissors';
       }
-      console.log(computerMove);
+      //console.log(computerMove);
+
+      if (computerMove === 'rock'){
+        console.log('Tie');
+      }else if(computerMove === 'paper'){
+        console.log('Lost')
+      }else if(computerMove ==='scissors'){
+        console.log('Win')
+      };
       "
       >Rock</button>
 
@@ -31,7 +39,7 @@
     <button onclick="console.log('scissors');"
       >Scissors</button>
 
-      
+
     <script>
       console.log('hello')
     </script>
