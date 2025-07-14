@@ -54,6 +54,7 @@
     ">Scissors</button>
 
     <script>
+      
       let computerMove = '';
       function pickComputerMove(){
         const randomNumber = Math.random();
@@ -65,6 +66,7 @@
         }else if( randomNumber >= 2/3 && randomNumber < 1){
           computerMove = 'scissors';
         }
+       // return computerMove;
       };
       /*
       function modal(){
@@ -74,6 +76,7 @@
 
       modal();
       */
+     //console.log(pickComputerMove());
     </script>
   </body>
 </html>
