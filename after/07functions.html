@@ -9,7 +9,7 @@
     <p>Hello</p>
     <p>Rock Paper Scissors</p>
     <button onclick="
-      pickComputerMove();
+      let computerMove = pickComputerMove();
       
       //console.log(computerMove);
       let result = '';
@@ -54,8 +54,6 @@
     ">Scissors</button>
 
     <script>
-      
-      let computerMove = '';
       function pickComputerMove(){
         const randomNumber = Math.random();
 
