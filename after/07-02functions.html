@@ -18,6 +18,12 @@
     ">Scissors</button>
 
     <script>
+      const score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
+
       //main function that takes params
       function playGame(playerMove){
         let computerMove = pickComputerMove();
