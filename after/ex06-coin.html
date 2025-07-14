@@ -13,13 +13,18 @@
       let randomNumber = Math.random();
       //console.log(randomNumber);
       let result = '';
+      let playerGuess = 'heads'
 
       if(randomNumber < 0.5){
         result = 'heads';
       }else{
         result = 'tails';
       };
-      console.log(result);
+      if (result === playerGuess){
+        console.log('Win');
+      }else{
+        console.log('Lost');
+      };
     </script>
   </body>
 </html>
