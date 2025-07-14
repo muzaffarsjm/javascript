@@ -9,13 +9,13 @@
     <p>Exercises of 7th Lesson</p>
 
     <p>from celcius to faranheit. results are in the console</p>
-    <button onclick="convertToFaranheit()">to Faranheit</button>
+    <button onclick="convertToFaranheit(20)">to Faranheit</button>
     <script>
       console.log(8);
 
       function convertToFaranheit(celcius){
         let result = '';
-        result = (celcius * 9 / 5) + 32;
+        result = Number((celcius * 9 / 5) + 32);
         console.log(result);
       };
     </script>
