@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Functions
+    </title>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p>Rock Paper Scissors</p>
+    <button onclick="playGame('rock')"
+      >Rock</button>
+
+    <button onclick="playGame('paper')"
+      >Paper</button>
+
+    <button onclick="playGame('scissors');
+    ">Scissors</button>
+
+    <script>
+      //main function that takes params
+      function playGame(playerMove){
+        let computerMove = pickComputerMove();
+        //console.log(computerMove);
+        
+        let result = '';
+
+        if (playerMove === 'scissors'){
+          if (computerMove === 'rock'){
+            result = 'Lost';
+          }else if(computerMove === 'paper'){
+            result = 'Win';
+          }else if(computerMove ==='scissors'){
+            result = 'Tie';
+          };
+
+          alert(`${result}. Computer move: ${computerMove}`);
+          }else if(playerMove === 'paper'){
+            pickComputerMove();
+          //console.log(computerMove);
+          let result = '';
+          if (computerMove === 'rock'){
+            result = 'Win';
+          }else if(computerMove === 'paper'){
+            result = 'Tie';
+          }else if(computerMove ==='scissors'){
+            result = 'Lost';
+          };
+          alert(`${result}. Computer move: ${computerMove}`);
+          }else{
+              let computerMove = pickComputerMove();
+      
+          //console.log(computerMove);
+          let result = '';
+          if (computerMove === 'rock'){
+            result = 'Tie';
+          }else if(computerMove === 'paper'){
+            result = 'Lost';
+          }else if(computerMove ==='scissors'){
+            result = 'Win';
+          };
+          alert(`${result}. Computer move: ${computerMove}`);
+          };
+        
+      };
+
+      //computer's move decided below
+      function pickComputerMove(){
+        const randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber <1/3){
+          computerMove = 'rock';
+        }else if(randomNumber>=1/3 && randomNumber < 2/3){
+          computerMove = 'paper';
+        }else if( randomNumber >= 2/3 && randomNumber < 1){
+          computerMove = 'scissors';
+        }
+       return computerMove;
+      };
+      /*
+      function modal(){
+        return 5;
+        return 'book';
+      };
+
+      modal();
+      */
+     //console.log(pickComputerMove());
+    </script>
+  </body>
+</html>
