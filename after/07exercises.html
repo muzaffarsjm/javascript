@@ -42,7 +42,15 @@
       //final function, with units and tempera
 
       function temperatureCalculator(degree, unit){
-        
+        if (unit === 'C'){
+          let result = '';
+          result = Number((celcius * 9 / 5) + 32);
+          console.log(result);
+        }else{
+            let result = '';
+            result = (faranheit-32) * 5 / 9;
+            console.log(result);
+          };
       };
 
 
