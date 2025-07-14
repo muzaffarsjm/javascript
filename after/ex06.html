@@ -7,13 +7,36 @@
   </head>
   <body>
     <p>Hello</p>
-    <p>cart challenge exercise</p>
-    <button>Cart Quantity</button>
-    <button>Add 1</button>
-    <button>Add 2</button>
-    <button> Add 3</button>
-    <button>Remove 1</button>
-    <button>Reset Cart</button>
+    <p>Cart challenge exercise</p>
+    <button onclick="console.log(cartQuantity);"
+      >Cart Quantity</button>
+    <button onclick=" 
+      cartQuantity ++;
+      console.log(cartQuantity);
+      ">Add 1</button>
+    <button onclick="
+      cartQuantity +=2;
+      console.log(cartQuantity)
+      ">Add 2</button>
+    <button onclick="
+      cartQuantity+=3;
+      console.log(cartQuantity);
+      "
+      > Add 3</button>
+    <button onclick="
+      
+      if(cartQuantity ===0){
+        console.log(0);
+      }else{
+        cartQuantity --;
+        console.log(cartQuantity)};
+      "
+      >Remove 1</button>
+    <button onclick="
+      cartQuantity = 0;
+      console.log(cartQuantity);
+      "
+      >Reset Cart</button>
     <script>
       //first exercise
       let hour = 18;
@@ -39,6 +62,7 @@
       };
 
       //Cart challenge exercise
+      let cartQuantity = 0;
     </script>
   </body>
 </html>
