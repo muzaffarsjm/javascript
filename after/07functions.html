@@ -40,7 +40,7 @@
     ">Paper</button>
 
     <button onclick="
-      pickComputerMove();
+      let computerMove = pickComputerMove();
       //console.log(computerMove);
       let result = '';
       if (computerMove === 'rock'){
@@ -64,7 +64,7 @@
         }else if( randomNumber >= 2/3 && randomNumber < 1){
           computerMove = 'scissors';
         }
-       // return computerMove;
+       return computerMove;
       };
       /*
       function modal(){
