@@ -40,7 +40,9 @@
             result = 'Tie';
           };
 
-          alert(`${result}. Computer move: ${computerMove}`);
+          alert(`${result}. Computer move: ${computerMove}. 
+          Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}.
+          `);
         }else if(playerMove === 'paper'){
             pickComputerMove();
           //console.log(computerMove);
@@ -76,7 +78,9 @@
           }else if(computerMove ==='scissors'){
             result = 'Win';
           };
-          alert(`${result}. Computer move: ${computerMove}`);
+          alert(`${result}. Computer move: ${computerMove}. 
+          Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}.
+          `);
           };
         
       };
