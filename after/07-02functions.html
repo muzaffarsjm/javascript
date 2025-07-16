@@ -18,7 +18,7 @@
     ">Scissors</button>
 
     <script>
-      const score = {
+      let score = {
         wins: 0,
         losses: 0,
         ties: 0
@@ -41,7 +41,7 @@
           };
 
           alert(`${result}. Computer move: ${computerMove}`);
-          }else if(playerMove === 'paper'){
+        }else if(playerMove === 'paper'){
             pickComputerMove();
           //console.log(computerMove);
           let result = '';
@@ -52,8 +52,19 @@
           }else if(computerMove ==='scissors'){
             result = 'Lost';
           };
-          alert(`${result}. Computer move: ${computerMove}`);
+
+          if (result === 'Win'){
+            score.wins ++;
+          }else if(result === 'Lost'){
+            score.losses ++;
           }else{
+            score.ties ++;
+          };
+
+          alert(`${result}. Computer move: ${computerMove}. 
+          Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}.
+          `);
+        }else{
               let computerMove = pickComputerMove();
       
           //console.log(computerMove);
