@@ -18,14 +18,10 @@
     ">Scissors</button>
 
     <script>
-      let score = {
-        wins: 0,
-        losses: 0,
-        ties: 0
-      };
+      let score = JSON.parse(localStorage.getItem('score'));
       //localstorage gets the previes datat here. yet it is still an object. it needs to be turned into a string
-      let scoreLast = localStorage.getItem('score');
-      console.log(JSON.parse(scoreLast))
+      //let scoreLast = localStorage.getItem('score');
+      //console.log(JSON.parse(scoreLast));
 
 
       //main function that takes params
