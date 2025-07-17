@@ -24,7 +24,8 @@
         ties: 0
       };
       //localstorage gets the previes datat here. yet it is still an object. it needs to be turned into a string
-      localStorage.getItem('score');
+      let scoreLast = localStorage.getItem('score');
+      console.log(JSON.parse(scoreLast))
 
 
       //main function that takes params
