@@ -39,7 +39,13 @@
           }else if(computerMove ==='scissors'){
             result = 'Tie';
           };
-
+          if (result === 'Win'){
+            score.wins ++;
+          }else if(result === 'Lost'){
+            score.losses ++;
+          }else{
+            score.ties ++;
+          };
         //player paper condition
         }else if(playerMove === 'paper'){
             pickComputerMove();
