@@ -16,7 +16,12 @@
 
     <button onclick="playGame('scissors');
     ">Scissors</button>
-    <button>Reset Score</button>
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      alert('Score reset');
+      ">Reset Score</button>
 
     <script>
       let score = JSON.parse(localStorage.getItem('score'));
