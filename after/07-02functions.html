@@ -50,9 +50,9 @@
         */
         //player paper condition
         }else if(playerMove === 'paper'){
-            pickComputerMove();
+            //pickComputerMove();
           //console.log(computerMove);
-          let result = '';
+          //let result = '';
           if (computerMove === 'rock'){
             result = 'Win';
           }else if(computerMove === 'paper'){
@@ -71,10 +71,10 @@
           */
           //player rock
         }else{
-             let computerMove = pickComputerMove();
+             //let computerMove = pickComputerMove();
       
           //console.log(computerMove);
-          let result = '';
+          //let result = '';
           if (computerMove === 'rock'){
             result = 'Tie';
           }else if(computerMove === 'paper'){
@@ -82,13 +82,14 @@
           }else if(computerMove ==='scissors'){
             result = 'Win';
           };
+          };
+          //one checker of the game result for three buttons for ideality
           if (result === 'Win'){
             score.wins ++;
           }else if(result === 'Lost'){
             score.losses ++;
           }else{
             score.ties ++;
-          };
           };
 
           localStorage.setItem('score', JSON.stringify(score));
