@@ -23,7 +23,9 @@
         losses: 0,
         ties: 0
       };
+      localStorage.getItem('message');
 
+      
       //main function that takes params
       function playGame(playerMove){
         let computerMove = pickComputerMove();
@@ -78,7 +80,7 @@
           };
 
           localStorage.setItem('message', 'hello');
-          
+
           alert(`${result}. Computer move: ${computerMove}. 
           Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}.
           `);
