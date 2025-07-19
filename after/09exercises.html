@@ -8,9 +8,20 @@
   <body>
     <p>Lesson 9 exercises</p>
     <p>first exercise</p>
-    <button>9a</button>
+
+
+    <button class="js-first-button">9a</button>
+    <button class="js-second-button">9b</button>
+
     <script>
       console.log('hello 9th');
+
+      let button = document.querySelector('.js-first-button');
+      console.log(button);
+
+      //second exercise
+      let secondButton = document.querySelector('.js-second-button');
+      secondButton.innerHTML = '9b done!';
     </script>
   </body>
 </html>
