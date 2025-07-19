@@ -58,6 +58,8 @@
       function greet(){
         let inputName = userName.value;
         textGreeting.innerHTML = `Good morning, ${inputName}`;
+        //clears the space
+        userName.value = '';
       };
 
       submitButton.addEventListener('click', greet);
