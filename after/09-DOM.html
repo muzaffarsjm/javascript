@@ -25,9 +25,9 @@
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders over $40 = FREE shipping</p>
 
-    <input type="text" class="js-input" placeholder="type cost">
+    <input type="text" class="js-input" placeholder="type cost" onkeydown="enterKey(event)">
     <button class="js-calculate-button">Calculate</button>
-    <p class="js-cost-display">$0</p>
+    <p class="js-cost-display">$ 0</p>
 
 
     <script>
@@ -65,22 +65,26 @@
       };
       
       //Amazon shipping calculator
-
+      function enterKey(event){
+        if(event.key === 'Enter'){
+          calculate();
+        };
+      };
       function calculate(){
         let finalPrice = 0;
-        const price = document.querySelector('.js-input');
+        let price = document.querySelector('.js-input');
 
-        const finalDisplay = document.querySelector('.js-cost-display');
+        let finalDisplay = document.querySelector('.js-cost-display');
 
-        const productPrice = Number(price.value);
+        let productPrice = Number(price.value);
         console.log(productPrice);
         
         if(productPrice < 40){
-          finalPrice = productPrice;
-          finalDisplay.innerHTML = finalPrice;
+          finalPrice = productPrice +=10;
+          finalDisplay.innerHTML = `$ ${finalPrice}`;
         }else{
           finalPrice = productPrice;
-          finalDisplay.innerHTML = finalPrice;
+          finalDisplay.innerHTML = `$ ${finalPrice}`;
         };
 
       };
@@ -88,14 +92,7 @@
       calculateButton.addEventListener('click', calculate);
 
       //function that works with enter button
-      function enterKey(event){
-        if(event.key === 'Enter'){
-          calculate();
-        };
-      };
-      document.querySelector('.js-calculate-button').addEventListener('keydown', enterKey());
-
-      console.log(event.key);
+      
     </script>
   </body>
 </html>
