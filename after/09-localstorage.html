@@ -22,7 +22,10 @@
     <button class="second-button"
       onclick="add2()"
       >add two</button>
-    <p class="count-display">0</p>
+
+      <button class="reset-button">reset count</button>
+
+      <p class="count-display">0</p>
 
 
     <script>
@@ -34,7 +37,7 @@
       let secondButton = document.querySelector('.second-button');
       let displayArea = document.querySelector('.count-display');
       displayArea.innerHTML = count;
-      
+
       function added1(){
         count ++;
         displayArea.innerHTML = count;
@@ -46,7 +49,8 @@
         displayArea.innerHTML = count;
         localStorage.setItem('count', JSON.stringify(count));
       };
-      
+      let resetEl = document.querySelector('reset-count');
+      resetEl.addEventListener('click', count = 0);
 
     </script>
   </body>
