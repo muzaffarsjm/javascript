@@ -74,7 +74,9 @@
         }else if(result === 'Tie'){
           score.ties++;
         };
+        //local storage
 
+        localStorage.setItem('score', JSON.stringify(score));
 
 
 
