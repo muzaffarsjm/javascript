@@ -11,6 +11,13 @@
     <button onclick="gameStart('rock')">Rock</button>
     <button onclick="gameStart('paper')">Paper</button>
     <button onclick="gameStart('scissors')">Scissors</button>
+    <button class="js-reset-button"
+      onclick=" 
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        "
+      >Reset Score</button>
 
     <p class="js-result-board"></p>
     <p class="js-choices-board"></p>
