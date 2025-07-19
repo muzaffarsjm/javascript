@@ -20,11 +20,11 @@
       Ties: 0
     </p>
     <script>  
-    let score = {
+    let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
       losses: 0,
       ties: 0
-    };
+    }
       //randomNumber for computer's move
       let computerChoice = '';
       let result = '';
