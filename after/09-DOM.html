@@ -67,9 +67,21 @@
       //Amazon shipping calculator
 
       function calculate(){
+        let finalPrice = 0;
         const price = document.querySelector('.js-input');
-        const productPrice = price.value;
-        //console.log(productPrice);
+
+        const finalDisplay = document.querySelector('.js-cost-display');
+
+        const productPrice = Number(price.value);
+        console.log(productPrice);
+        
+        if(productPrice < 40){
+          finalPrice = productPrice;
+          finalDisplay.innerHTML = finalPrice;
+        }else{
+          finalPrice = productPrice;
+          finalDisplay.innerHTML = finalPrice;
+        };
 
       };
       const calculateButton  = document.querySelector('.js-calculate-button');
