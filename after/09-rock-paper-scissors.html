@@ -12,6 +12,9 @@
     <button onclick="gameStart('paper')">Paper</button>
     <button onclick="gameStart('scissors')">Scissors</button>
 
+    <p class="js-result-board"></p>
+    <p class="js-choices-board"></p>
+    <p class="js-score-board"></p>
     <script>  
       //randomNumber for computer's move
       let computerChoice = '';
@@ -26,7 +29,7 @@
         }else if (randomNumber >= 2/3 && randomNumber < 1){
           computerChoice = 'scissors'
         };
-        console.log(computerChoice);
+        //console.log(computerChoice);
       };
       computerMove();
 
@@ -54,7 +57,12 @@
             result = 'Win'
           };
         };
-        alert(`${result}. Computer: ${computerChoice}`);
+        //alert(`${result}. Computer: ${computerChoice}`);
+        let resultEl = document.querySelector('.js-result-board');
+        resultEl.innerHTML = result;
+
+        let choiceEl = document.querySelector('js-choices-board');
+        choiceEl.innerHTML = computerChoice;
       };
     </script>
   </body>
