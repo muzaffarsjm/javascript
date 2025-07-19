@@ -59,10 +59,10 @@
         };
         //alert(`${result}. Computer: ${computerChoice}`);
         let resultEl = document.querySelector('.js-result-board');
-        resultEl.innerHTML = result;
+        resultEl.innerHTML = `Result: ${result}`;
 
-        let choiceEl = document.querySelector('js-choices-board');
-        choiceEl.innerHTML = computerChoice;
+        let choiceEl = document.querySelector('.js-choices-board');
+        choiceEl.innerHTML = `You ${user} : ${computerChoice} Computer`;
       };
     </script>
   </body>
