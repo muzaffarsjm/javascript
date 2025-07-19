@@ -17,8 +17,12 @@
 
     <p>third exercise</p>
 
-    <button class="js-heads-button">heads</button>
-    <button class="js-tails-button">tails</button>
+    <button class="js-heads-button"
+      onclick="selectedElement.innerHTML = 'heads'"
+      >heads</button>
+    <button class="js-tails-button"
+      onclick="selectedElement.innerHTML = 'tails'"
+      >tails</button>
     <p class="js-result-display"></p>
 
 
@@ -37,9 +41,9 @@
       const tailsButton = document.querySelector('.js-tails-button');
       const selectedElement = document.querySelector('.js-result-display');
 
-      headsButton.addEventListener('click', selectedElement.innerHTML = 'You chose: heads');
+      //headsButton.addEventListener('click', selectedElement.innerHTML = 'You chose: heads');
 
-      tailsButton.addEventListener('click', selectedElement.innerHTML = 'You chose:tails');
+      //tailsButton.addEventListener('click', selectedElement.innerHTML = 'You chose:tails');
 
     </script>
   </body>
