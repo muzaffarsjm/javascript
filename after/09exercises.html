@@ -24,9 +24,9 @@
     <p>fourth exercise</p>
 
     <input type="text" class="js-user-input">
-    <button>Submit</button>
+    <button class="js-submit-button" onclick="greet()">Submit</button>
     <p class="js-greeting-name"></p>
-
+    <p>test</p>
 
 
     <script>
@@ -52,7 +52,7 @@
       //fourth exercise
 
       const userName = document.querySelector('.js-user-input');
-      const submitButton = document.querySelector('.js-submit-buton');
+      let submitButton = document.querySelector('.js-submit-buton');
       const textGreeting = document.querySelector('.js-greeting-name');
 
       function greet(){
@@ -61,8 +61,9 @@
         //clears the space
         userName.value = '';
       };
-
-      submitButton.addEventListener('click', greet);
+      //greet()
+      console.log(submitButton)
+      //submitButton.addEventListener('click', greet);
 
 
     </script>
