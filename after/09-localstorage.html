@@ -50,7 +50,8 @@
         localStorage.setItem('count', JSON.stringify(count));
       };
 
-      let resetEl = document.querySelector('reset-button');
+      let resetEl = document.querySelector('.reset-button');
+
       function resetFunction(){
         count = 0;
         displayArea.innerHTML = count;
