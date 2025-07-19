@@ -86,8 +86,13 @@
       };
       const calculateButton  = document.querySelector('.js-calculate-button');
       calculateButton.addEventListener('click', calculate);
-
-
+      
+      //function that works with enter button
+      function enterKey(){
+        if(event.key === 'Enter'){
+          calculate();
+        };
+      };
     </script>
   </body>
 </html>
