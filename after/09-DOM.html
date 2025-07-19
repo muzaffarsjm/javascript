@@ -8,12 +8,16 @@
   <body>
     <p>DOM</p>
     <button>hello</button>
-    <button class="js-second-button"
-      onclick="subscribtion()"
-      >hi</button>
+    <button>hi</button>
 
     <p>YouTube subscibe button</p>
-    <button class="js-subscribe-button">subscribe</button>
+    <button
+      class="js-subscribe-button"
+      onclick="subscribtion()"
+      >subscribe</button>
+
+
+
     <script>
       console.log('DOM');
       document.write('delete');
@@ -36,15 +40,15 @@
       document.querySelector('button').innerHTML = 'click';
 
       //while selecting classes with fom, add . in front of the class name
-      document.querySelector('.js-second-button').innerHTML = 'no click'
+      //document.querySelector('.js-second-button').innerHTML = 'no click'
 
       const buttonEl = document.querySelector('.js-subscribe-button');
       //function to check
       function subscribtion(){
-        if(buttonEl.innerHTML === 'subscribed'){
-          buttonEl.innerHTML = 'Subscribe'
+        if(buttonEl.innerHTML === 'subscribe'){
+          buttonEl.innerHTML = 'Subscribed'
         }else{
-          buttonEl.innerHTML = 'subscribed'
+          buttonEl.innerHTML = 'subscribe'
         };
       };
       
