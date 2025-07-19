@@ -8,15 +8,27 @@
   <body>
     <p>Hello</p>
     <input type="text" placeholder="stype shit" 
-    class="js-user-input">
+    class="js-user-input"
+    
+    onkeydown="keyFinder(event)"
+    >
     
     
     <script>
-      
+
       let userInput = document.querySelector('.js-user-input');
-
-
-
+      function keyFinder(event){
+        if(event.key === 'Enter'){
+          salute();
+          //console.log('bingo');
+        }else{
+          console.log(event.key);
+        }
+      };
+      //userInput.addEventListener('keydown', console.log(event));
+      function salute(){
+        console.log('Good, early morning');
+      };
     </script>
   </body>
 </html>
