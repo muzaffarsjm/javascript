@@ -49,8 +49,15 @@
         displayArea.innerHTML = count;
         localStorage.setItem('count', JSON.stringify(count));
       };
-      let resetEl = document.querySelector('reset-count');
-      resetEl.addEventListener('click', count = 0);
+
+      let resetEl = document.querySelector('reset-button');
+      function resetFunction(){
+        count = 0;
+        displayArea.innerHTML = count;
+        localStorage.removeItem('item');
+      }
+     
+      resetEl.addEventListener('click', resetFunction);
 
     </script>
   </body>
