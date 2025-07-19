@@ -16,16 +16,24 @@
 
     <p>sample first</p>
 
-    <button class="first-button">add one</button>
+    <button class="first-button"
+      onclick="added1()"
+      >add one</button>
     <button class="second-button">add two</button>
     <p class="count-display">0</p>
 
 
     <script>
-
+      let count = 0;
       let firstButton = document.querySelector('.first-button');
-      let secondButton = document.querySelector('.second-button');
 
+      let secondButton = document.querySelector('.second-button');
+      let displayArea = document.querySelector('.count-display');
+      
+      function added1(){
+        count ++;
+        displayArea.innerHTML = count;
+      };
 
 
     </script>
