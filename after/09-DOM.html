@@ -25,7 +25,7 @@
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders over $40 = FREE shipping</p>
 
-    <input type="text" class="js-input">
+    <input type="text" class="js-input" placeholder="type cost">
     <button class="js-calculate-button">Calculate</button>
     <p class="js-cost-display">$0</p>
 
@@ -86,7 +86,7 @@
       };
       const calculateButton  = document.querySelector('.js-calculate-button');
       calculateButton.addEventListener('click', calculate);
-      
+
       //function that works with enter button
       function enterKey(){
         if(event.key === 'Enter'){
