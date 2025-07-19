@@ -33,17 +33,20 @@
 
       let secondButton = document.querySelector('.second-button');
       let displayArea = document.querySelector('.count-display');
-
+      displayArea.innerHTML = count;
+      
       function added1(){
         count ++;
         displayArea.innerHTML = count;
+        localStorage.setItem('count', JSON.stringify(count));
       };
 
       function add2(){
         count +=2;
         displayArea.innerHTML = count;
+        localStorage.setItem('count', JSON.stringify(count));
       };
-      localStorage.setItem('count', JSON.stringify(count));
+      
 
     </script>
   </body>
