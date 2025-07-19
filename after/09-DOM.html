@@ -14,13 +14,25 @@
     <button
       class="js-subscribe-button"
       onclick="subscribtion()"
-      >subscribe</button>
+      >subscribe
+    </button>
 
+    <br>
+    <br>
+    <br>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+
+    <input type="text" class="js-input">
+    <button class="js-calculate-button">Calculate</button>
+    <p class="js-cost-display">$0</p>
 
 
     <script>
-      console.log('DOM');
-      document.write('delete');
+      //console.log('DOM');
+      //document.write('delete');
 
       //document.body.innerHTML removes all the previous code on the page
       //document.body.innerHTML = 'Delete';
@@ -29,8 +41,8 @@
 
       //document.body
 
-      console.log(document.body);
-      console.log(document.body.innerHTML);
+      //console.log(document.body);
+      //console.log(document.body.innerHTML);
       //document.body.innerHTML = '<button>changed</button>'
 
       /*document.body selects thwhole page. and document.querySelector() helps to select the element of the HTML. Single element could be selectes and later changed in JavaScript. Note that there are other ways o selecting elements using their classes or IDs as well*/
@@ -52,6 +64,16 @@
         };
       };
       
+      //Amazon shipping calculator
+
+      function calculate(){
+        const price = document.querySelector('.js-input');
+        const productPrice = price.value;
+        //console.log(productPrice);
+
+      };
+      const calculateButton  = document.querySelector('.js-calculate-button');
+      calculateButton.addEventListener('click', calculate);
 
 
     </script>
