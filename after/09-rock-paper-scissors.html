@@ -9,12 +9,13 @@
     <p>Rock Paper Scissors</p>
 
     <button onclick="gameStart('rock')">Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
+    <button onclick="gameStart('paper')">Paper</button>
+    <button onclick="gameStart('scissors')">Scissors</button>
 
     <script>  
       //randomNumber for computer's move
       let computerChoice = '';
+      let result = '';
       function computerMove(){
 
         const randomNumber = Math.random();
@@ -31,12 +32,29 @@
 
       function gameStart(user){
         computerMove();
-        
+
         if (user === computerChoice){
-          console.log('tie');
-        }else{
-          console.log('try again');
+          result = 'Tie';
+        }else if(user === 'rock'){
+          if(computerChoice === 'paper'){
+            result = 'Lost';
+          }else if(computerChoice = 'scissors'){
+            result = 'Win'
+          };
+        }else if(user === 'paper'){
+          if(computerChoice === 'rock'){
+            result = 'Win';
+          }else if(computerChoice === 'scissors'){
+            result = 'Lost'
+          };
+        }else if(user === 'scissors'){
+          if(computerChoice === 'rock'){
+            resul = 'Lost'
+          }else if(computerChoice === 'paper'){
+            result = 'Win'
+          };
         };
+        alert(result);
       };
     </script>
   </body>
