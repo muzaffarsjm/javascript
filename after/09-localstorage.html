@@ -26,7 +26,9 @@
 
 
     <script>
-      let count = 0;
+      let count = JSON.parse(localStorage.getItem('count')) || 0;
+
+
       let firstButton = document.querySelector('.first-button');
 
       let secondButton = document.querySelector('.second-button');
@@ -41,6 +43,7 @@
         count +=2;
         displayArea.innerHTML = count;
       };
+      localStorage.setItem('count', JSON.stringify(count));
 
     </script>
   </body>
