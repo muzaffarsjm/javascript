@@ -14,8 +14,17 @@
 
     <p class="js-result-board"></p>
     <p class="js-choices-board"></p>
-    <p class="js-score-board"></p>
+    <p class="js-score-board">
+      Wins: 0
+      Losses: 0
+      Ties: 0
+    </p>
     <script>  
+    let score = {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };
       //randomNumber for computer's move
       let computerChoice = '';
       let result = '';
@@ -52,17 +61,34 @@
           };
         }else if(user === 'scissors'){
           if(computerChoice === 'rock'){
-            resul = 'Lost'
+            result = 'Lost'
           }else if(computerChoice === 'paper'){
             result = 'Win'
           };
         };
+        //score calculation part
+        if(result ==='Win'){
+          score.wins ++;
+        }else if(result === 'Lost'){
+          score.losses++;
+        }else if(result === 'Tie'){
+          score.ties++;
+        };
+
+
+
+
         //alert(`${result}. Computer: ${computerChoice}`);
         let resultEl = document.querySelector('.js-result-board');
         resultEl.innerHTML = `Result: ${result}`;
 
         let choiceEl = document.querySelector('.js-choices-board');
         choiceEl.innerHTML = `You ${user} : ${computerChoice} Computer`;
+        let scoreEl = document.querySelector('.js-score-board');
+        scoreEl.innerHTML = `Wins: ${score.wins}
+          Losses: ${score.losses}
+          Ties: ${score.ties}
+        `
       };
     </script>
   </body>
