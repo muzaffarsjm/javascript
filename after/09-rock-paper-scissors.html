@@ -16,15 +16,16 @@
       //randomNumber for computer's move
       let computerChoice = '';
       function computerMove(){
+
         const randomNumber = Math.random();
         if(randomNumber <1/3){
           computerChoice = 'rock'
         }else if(randomNumber >=1/3 && randomNumber <2/3){
           computerChoice = 'paper';
-        }else{
+        }else if (randomNumber >= 2/3 && randomNumber < 1){
           computerChoice = 'scissors'
         };
-        return computerChoice;
+        console.log(computerChoice);
       };
       computerMove();
     </script>
