@@ -45,7 +45,17 @@
         }else{
           gameResult = 'Lost';
         };
-        alert(`${computerChoice}. You ${gameResult}`);
+
+        // score object renewal code
+
+        if(gameResult === 'Win'){
+          score.wins ++;
+        }else{
+          score.losses ++;
+        };
+        alert(`${computerChoice}. You ${gameResult}
+        Wins: ${score.wins} : ${score.losses} Losses
+        `);
       };
     </script>
   </body>
