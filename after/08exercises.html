@@ -11,7 +11,7 @@
       console.log('08 exercises supersimpledev of Simon');
 
       //object comparison function
-      const product1 = {
+      const product11 = {
         name: 'TV',
         modelName: 'Samsung',
         origin: 'South Korea',
@@ -19,16 +19,23 @@
       };
       //second object
 
-      const product2 = {
+      const product12 = {
         name: 'Smartphone',
         modelName: 'Apple',
         origin: 'USA',
         forSale: 'India'
       };
-      
-      function isSameProduct(product1, product2){
 
+      function isSameProduct(product1, product2){
+        if (product11.forSale === product12.forSale){console.log('yedi')};
+        //second condition
+        if(product11.origin === product12.origin){
+          console.log('same origin');
+        }else{
+          console.log('Not same origin');
+        };
       };
+      isSameProduct();
 
     </script>
   </body>
