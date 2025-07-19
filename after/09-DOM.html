@@ -88,12 +88,14 @@
       calculateButton.addEventListener('click', calculate);
 
       //function that works with enter button
-      function enterKey(){
+      function enterKey(event){
         if(event.key === 'Enter'){
           calculate();
         };
       };
       document.querySelector('.js-calculate-button').addEventListener('keydown', enterKey());
+
+      console.log(event.key);
     </script>
   </body>
 </html>
