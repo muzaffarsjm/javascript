@@ -8,7 +8,7 @@
   <body>
     <p>Rock Paper Scissors</p>
 
-    <button>Rock</button>
+    <button onclick="gameStart('rock')">Rock</button>
     <button>Paper</button>
     <button>Scissors</button>
 
@@ -28,6 +28,16 @@
         console.log(computerChoice);
       };
       computerMove();
+
+      function gameStart(user){
+        computerMove();
+        
+        if (user === computerChoice){
+          console.log('tie');
+        }else{
+          console.log('try again');
+        };
+      };
     </script>
   </body>
 </html>
