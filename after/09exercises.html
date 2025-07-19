@@ -17,13 +17,16 @@
 
     <p>third exercise</p>
 
-    <button class="js-heads-button"
-      
-      >heads</button>
-    <button class="js-tails-button"
-      
-      >tails</button>
+    <button class="js-heads-button">heads</button>
+    <button class="js-tails-button">tails</button>
     <p class="js-result-display"></p>
+
+    <p>fourth exercise</p>
+
+    <input type="text" class="js-user-input">
+    <button>Submit</button>
+    <p class="js-greeting-name"></p>
+
 
 
     <script>
@@ -45,6 +48,20 @@
         selectedElement.innerHTML = 'You chose: heads');
 
       tailsButton.addEventListener('click', ()=> selectedElement.innerHTML = 'You chose:tails');
+
+      //fourth exercise
+
+      const userName = document.querySelector('.js-user-input');
+      const submitButton = document.querySelector('.js-submit-buton');
+      const textGreeting = document.querySelector('.js-greeting-name');
+
+      function greet(){
+        let inputName = userName.value;
+        textGreeting.innerHTML = `Good morning, ${inputName}`;
+      };
+
+      submitButton.addEventListener('click', greet);
+
 
     </script>
   </body>
