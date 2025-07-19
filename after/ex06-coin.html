@@ -9,7 +9,7 @@
     <h1>
       Coin-flip game 
     </h1>
-    
+
     <button onclick="
       playGame('heads')
       ">heads</button>
@@ -24,19 +24,24 @@
       function playGame(guess){
         let randomNumber = Math.random();
         //console.log(randomNumber);
-        let result = '';
-        let playerGuess = 'heads'
+        let computerChoice = '';
+        //let playerGuess = 'heads'
+        let gameResult = '';
+        //computer's hoice decided here
 
         if(randomNumber < 0.5){
-          result = 'heads';
+          computerChoice = 'heads';
         }else{
-          result = 'tails';
+          computerChoice = 'tails';
         };
-        if (result === playerGuess){
-          console.log('Win');
+
+        //moves compared here
+        if (computerChoice ===  guess){
+          gameResult = 'Win';
         }else{
-          console.log('Lost');
+          gameResult = 'Lost';
         };
+        alert(`${computerChoice}. You ${gameResult}`);
       };
     </script>
   </body>
