@@ -7,7 +7,9 @@
     <h1>Arrays and Loops</h1>
     <h1>To Do List Practice 1</h1>
     <input type="text" placeholder="todo name" class="js-todo-input">
-    <button class="js-todo-button">Add</button>
+    <button class="js-todo-button"
+      onclick="addToDO()"
+    >Add</button>
     
     <script>
       let addButton = document.querySelector('.js-todo-button');
@@ -16,12 +18,12 @@
         let todoName = userInput.value;
         console.log(todoName);
 
-        
+
         userInput.value = '';
       };
 
       //function for adding to do
-      addButton.addEventListener('click' addToDo);
+   
 
 
 
