@@ -15,6 +15,9 @@
     </button>
     <p class="js-final-cost">$0</p>
 
+    <input type="text" class="js-keyup-test" onkeyup="keyUp()">
+    <p class="js-keyup-display">sample</p>
+
 
     <script>
       const inputPrice = document.querySelector('.price-input');
@@ -30,6 +33,12 @@
         }else{
           finalPrice.innerHTML = initialPrice;
         };
+      };
+      function keyUp(){
+        let directText = document.querySelector('.js-keyup-test');
+        let toDisplay = directText.value; 
+        let text = document.querySelector('.js-keyup-display');
+        text.innerHTML = toDisplay;
       };
 
       //console.log('test');
