@@ -5,13 +5,41 @@
   </head>
   <body>
     <h1>Arrays and Loops</h1>
+    <h1>To Do List Practice 1</h1>
+    <input type="text" placeholder="todo name" class="js-todo-input">
+    <button class="js-todo-button">Add</button>
+    
     <script>
+      let addButton = document.querySelector('.js-todo-button');
+      function addToDO(){
+        let userInput = document.querySelector('.js-todo-input');
+        let todoName = userInput.value;
+        console.log(todoName);
+
+        
+        userInput.value = '';
+      };
+
+      //function for adding to do
+      addButton.addEventListener('click' addToDo);
+
+
+
+
+
+
+
+
+
+
+
+      /*
       const myArray = [10, 20, 30];
       console.log(myArray);
       console.log(myArray[0]);
       myArray[0] = 78;
       console.log(myArray);
-
+      */
      // console.log('test');
     </script>
   </body>
