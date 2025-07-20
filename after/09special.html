@@ -4,12 +4,34 @@
     <title>Special exercise</title>
   </head>
   <body>
-    <p>Salom</p>
+ 
     <p>Amazon shipping calculator</p>
-    <input type="text" placeholder="Enter price">
-    <button>Calulate</button>
+
+    <input type="text" placeholder="Enter price"
+    class="price-input">
+
+    <button class="js-calculate-button" onclick="calculator()"> Calculate
+
+    </button>
+    <p class="js-final-cost">$0</p>
+
+
     <script>
-      console.log('done');
+      const inputPrice = document.querySelector('.price-input');
+      
+      const button = document.querySelector('js-calculate-button');
+      let finalPrice = document.querySelector('.js-final-cost');
+      
+      function calculator(){
+        let initialPrice = Number(inputPrice.value);
+        if(initialPrice < 40){
+          finalPrice.innerHTML = Number(initialPrice+=10)
+        }else{
+          finalPrice.innerHTML = initialPrice;
+        };
+      };
+
+      //console.log('test');
     </script>
   </body>
 </html>
