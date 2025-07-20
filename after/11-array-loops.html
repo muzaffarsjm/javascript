@@ -35,7 +35,16 @@
 
    //second version
    
+      function secondfunction(){
+        let todos2 = [];
+        let userInput2 = document.querySelector('.js-second-input');
+        let alltodos = document.querySelector('.js-todo-display');
+        let newtoDo = userInput2.value;
+        todos2.push(newtoDo);
+        alltodos.innerHTML = `<div>${todos2}</div>`;
 
+        userInput2.value = '';
+      };
 
 
 
