@@ -26,7 +26,7 @@
 
     <script>
       //console.log('test1');
-      let cartQuantity = 6;
+      let cartQuantity = JSON.parse(localStorage.getItem('quantity')) || 0;
 
       let finalQuantity = document.querySelector('.js-show-quantity');
       //add one function
