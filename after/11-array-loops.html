@@ -45,6 +45,10 @@
         let newtoDo = userInput2.value;
         todos2.push(newtoDo);
         alltodos.innerHTML = `<p>${todos2}</p>`;
+        /*
+        here a problem rises with paragraphs, or divs of the newly created element. js considers i as one html element. that is why we need loops to go over the hole array and see what we can do with each element
+        
+        */
         console.log(todos2);
         userInput2.value = '';
       };
