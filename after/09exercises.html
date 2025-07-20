@@ -23,7 +23,7 @@
 
     <p>fourth exercise</p>
 
-    <input type="text" class="js-user-input">
+    <input type="text" class="js-user-input" onkeydown="eventChecker(event)">
     <button class="js-submit-button" onclick="greet()">Submit</button>
     <p class="js-greeting-name"></p>
     <p>test</p>
@@ -64,7 +64,11 @@
       //greet()
       console.log(submitButton)
       //submitButton.addEventListener('click', greet);
-
+      function eventChecker(){
+        if(event.key ==='Enter'){
+          greet();
+        };
+      };
 
     </script>
   </body>
