@@ -8,20 +8,72 @@
   <body>
     <p>Cart Quantity Project</p>
 
-    <button class="js-quantity-button">show Quantity</button>
-    <button class="js-add-to-cart">Add to Cart</button>
-    <button class="js-add-2">+2</button>
-    <button class="js-add-3">+3</button>
-    <button class="js-add-4">+4</button>
-    <button class="js-add-5">+5</button>
-    <button class="js-remove-one">Remove from Cart</button>
-    <button class="js-remove-two">-2</button>
-    <button class="js-remove-three">-3</button>
+    <button class="js-quantity-button"
+      onclick="showQuantity()"
+    >show Quantity</button>
+    <button class="js-add-to-cart" onclick="add1()"
+    
+    >Add to Cart</button>
+    <button class="js-add-2" onclick="add2()">+2</button>
+    <button class="js-add-3" onclick="add3()">+3</button>
+    <button class="js-add-4" onclick="add4()">+4</button>
+    <button class="js-add-5" onclick="add5()">+5</button>
+    <button class="js-remove-one" onclick="remove1()">Remove from Cart</button>
+    <button class="js-remove-two" onclick="remove2()">-2</button>
+    <button class="js-remove-three" onclick="remove3()">-3</button>
 
     <p class="js-show-quantity">0</p>
 
     <script>
-      console.log('test1');
+      //console.log('test1');
+      let cartQuantity = 6;
+
+      let finalQuantity = document.querySelector('.js-show-quantity');
+      //add one function
+      function showQuantity(){
+        finalQuantity.innerHTML = cartQuantity;
+      };
+    
+      function add1(){
+        cartQuantity++;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function add2(){
+        cartQuantity +=2;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function add3(){
+        cartQuantity += 3;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function add4(){
+        cartQuantity += 4;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function add5(){
+        cartQuantity += 5;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function remove1(){
+        cartQuantity --;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function remove2(){
+        cartQuantity -=2;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
+      function remove3(){
+        cartQuantity -= 3;
+        finalQuantity.innerHTML = cartQuantity;
+      };
+
     </script>
   </body>
 </html>
