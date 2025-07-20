@@ -12,17 +12,20 @@
     >Add</button>
     
     <script>
+      //first version of the todo list
       let addButton = document.querySelector('.js-todo-button');
+      let todos = [];
       function addToDO(){
         let userInput = document.querySelector('.js-todo-input');
         let todoName = userInput.value;
-        console.log(todoName);
+        todos.push(todoName);
+        console.log(todos);
 
 
         userInput.value = '';
       };
 
-      //function for adding to do
+   //second version
    
 
 
