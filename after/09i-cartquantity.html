@@ -73,7 +73,7 @@
         cartQuantity -= 3;
         finalQuantity.innerHTML = cartQuantity;
       };
-
+      localStorage.setItem('quantity', JSON.stringify(cartQuantity));
     </script>
   </body>
 </html>
