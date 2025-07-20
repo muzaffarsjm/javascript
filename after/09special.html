@@ -23,9 +23,10 @@
       let finalPrice = document.querySelector('.js-final-cost');
       
       function calculator(){
-        let initialPrice = Number(inputPrice.value);
-        if(initialPrice < 40){
-          finalPrice.innerHTML = Number(initialPrice+=10)
+        let initialPrice = Number(inputPrice.value)*100;
+  
+        if(initialPrice < 4000){
+          finalPrice.innerHTML = (initialPrice+=1000)/100;
         }else{
           finalPrice.innerHTML = initialPrice;
         };
