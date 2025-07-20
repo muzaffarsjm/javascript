@@ -15,7 +15,9 @@
     <h1>second todo list</h1>
     <input type="text" placeholder="enter todo"
      class="js-second-input">
-     <button class="js-second-button">Add</button>
+     <button class="js-second-button"
+      onclick="secondfunction()"
+      >Add</button>
     <div class="js-todo-display"></div>
 
 
@@ -34,15 +36,16 @@
       };
 
    //second version
-   
+      let todos2 = [];
+
       function secondfunction(){
-        let todos2 = [];
+        
         let userInput2 = document.querySelector('.js-second-input');
         let alltodos = document.querySelector('.js-todo-display');
         let newtoDo = userInput2.value;
         todos2.push(newtoDo);
-        alltodos.innerHTML = `<div>${todos2}</div>`;
-
+        alltodos.innerHTML = `<p>${todos2}</p>`;
+        console.log(todos2);
         userInput2.value = '';
       };
 
