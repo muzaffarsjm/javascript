@@ -55,9 +55,9 @@
       let submitButton = document.querySelector('.js-submit-buton');
       const textGreeting = document.querySelector('.js-greeting-name');
 
-      function greet(){
+      function greet(event){
         let inputName = userName.value;
-        textGreeting.innerHTML = `Good morning, ${inputName}`;
+          textGreeting.innerHTML = `Good morning, ${inputName}` 
         //clears the space
         userName.value = '';
       };
