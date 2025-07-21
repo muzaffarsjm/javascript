@@ -89,8 +89,18 @@
       addOne(testArray);
       
     //11a
+    
+    function addNum(array, num){
+      let newArray = [];
 
-
+      for(let i = 0; i < array.length; i++){
+        let number = array[i]; 
+        newArray.push(number + num);
+      };
+      console.log(newArray);
+    };
+    let arraysec = [5, 6, 7];
+    addNum(arraysec, 2);
 
 
 
