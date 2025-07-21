@@ -47,13 +47,13 @@
         todos2.push(newtoDo);
         //checking the new array with newly pushed values
         console.log(todos2);
-
-        for(let i = 0; i<=todos.length; i++){
+        let todoListHTML = '';
+        for (let i = 0; i<todos2.length; i++){
           let newList = todos2[i];
           console.log(newList);
-          //alltodos.innerHTML = `<p>${todos2}</p>`;
+          todoListHTML = `<p>${todos2}</p>`;
         };
-        
+        alltodos.innerHTML = todoListHTML;
         /*
         here a problem rises with paragraphs, or divs of the newly created element. js considers i as one html element. that is why we need loops to go over the hole array and see what we can do with each element
         
