@@ -37,32 +37,38 @@
 
    //second version
       let todos2 = [];
-      let todoListHTML = '';
+      
+      let alltodos = document.querySelector('.js-todo-display');
+
       function secondfunction(){
         
         let userInput2 = document.querySelector('.js-second-input');
-        let alltodos = document.querySelector('.js-todo-display');
+        
         let newtoDo = userInput2.value;
         
         todos2.push(newtoDo);
         //checking the new array with newly pushed values
         console.log(todos2);
         
-        for (let i = 0; i<todos2.length; i++){
-          let newList = todos2[i];
-          console.log(newList);
-          todoListHTML = `<p>${todos2}</p>`;
-          
-        };
-        alltodos.innerHTML = todoListHTML;
+        
         /*
         here a problem rises with paragraphs, or divs of the newly created element. js considers i as one html element. that is why we need loops to go over the hole array and see what we can do with each element
         
         */
         //console.log(todos2);
         userInput2.value = '';
+        newListFunction();
       };
-
+      function newListFunction(){
+        let todoListHTML = '';
+        for (let i = 0; i < todos2.length; i++){
+            let newList = todos2[i];
+            //console.log(newList);
+            todoListHTML += `<p>${newList}</p>`;
+            
+          };
+          alltodos.innerHTML = todoListHTML;
+        };
 
 
 
