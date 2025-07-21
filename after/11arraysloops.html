@@ -19,13 +19,15 @@
       let numsOf  = [10, 20, 20, 30, 40];
       let names = ['jamol', 'kamol', 'ali'];
 
-      function getLastValue(){
-        let i = numsOf.length-1;
-        let v = names.length-1;
-        console.log(numsOf[i]);
-        console.log(names[v])
+      function getLastValue(num){
+        let i = num.length-1;
+  
+        console.log(num[i]);
       };
-      getLastValue();
+      getLastValue(names);
+      getLastValue(numsOf)
+      let number = numsOf[numsOf.length-1];
+      console.log(number);
 
     </script>
   </body>
