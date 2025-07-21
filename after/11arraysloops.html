@@ -29,6 +29,22 @@
       let number = numsOf[numsOf.length-1];
       console.log(number);
 
+
+      //third exercise
+      function arraySwap(array){
+        let firstValue = array[0];
+        let lastValue = array[array.length-1];
+        
+        array.pop(firstValue)
+        array.push(firstValue);
+        array.shift(lastValue);
+        array.unshift(lastValue);
+        
+        console.log(array);
+      };
+      arraySwap(names);
+      
+
     </script>
   </body>
 </html>
