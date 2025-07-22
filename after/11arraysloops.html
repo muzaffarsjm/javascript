@@ -107,6 +107,7 @@
     function addArrays(array1, array2){
       let thirdArray = [];
       for(let i = 0; i < array1.length; i++){
+        //pushing is prefered instead of +=;
         thirdArray.push(array1[i] + array2[i]);
       };
       console.log(thirdArray);
