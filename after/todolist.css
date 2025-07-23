@@ -1,6 +1,10 @@
 *{
   background-color: rgb(240, 223, 223);
 }
+.st-todo-grid{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
 .style-heading{
   font-size: 28px;
   color: rgb(86, 84, 84);
