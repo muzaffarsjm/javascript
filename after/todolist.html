@@ -11,7 +11,7 @@
 
     <input type="text" placeholder="Enter todo"
       class="js-todo-input">
-      <input type = "date">
+      <input type = "date" class="js-todo-date">
 
     <button class="js-add-button"
       onclick="todoAdder()"
@@ -41,7 +41,7 @@
       function todoAdder(){
 
         let name = userInput.value.trim();
-        
+        let userDate = document.querySelector('.js-todo-date');
         //console.log(todoList);
         if(name === ''){
           alert('Please enter to do name');
@@ -60,9 +60,11 @@
           let todoObject = todoList[i];
           let name = todoObject.name;
           let date = todoObject.dueDate;
+          console.log(name)
           allToDos += 
           `<p>
-            ${todo} 
+            ${name} 
+            ${date}
             <button onclick = '
               todoList.splice(${i}, 1);
               render();
