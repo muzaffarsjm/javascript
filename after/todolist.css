@@ -5,6 +5,13 @@
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }
+.st-elements-div{
+  background-color: rgb(132, 108, 108);
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+}
 .style-heading{
   font-size: 28px;
   color: rgb(86, 84, 84);
@@ -12,6 +19,7 @@
   padding-top: 20px;
   line-height: 20px;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .style-input-field{
