@@ -4,6 +4,8 @@
 .st-todo-grid{
   display: grid;
   grid-template-columns: 200px 200px 200px;
+  background-color: rgb(180, 145, 145);
+  margin-top: 30px;
 }
 .st-elements-div{
   background-color: rgb(132, 108, 108);
@@ -15,9 +17,6 @@
   grid-template-columns: 300px 200px 200px;
   column-gap: 30px;
  
-}
-.st-user-input{
-  display: grid;
 }
 .style-heading{
   font-size: 28px;
