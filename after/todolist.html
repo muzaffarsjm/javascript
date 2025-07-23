@@ -48,7 +48,10 @@
           alert('Please enter to do name');
           return;
         };
-        todoList.push(name);
+        todoList.push(
+          {name: name,
+            dueDate: dueDate
+          });
         userInput.value = '';
 
         render();
