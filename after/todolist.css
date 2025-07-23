@@ -1,3 +1,10 @@
 *{
-  background-color: red;
+  background-color: rgb(240, 223, 223);
+}
+.style-heading{
+  font-size: 28px;
+  color: rgb(86, 84, 84);
+  text-align: center;
+  padding-top: 20px;
+  line-height: 20px;
 }
