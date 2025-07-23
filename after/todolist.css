@@ -16,6 +16,8 @@
   border: solid black 1px;
   border-radius: 8px;
   margin-right: 20px;
+  font-size: 17px;
+  padding-left: 8px;
 }
 .style-calendar{
   height: 40px;
@@ -23,6 +25,7 @@
   border: solid black 1px;
   border-radius: 8px;
   margin-right: 20px;
+  font-size: 17px;
 }
 .st-add-button{
   border: 1px solid black;
