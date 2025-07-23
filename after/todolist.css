@@ -16,6 +16,9 @@
   column-gap: 30px;
  
 }
+.st-user-input{
+  display: grid;
+}
 .style-heading{
   font-size: 28px;
   color: rgb(86, 84, 84);
