@@ -143,10 +143,19 @@
         min: 0,
         max: 0
       };
-      for (let i = 0; i < array.length; i++){
+      let firstValue = array[0];
 
+      for (let i = 0; i < array.length; i++){
+        let value = array[i];
+        if(value > firstValue){
+          object11.max = value;
+        }else{
+          object11.max = firstValue;
+        }
       };
+      console.log(object11.max);
     };
+    minMax(array11);
 
     </script>
   </body>
