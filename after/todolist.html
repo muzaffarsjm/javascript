@@ -68,10 +68,11 @@
           let date = todoObject.dueDate;
           //console.log(name)
           allToDos += 
-          `<p>
+          `<p class = 'st-user-input'>
             ${name} 
             ${date}
-            <button onclick = '
+            <button class = 'st-delete-button'
+              onclick = '
               todoList.splice(${i}, 1);
               render();
             '>Delete</button>
