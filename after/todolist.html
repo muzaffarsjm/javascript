@@ -33,9 +33,15 @@
       function todoAdder(){
 
         let name = userInput.value.trim();
-        todoList.push(name);
+        
         //console.log(todoList);
+        if(name === ''){
+          alert('Please enter to do name');
+          return;
+        };
+        todoList.push(name);
         userInput.value = '';
+        
         render();
       };
       
