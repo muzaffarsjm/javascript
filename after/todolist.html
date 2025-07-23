@@ -73,21 +73,24 @@
           let date = todoObject.dueDate;
           //console.log(name)
           allToDos += 
-          ` <div class = 'st-user-input'>
-              ${name} 
-            </div>
-            <div>
-              ${date}
-            </div
-            <div>
-              <button class = 'st-delete-button'
-                onclick = '
-                todoList.splice(${i}, 1);
-                render();
-              '>Delete
-              </button>
-            </div>
-          </div>`;
+
+          ` <div>
+                <div class = 'st-user-input'>
+                  ${name} 
+                </div>
+                <div>
+                  ${date}
+                </div
+                <div>
+                  <button class = 'st-delete-button'
+                    onclick = '
+                    todoList.splice(${i}, 1);
+                    render();
+                  '>Delete
+                  </button>
+                </div>
+              </div>;
+            </div>`
         }
         finalToDos.innerHTML = allToDos;
       };
