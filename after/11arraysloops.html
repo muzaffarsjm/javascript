@@ -136,7 +136,7 @@
 
     //11l
     console.log(`11l`);
-    let array11 = [3, 5, 7, 9, 1, 11, 4];
+    let array11 = [3, 5, 7, 9, 1];
     //function results should in in an object,task requirement!
     function minMax(array){
       let object11 = {
@@ -144,6 +144,7 @@
         max: 0
       };
       let maxValue = array[0];
+      let minValue = array[0];
       // maxNumber loop
       for (let i = 0; i < array.length; i++){
         let value = array[i];
@@ -155,7 +156,7 @@
       
       //minNumber loop
 
-      let minValue = array[0];
+      
 
       for(let i = 0; i < array.length; i++){
         let conditionalValue = array[i];
