@@ -38,5 +38,10 @@
 }
 
 .st-user-input{
-  font-size: 18px;
+  font-size: 18px; 
+}
+
+.st-delete-button{
+  height: 20px;
+  border: 1px solid black;
 }
