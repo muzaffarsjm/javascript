@@ -16,7 +16,9 @@
       onclick="todoAdder()"
       >Add</button>
 
-    <div class="js-todo-displayer"></div>
+    <div class="js-todo-displayer">
+
+    </div>
 
 
 
@@ -30,7 +32,7 @@
       //todoAdder();
       function todoAdder(){
 
-        let name = userInput.value;
+        let name = userInput.value.trim();
         todoList.push(name);
         //console.log(todoList);
         userInput.value = '';
@@ -46,7 +48,7 @@
             ${todo} 
             <button onclick = '
               todoList.splice(${i}, 1);
-              todoAdder();
+              render();
             '>Delete</buton>
           </p>`;
         }
