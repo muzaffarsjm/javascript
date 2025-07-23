@@ -8,3 +8,10 @@
   padding-top: 20px;
   line-height: 20px;
 }
+
+.style-input-field{
+  height: 40px;
+  width: 190px;
+  border: solid black 1px;
+  border-radius: 8px;
+}
