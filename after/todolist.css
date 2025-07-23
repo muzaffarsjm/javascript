@@ -15,12 +15,14 @@
   width: 190px;
   border: solid black 1px;
   border-radius: 8px;
+  margin-right: 20px;
 }
 .style-calendar{
   height: 40px;
   width: 190px;
   border: solid black 1px;
   border-radius: 8px;
+  margin-right: 20px;
 }
 .st-add-button{
   border: 1px solid black;
