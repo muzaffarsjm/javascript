@@ -11,13 +11,28 @@
 
     <input type="text" placeholder="Enter todo"
       class="js-todo-input">
-    <button class="js-add-button">Add</button>
+
+    <button class="js-add-button"
+      onclick="todoAdder()"
+      >Add</button>
+
     <div class="js-todo-displayer"></div>
 
 
 
     <script>
-      console.log(56);
+      //console.log(56);
+      let userInput = document.querySelector('.js-todo-input');
+      let finalToDos = document.querySelector('.js-todo-displayer');
+
+      let todoList = [];
+      function todoAdder(){
+        let name = userInput.value;
+        todoList.push(name);
+        console.log(todoList);
+        userInput.value = '';
+      };
+
     </script>
   </body>
 </html>
