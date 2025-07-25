@@ -1,4 +1,4 @@
-*{
+body{
   background-color: rgb(240, 223, 223);
 }
 .st-todo-grid{
@@ -30,32 +30,3 @@
   width: 100%;
 }
 
-.style-input-field{
-  border: solid black 1px;
-  border-radius: 8px;
-  font-size: 17px;
-  
-}
-.style-calendar{
-  border: solid black 1px;
-  border-radius: 8px;
-  font-size: 17px;
-}
-.st-add-button{
-  border: 1px solid black;
-  height: 40px;
-  width: 160px;
-  border-radius: 8px;
- 
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.st-user-input{
-  font-size: 18px; 
-}
-
-.st-delete-button{
-  height: 20px;
-  border: 1px solid black;
-}
