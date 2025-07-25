@@ -4,7 +4,7 @@
 .st-todo-grid{
   display: grid;
   grid-template-columns: 200px 200px 200px;
-  background-color: rgb(180, 145, 145);
+  background-color: rgb(186, 59, 59);
   margin-top: 30px;
   column-gap: 10px;
   row-gap: 10px;
