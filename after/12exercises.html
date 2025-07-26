@@ -5,7 +5,7 @@
   </head>
   <body>
     <p>12th lesson</p>
-
+    <button class="js-12c">Start</button>
 
     <script>
       let add = function(){
@@ -24,9 +24,12 @@
      runTwice(function(){
       console.log('12b');
      });
-
-
-
+     //12c
+     let button = document.querySelector('.js-12c');
+     function checker(){
+      button.innerHTML = 'Finished';
+     };
+     setTimeout(checker, 2000);
       //console.log('test');
     </script>
   </body>
