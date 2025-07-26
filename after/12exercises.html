@@ -49,6 +49,18 @@
         }, 2000);
       };
       button2.addEventListener('click', loader);
+
+
+      //12e
+      let button3 = document.querySelector('.js-12e');
+      let message = document.querySelector('.js-message');
+      function addToCart(){
+        message.innerHTML = 'Added to cart';
+        setTimeout(function(){
+          message.innerHTML = '';
+        }, 2000);
+      };
+      button3.addEventListener('click', addToCart);
     </script>
   </body>
 </html>
