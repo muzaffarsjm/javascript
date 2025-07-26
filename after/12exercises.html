@@ -33,6 +33,18 @@
      };
      setTimeout(checker, 2000);
       //console.log('test');
+
+
+      //12d
+
+      let button2 = document.querySelector('.js-12d');
+      function loader(){
+        button2.innerHTML = 'Loading...';
+        setTimeout(function(){
+          button2.innerHTML = 'Finished';
+        }, 2000);
+      };
+      button2.addEventListener('click', loader);
     </script>
   </body>
 </html>
