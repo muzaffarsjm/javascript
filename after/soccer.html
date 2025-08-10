@@ -9,7 +9,7 @@
     <div class="js-main">
       <div class="first-div">Bugun</div>
    
-
+      <div class="root"></div>
 
       <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
@@ -21,8 +21,17 @@
       //document.querySelector('.first-div').innerHTML = 'Hello'
     
       let firstElement = document.querySelector('.first-div');
-      let ractCode = ReactDOM.createRoot(firstElement)
-      ractCode.render(<p>salom</p>);
+      ReactDOM.createRoot(firstElement).render('salom');
+
+      function App(){
+        return(
+          <button>Click me!</button>
+        );
+      };
+
+      const rootElement = document.querySelector('.root');
+      ReactDOM.createRoot(rootElement).render(<App/>);
+        
       
     </script>
   </body>
