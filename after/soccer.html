@@ -37,22 +37,26 @@
 
       /*second component*/
 
-      function ChatMessage(){
+      function ChatMessage(props){
+        const  message = props.message
+
         return (
           <div>
-            First Message
+            {message}
             <button>User</button>
           </div>
         );
       };
 
       /*main*/
-      const app = 
+      const app = (
         <>
           <App></App>
-          <ChatMessage></ChatMessage>
+          <ChatMessage message  = "How are you?"/>
+          <ChatMessage message  = "How are yough?"/>
+          <ChatMessage message  = "How are yous?"/>
         </>
-      
+      )
       const rootElement = document.querySelector('.root');
       ReactDOM.createRoot(rootElement).render(app);
         
