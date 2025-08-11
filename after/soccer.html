@@ -35,9 +35,13 @@
         );
       }
 
+      const div = <div>
+        <App></App>
+        {App()}
+        </div>
       
       const rootElement = document.querySelector('.root');
-      ReactDOM.createRoot(rootElement).render(App());
+      ReactDOM.createRoot(rootElement).render(div);
         
       
     </script>
