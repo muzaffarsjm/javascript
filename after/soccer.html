@@ -35,9 +35,20 @@
         );
       }
 
+      /*second component*/
+
+      function ChatMessage(){
+        return (
+          <>
+            <p>First Message</p>
+            <button>User</button>
+          </>
+        );
+      };
       const app = 
         <>
           <App></App>
+          <ChatMessage></ChatMessage>
         </>
       
       const rootElement = document.querySelector('.root');
