@@ -25,14 +25,24 @@
 
       const button  = <button>sdfsdf</button>
     
-      const div = (
+      function App(){
+        return (
+          <div>
+            <p>hello React</p>
+            <p>hello React2</p>  
+          </div>
+        );
+      }
+
+      
+        const div = (
         <div>
           <p>hello</p>
           <p>hello</p>
+          {App()}
         </div>
       );
-
-      /*comment*/
+      
       const rootElement = document.querySelector('.root');
       ReactDOM.createRoot(rootElement).render(div);
         
