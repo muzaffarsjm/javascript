@@ -21,6 +21,9 @@
     <!--third exercise code-->
     <div class="demo-03"></div>
 
+    <!--fourth exercise code-->
+    <div class="demo-04"></div>
+
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
       ReactDOM.createRoot(rootElement).render(<button>Good job!</button>);
@@ -49,6 +52,20 @@
       let thirdElement = document.querySelector('.demo-03');
       let thirdRoot = ReactDOM.createRoot(thirdElement);
       thirdRoot.render(container);
+
+      /*4th Exercise starts from here*/
+      let socks = 10;
+      let tshirt = 8;
+      let cost = Number(socks + 2*tshirt);
+      console.log(cost);
+
+      let costElement = document.querySelector('.demo-04');
+      let productPrice =  ReactDOM.createRoot(costElement);
+      productPrice.render(<p>Product cost: ${cost}</p>);
+
+
+
+
     </script>
   </body>
 </html>
