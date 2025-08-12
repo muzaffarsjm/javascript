@@ -15,12 +15,21 @@
     <p>React Exercises(First Free Lesson)</p>
 
     <div class="demo-01"></div>
-
+    <!--second exercise code-->
+    <div class="demo-02"></div>
 
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
       ReactDOM.createRoot(rootElement).render(<button>Good job!</button>);
 
+
+      /*
+      Second exercise of the React class starts from here
+      */
+
+      let rootElement2 = document.querySelector('.demo-02');
+      let secondelement = ReactDOM.createRoot(rootElement2);
+      secondelement.render(<p>My name is Newton!</p>);
     </script>
   </body>
 </html>
