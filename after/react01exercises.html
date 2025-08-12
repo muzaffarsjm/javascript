@@ -36,6 +36,9 @@
     <!--7th exercise code-->
     <div class="demo-08"></div>
 
+    <!--8th exercise code-->
+    <div class="demo-09"></div>
+
 
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
@@ -112,6 +115,18 @@
       let timeElement = document.querySelector('.demo-08');
       let timeRoot = ReactDOM.createRoot(timeElement);
       timeRoot.render(<p>Current time: {currentTime}</p>);
+
+      /*9th exercise*/
+      function Clock(){
+        let currentTime = dayjs().format('HH:mm:ss');
+        return <h2>{currentTime}</h2>;
+      };
+
+      let clockElement = document.querySelector('.demo-09');
+      let clockRoot = ReactDOM.createRoot(clockElement);
+      setInterval(() => {clockRoot.render(<Clock />)}, 1000);
+
+
     </script>
   </body>
 </html>
