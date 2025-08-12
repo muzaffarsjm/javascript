@@ -59,6 +59,7 @@
       /*4th Exercise starts from here*/
       let socks = 10;
       let tshirt = 8;
+      let shippingCost = 5;
       let cost = Number(socks + 2*tshirt);
       console.log(cost);
 
@@ -72,12 +73,18 @@
       /*5th Exercise*/
       let withShipping = (
         <>
-          <p>Product Cost: </p>
-          <p>Shipping Cost</p>
-          <p>Total Cost</p>
+          <p>Product Cost: {cost}</p>
+          <p>Shipping Cost: {shippingCost}</p>
+          <p>Total Cost: {cost + shippingCost}</p>
           <button>Place your order</button>
         </>
       );
+
+      let displayShipping = document.querySelector('.demo-06');
+      let fifthRoot = ReactDOM.createRoot(displayShipping);
+      fifthRoot.render(withShipping);
+        
+      
 
     </script>
   </body>
