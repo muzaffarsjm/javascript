@@ -17,13 +17,14 @@
 
 
     <script type = 'text/babel'>
-      
-      let paragraph = <p>Salomy</p>
-      let button = <button>Click Me!</button>
 
+      let div  = (<div>
+        <p>Salomy</p>
+        <button>Click Me!</button>
+      </div>)
 
       let rootElement = document.querySelector('.root');
-      ReactDOM.createRoot(rootElement).render(button);
+      ReactDOM.createRoot(rootElement).render(div);
         
       
     </script>
