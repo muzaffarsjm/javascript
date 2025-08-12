@@ -17,48 +17,13 @@
 
 
     <script type = 'text/babel'>
-      //document.querySelector('.first-div').innerHTML = 'Hello'
-    
-      /*
-      let firstElement = document.querySelector('.first-div');
-      ReactDOM.createRoot(firstElement).render('salom');
-      */
+      
+      let paragraph = <p>Salomy</p>
+      let button = <button>Click Me!</button>
 
-      const button  = <button>sdfsdf</button>
-    
-      function App(){
-        return (
-          <>
-            <input placeholder = "Ask Chatbot here" size= '30'></input>
-            <button>Send</button> 
-          </>
-        );
-      }
 
-      /*second component*/
-
-      function ChatMessage(props){
-        const  message = props.message
-
-        return (
-          <div>
-            {message}
-            <button>User</button>
-          </div>
-        );
-      };
-
-      /*main*/
-      const app = (
-        <>
-          <App></App>
-          <ChatMessage message  = "How are you?"/>
-          <ChatMessage message  = "How are yough?"/>
-          <ChatMessage message  = "How are yous?"/>
-        </>
-      )
-      const rootElement = document.querySelector('.root');
-      ReactDOM.createRoot(rootElement).render(app);
+      let rootElement = document.querySelector('.root');
+      ReactDOM.createRoot(rootElement).render(button);
         
       
     </script>
