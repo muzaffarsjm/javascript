@@ -18,6 +18,9 @@
     <!--second exercise code-->
     <div class="demo-02"></div>
 
+    <!--third exercise code-->
+    <div class="demo-03"></div>
+
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
       ReactDOM.createRoot(rootElement).render(<button>Good job!</button>);
@@ -30,6 +33,22 @@
       let rootElement2 = document.querySelector('.demo-02');
       let secondelement = ReactDOM.createRoot(rootElement2);
       secondelement.render(<p>My name is Newton!</p>);
+
+
+      /*Third exercise react code starts from here*/
+
+      
+      let container = (
+        <>
+          <p>Cotton Socks</p>
+          <p>Price: $10</p>
+          <button>Add to Cart</button>
+        </>
+      );
+
+      let thirdElement = document.querySelector('.demo-03');
+      let thirdRoot = ReactDOM.createRoot(thirdElement);
+      thirdRoot.render(container);
     </script>
   </body>
 </html>
