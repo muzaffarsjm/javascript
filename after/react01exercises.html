@@ -33,6 +33,10 @@
     <!--6th exercise code-->
     <div class="demo-07"></div>
 
+    <!--7th exercise code-->
+    <div class="demo-08"></div>
+
+
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
       ReactDOM.createRoot(rootElement).render(<button>Good job!</button>);
@@ -98,7 +102,16 @@
       let date = document.querySelector('.demo-07');
       let dateRoot = ReactDOM.createRoot(date);
       dateRoot.render(<p>Today is {today}</p>);
+       
 
+      /*8th exercise*/
+
+      let currentTime = dayjs().format('HH:mm:ss');
+
+
+      let timeElement = document.querySelector('.demo-08');
+      let timeRoot = ReactDOM.createRoot(timeElement);
+      timeRoot.render(<p>Current time: {currentTime}</p>);
     </script>
   </body>
 </html>
