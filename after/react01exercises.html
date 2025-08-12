@@ -30,6 +30,9 @@
     <!--5th exercise code-->
     <div class="demo-06"></div>
 
+    <!--6th exercise code-->
+    <div class="demo-07"></div>
+
     <script type="text/babel">
       let rootElement = document.querySelector('.demo-01');
       ReactDOM.createRoot(rootElement).render(<button>Good job!</button>);
@@ -86,7 +89,15 @@
       let fifthRoot = ReactDOM.createRoot(displayShipping);
       fifthRoot.render(withShipping);
         
-      
+
+      /*dat execise*/
+      let today = dayjs().format('MMMM D');
+      /*
+        console.log(today);
+      */
+      let date = document.querySelector('.demo-07');
+      let dateRoot = ReactDOM.createRoot(date);
+      dateRoot.render(<p>Today is {today}</p>);
 
     </script>
   </body>
