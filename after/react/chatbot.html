@@ -73,8 +73,10 @@
         return(
           <div>
             {sender === 'robot' && <img src="profileimages/robot.png" width = '30'/>}
+
             <p style = {{color : 'red', display : 'inline'}}>{message}</p>
-            <img src="profileimages/download.png" width = '30' />
+
+            {sender === 'user' && <img src="profileimages/download.png" width = '30' />}
           </div>
         );
       };   
