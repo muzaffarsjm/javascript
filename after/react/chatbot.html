@@ -58,7 +58,12 @@
         const sender = props.sender;
 
         if(sender === 'robot'){
-          <img src="profileimages/robot.png" width = '30'/>
+          return(
+            <>
+              <img src="profileimages/robot.png" width = '30'/>
+              <p style = {{display: 'inline', color: 'blue'}}>{message}</p>
+            </>
+        )
         };
 
         return(
