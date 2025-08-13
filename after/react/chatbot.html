@@ -28,7 +28,7 @@
       /*Below is the code of the chatbot with the user. User's profile and therobots answers are in two different components, for practice*/
 
 
-      
+
       /*
       function Component1(props){
         const message = props.message;
@@ -51,13 +51,27 @@
         );
       };
         
-        */
+      */
+
+      function ChatComponent(props){
+        const message = props.message;
+        const sender = props.sender;
+        return(
+          <>
+            <p>{message}</p>
+            <img src="profileimages/download.png" width = '30' />
+          </>
+        );
+      };   
 
       let app = (
         <div>
-
           <ChatBot />
 
+          <ChatComponent 
+            message = 'HI'
+            sender = 'user'
+          />
         </div>
       );
 
