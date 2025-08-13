@@ -49,13 +49,17 @@
 
       let app = (
         <div>
+
           <ChatBot />
           <Component1 message = 'hello Chatbot' />
           <Component2  robotMessage = "How may I help you?"/>
           <Component1 message = "What is your name?" />
           <Component2  robotMessage = "My name is same as yours"/>
+
         </div>
       );
+
+      
       let element = document.querySelector('.root-1');
       let rootElement = ReactDOM.createRoot(element);
       rootElement.render(app);
