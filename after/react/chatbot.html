@@ -26,20 +26,23 @@
         );
       };
       
-      function Component1(){
+      function Component1(props){
+        const message = props.message;
+
         return(
           <div>
-            hello chatbot
+            {message}
             <img src="profileimages/download.png" width = '30'/>
           </div>
         );
       };
 
-      function Component2(){
+      function Component2(props){
+        const robotMessage = props.robotMessage;
         return(
           <div>
             <img src="profileimages/robot.png" width = '30'/>
-            How may I help you?
+            {robotMessage}
           </div>
         );
       };
@@ -48,7 +51,9 @@
         <div>
           <ChatBot />
           <Component1 message = 'hello Chatbot' />
-          <Component2 />
+          <Component2  robotMessage = "How may I help you?"/>
+          <Component1 message = "What is your name?" />
+          <Component2  robotMessage = "My name is same as yours"/>
         </div>
       );
       let element = document.querySelector('.root-1');
