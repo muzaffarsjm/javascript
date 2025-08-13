@@ -20,18 +20,26 @@
       function ChatBot(){
         return(
           <>
-            <p>Salom</p>
-            <p>Salomy</p>
+            <input placeholder = 'text here'></input>
+            <button>Salomy</button>
+          </>
+        );
+      };
+      
+      function Component1(){
+        return(
+          <>
+            <p>hello cahtbot</p>
+            <button>send</button>
           </>
         );
       };
 
       let app = (
-        <>
-          <button>Hello</button>
-          <p>message</p>
+        <div>
           <ChatBot />
-        </>
+          <Component1 />
+        </div>
       );
       let element = document.querySelector('.root-1');
       let rootElement = ReactDOM.createRoot(element);
