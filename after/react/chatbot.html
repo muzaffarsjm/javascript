@@ -17,13 +17,25 @@
 
     <script type="text/babel">
 
+      function Chatbot(){
+        return(
+          <>
+            <p>Salom</p>
+            <p>Salomy</p>
+          </>
+        );
+      };
+
       let app = (
         <>
           <button>Hello</button>
           <p>message</p>
+          <Chatbot />
         </>
       );
-
+      let element = document.querySelector('.root-1');
+      let rootElement = ReactDOM.createRoot(element);
+      rootElement.render(app);
 
     </script>
   </body>
