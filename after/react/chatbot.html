@@ -54,9 +54,12 @@
       */
 
       function ChatComponent(props){
-        const message = props.message;
-        const sender = props.sender;
-
+        /*
+          const message = props.message;
+          const sender = props.sender;
+        */
+        const {message} = props;
+        const {sender} = props;
         if(sender === 'robot'){
           return(
             <>
