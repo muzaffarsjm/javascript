@@ -82,7 +82,8 @@
         );
       };   
 
-      let app = (
+      function App () {
+        return(
         <div>
           <ChatBot />
 
@@ -105,12 +106,12 @@
           />
             
         </div>
-      );
+      )};
 
 
       let element = document.querySelector('.root-1');
       let rootElement = ReactDOM.createRoot(element);
-      rootElement.render(app);
+      rootElement.render(<App></App>);
 
     </script>
   </body>
