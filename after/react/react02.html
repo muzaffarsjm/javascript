@@ -27,21 +27,32 @@
       };
       function ChatMessage(props){
         let message = props.message;
+        let sender = props.sender;
 
         return(
 
           <div >
+            {sender === 'user' && <img src="profileimages/download.png" alt="" width = '30'/>}
+
             <p style = {{display: 'inline'}}>{message}</p>
-            <img src="profileimages/download.png" alt="" width = '30'/>
+
+            {sender === 'robot' && <img src="profileimages/robot.png" alt="" width = '30'/>}
           </div>
         );
       };
       let div  = (
         <>
           <p>hello</p>
+
           <Chatbot />
-          <ChatMessage message = 'Good Morning!' sender = 'user'/>
-          <ChatMessage message = 'Good Morning, too!' sender = 'robot'/>
+          
+          <ChatMessage 
+            message = 'Good Morning!' 
+            sender = 'user'
+          />
+
+          <ChatMessage 
+            message = 'Good Morning, too!' sender = 'robot'/>
         </>
       );
 
