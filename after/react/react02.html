@@ -25,10 +25,13 @@
           </>
         )
       };
-      function ChatMessage(){
+      function ChatMessage(props){
+        let message = props.message;
+
         return(
+
           <div >
-            <p style = {{display: 'inline'}}>hello</p>
+            <p style = {{display: 'inline'}}>{message}</p>
             <img src="profileimages/download.png" alt="" width = '30'/>
           </div>
         );
@@ -37,7 +40,8 @@
         <>
           <p>hello</p>
           <Chatbot />
-          <ChatMessage />
+          <ChatMessage message = 'Good Morning!' sender = 'user'/>
+          <ChatMessage message = 'Good Morning, too!' sender = 'robot'/>
         </>
       );
 
