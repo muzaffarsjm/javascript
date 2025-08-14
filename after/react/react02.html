@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    React 2.0
+  </title>
+  <body>
+    
+    <h1>Dunyo Sporti</h1>
+    <div class="js-main">
+   
+      <div class="root"></div>
+
+      <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <script type = 'text/babel'>
+      function Chatbot(){
+        return(
+          <>
+            <input type="text"/>
+            <button>Send</button>
+          </>
+        )
+      };
+      function ChatMessage(){
+        return(
+          <div >
+            <p style = {{display: 'inline'}}>hello</p>
+            <img src="profileimages/download.png" alt="" width = '30'/>
+          </div>
+        );
+      };
+      let div  = (
+        <>
+          <p>hello</p>
+          <Chatbot />
+          <ChatMessage />
+        </>
+      );
+
+      let rootElement = document.querySelector('.root');
+      ReactDOM.createRoot(rootElement).render(div);
+        
+      
+    </script>
+  </body>
+</html>
