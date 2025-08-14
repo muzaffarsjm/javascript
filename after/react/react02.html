@@ -56,29 +56,23 @@
           message : 'Great! Thanks. And you?',
           sender : 'robot'
          }];
+
+         const chatMessageComponents = chatMessages.map((chatMessage)=>{
+          return (
+            <ChatMessage 
+              message = {chatMessage.message}
+              sender = {chatMessage.sender}
+            />
+          )
+         });
+
+
         return(
         <>
 
           <Chatbot />
 
-          <ChatMessage 
-            message = 'Good Morning!' 
-            sender = 'user'
-          />
-
-          <ChatMessage 
-             sender = 'robot'
-             message = 'Good Morning, too!'
-            />
-
-          <ChatMessage 
-            message = 'How are you doing today?' 
-            sender = 'user'
-          />
-          <ChatMessage 
-             sender = 'robot'
-             message = 'Great! and you?'
-            />
+          {chatMessageComponents}
         </>
       )};
 
