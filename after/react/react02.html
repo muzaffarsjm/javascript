@@ -42,7 +42,9 @@
           </div>
         );
       };
-      let div  = (
+      function App (){
+         const chatMessages = [];
+        return(
         <>
 
           <Chatbot />
@@ -66,10 +68,10 @@
              message = 'Great! and you?'
             />
         </>
-      );
+      )};
 
       let rootElement = document.querySelector('.root');
-      ReactDOM.createRoot(rootElement).render(div);
+      ReactDOM.createRoot(rootElement).render(<App />);
         
       
     </script>
