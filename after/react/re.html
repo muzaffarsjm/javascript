@@ -4,8 +4,47 @@
     <title>
       Re React
     </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    
+    <p>Hello</p>
+    <div class="demo-01"></div>
+
+    <script type = 'text/babel'>
+
+      function Chat(){
+        return(
+          <>
+            <p>First Component</p>
+            <p>Second Component</p>
+          </>
+        )
+      };
+
+      function Chat2(){
+        return(
+          <>
+            <p>First Component</p>
+            <p>Second Component</p>
+          </>
+        )
+      };
+
+      function App(){
+        return(
+          <>
+            <Chat />
+            <Chat2 />
+          </>
+        )
+      };
+
+      let container = document.querySelector('.demo-01');
+      let firstC = ReactDOM.createRoot(container);
+      firstC.render(<App />);
+    </script>
   </body>
 </html>
