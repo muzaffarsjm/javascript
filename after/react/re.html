@@ -28,11 +28,20 @@
 
       function ChatMessage(props) { 
         //props of react is actually an object
-        const message = props.message
+        const message = props.message;
+        const sender = props.sender;
+
+        if (sender === 'bot'){
+          return(
+            <div>
+              <button>chatbot</button>
+              {message}
+            </div>
+          ); 
+        };
         return(
           <div>
             {message}
-            <button>chatbot</button>
             <button>user</button>
           </div>
         );
