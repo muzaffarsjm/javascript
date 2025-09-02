@@ -27,9 +27,10 @@
       };
 
       function ChatMessage(props) { 
+        const message = props.message
         return(
           <>
-            <p>Hiii! how may I help you?</p>
+            {message}
             <button>chatbot</button>
           </>
         );
@@ -40,7 +41,7 @@
     let app = (
       <>
         <PartOne />
-         <PartOne />
+        <ChatMessage  message = 'Hiii! How may I help you?' />
         <ChatMessage  message = 'Who is Ronaldo?'/>
       </>);
     let firstTest = document.querySelector('.demo-01');
