@@ -17,14 +17,18 @@
     //jsx elements
     let paragraph = <p>text</p>
     let button = <button>text</button>
-      function PartOne() {};
+      function PartOne() { 
+        return(
+          <p>hellos</p>
+        );
+      };
     let div = <div>
         <p>text</p>
         <button>text</button>
       </div>
     let firstTest = document.querySelector('.demo-01');
     let component1 = ReactDOM.createRoot(firstTest);
-    component1.render(div);
+    component1.render(<PartOne />);
 
     </script>
   </body>
