@@ -37,13 +37,14 @@
 
 
 
-    let div = <div>
-        <p>text</p>
-        <button>text</button>
-      </div>
+    let div = (
+      <div>
+        <PartOne />
+        <PartTwo />
+      </div>);
     let firstTest = document.querySelector('.demo-01');
     let component1 = ReactDOM.createRoot(firstTest);
-    component1.render(<PartOne />);
+    component1.render(div);
 
     </script>
   </body>
