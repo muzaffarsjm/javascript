@@ -53,14 +53,16 @@
       };
 
 
-
-    let app = (
-      <>
-        <PartOne />
-        <ChatMessage  message = 'Hiii! How may I help you?' sender = 'bot' />
-        <ChatMessage  message = 'Who is Ronaldo?' sender = 'user'/>
-        <ChatMessage  message = 'Soccer player' sender = 'bot' />
-      </>);
+      function App(){
+        return (
+          <>
+            <PartOne />
+            <ChatMessage  message = 'Hiii! How may I help you?' sender = 'bot' />
+            <ChatMessage  message = 'Who is Ronaldo?' sender = 'user'/>
+            <ChatMessage  message = 'Soccer player' sender = 'bot' />
+          </>);
+      };
+      
     let firstTest = document.querySelector('.demo-01');
     let component1 = ReactDOM.createRoot(firstTest);
     component1.render(app);
