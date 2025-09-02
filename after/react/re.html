@@ -43,8 +43,11 @@
         return(
           <div>
             {sender === 'bot' && <button>chatbot</button>}
+
             {message}
-            <button>user</button>
+            
+            {sender === 'user' && <button>user</button>}
+            
           </div>
         );
       };
