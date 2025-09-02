@@ -55,28 +55,31 @@
 
       function App(){
 
-        const ChatMessages = [{
+        const chatMessages = [{
           message : "Hiii! How may I help you?",
           sender : 'bot'
         },{
           message : "How are you today?",
           sender : 'user'
+        },{
+          message : "How are you today?",
+          sender : 'user'
         }];
 
-        chatMessages.map(() =>{
-          
+        const chatMessageComponent = chatMessages.map((chatMessage) =>{
+          return (
+            <ChatMessage 
+              message = {chatMessage.message}
+              sender = {chatMessage.sender}
+            />
+          );
         });
+
+
         return (
           <>
             <PartOne />
-            <ChatMessage  
-              message = 'Hiii! How may I help you?' 
-              sender = 'bot' />
-            <ChatMessage  
-              message = 'Who is Ronaldo?' sender = 'user'/>
-            <ChatMessage  
-              message = 'Soccer player' 
-              sender = 'bot' />
+            {chatMessageComponent}
 
           </>);
       };
