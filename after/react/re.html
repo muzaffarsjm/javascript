@@ -54,12 +54,25 @@
 
 
       function App(){
+        const ChatMessages = [{
+          message : "Hiii! How may I help you?",
+          sender : 'bot'
+        },{
+          message : "How are you today?",
+          sender : 'user'
+        }];
         return (
           <>
             <PartOne />
-            <ChatMessage  message = 'Hiii! How may I help you?' sender = 'bot' />
-            <ChatMessage  message = 'Who is Ronaldo?' sender = 'user'/>
-            <ChatMessage  message = 'Soccer player' sender = 'bot' />
+            <ChatMessage  
+              message = 'Hiii! How may I help you?' 
+              sender = 'bot' />
+            <ChatMessage  
+              message = 'Who is Ronaldo?' sender = 'user'/>
+            <ChatMessage  
+              message = 'Soccer player' 
+              sender = 'bot' />
+
           </>);
       };
       
