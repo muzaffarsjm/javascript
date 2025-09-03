@@ -68,10 +68,13 @@
           id : 'id3'
         }];
 
+        function sendHi(){
+          console.log('Greet');
+        };
         return(
           <>
-          <button>Send message</button>
-          
+          <button onclick = {sendHi}>Send message</button>
+
            {chatMessages.map((chatMessage) =>{
             return (
             <ChatMessage 
