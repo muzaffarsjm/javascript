@@ -74,7 +74,10 @@
         function sendHi(){
           setChatMessages([
             //spread operator
-            ...chatMessages
+            ...chatMessages, 
+            { message : 'Can I help you?',
+              sender: 'robot',
+              id : crypto.randomUUID()}
           ]);
           /*
           chatMessages.push({
