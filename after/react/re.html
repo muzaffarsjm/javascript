@@ -53,6 +53,7 @@
       };
 
       function ChatMessages(){
+        
         const chatMessages = [{
           message : "Hiii! How may I help you?",
           sender : 'bot',
@@ -66,8 +67,11 @@
           sender : 'bot',
           id : 'id3'
         }];
+
         return(
           <>
+          <button>Send message</button>
+          
            {chatMessages.map((chatMessage) =>{
             return (
             <ChatMessage 
@@ -76,20 +80,15 @@
               key = {chatMessage.id}
             />
             );
-          })}
-          
+          })}  
           </> 
         )  
       };
       function App(){
-
-        
-
         return (
           <>
             <PartOne />
             <ChatMessages />
-
           </>);
       };
       
