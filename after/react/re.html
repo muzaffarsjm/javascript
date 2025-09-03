@@ -17,17 +17,27 @@
     //jsx elements
     let paragraph = <p>text</p>
     let button = <button>text</button>
+
       function PartOne() { 
         const [inputText, setInputText] = React.useState('');
         function saveInputText(event){
           setInputText(event.target.value)
         };
+        function sendMessage(){
+          setChatMessages([
+            //spread operator
+            ...chatMessages, 
+            { message : 'Can I help you?',
+              sender: 'bot',
+              id : crypto.randomUUID()}
+          ]);
+        }
         return(
           <>
             <input placeholder = 'type here' 
               onChange = {saveInputText}
             />
-            <button>send</button>
+            <button onclick = {sendMessage}>send</button>
           </>
         );
       };
@@ -78,6 +88,7 @@
       //added values with event-handling.updater function
       const setChatMessages = array[1];
         function sendHi(){
+          /*
           setChatMessages([
             //spread operator
             ...chatMessages, 
@@ -85,6 +96,7 @@
               sender: 'bot',
               id : crypto.randomUUID()}
           ]);
+          */
           /*
           chatMessages.push({
             message : 'Can I help you?',
@@ -96,7 +108,7 @@
         };
         return(
           <>
-          <button onClick = {sendHi}>Send message</button>
+          
 
            {chatMessages.map((chatMessage) =>{
             return (
