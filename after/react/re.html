@@ -18,7 +18,9 @@
     let paragraph = <p>text</p>
     let button = <button>text</button>
       function PartOne() { 
-        function saveInputText(){};
+        function saveInputText(event){
+          event.target.value
+        };
         return(
           <>
             <input placeholder = 'type here' 
