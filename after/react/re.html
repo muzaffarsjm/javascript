@@ -18,9 +18,12 @@
     let paragraph = <p>text</p>
     let button = <button>text</button>
       function PartOne() { 
+        function saveInputText(){};
         return(
           <>
-            <input placeholder = 'type here'></input>
+            <input placeholder = 'type here' 
+              onChange = {saveInputText}
+            />
             <button>send</button>
           </>
         );
