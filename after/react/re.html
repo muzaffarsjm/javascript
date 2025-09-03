@@ -69,11 +69,15 @@
         }];
 
         function sendHi(){
-          console.log('Greet');
+          chatMessages.push({
+            message : 'Can I help you?',
+            sender: 'robot',
+            id : 'id4'
+          });
         };
         return(
           <>
-          <button onclick = {sendHi}>Send message</button>
+          <button onClick = {sendHi}>Send message</button>
 
            {chatMessages.map((chatMessage) =>{
             return (
