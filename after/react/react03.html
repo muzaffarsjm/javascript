@@ -11,6 +11,30 @@
   </head>
   <body>
     <p>React 3rd lecture</p>
-    <script type="text/babel"></script>
+
+    <div class="react-container"></div>
+    <script type="text/babel">
+
+      function Component(){
+        return(
+          <>
+            <p>First test</p>
+            <p>firsttest01</p>
+          </>
+        );
+       
+      };
+
+      function App(){
+        return(
+          <Component/>
+        );
+      };
+
+      let component = document.querySelector('.react-container');
+      const componentRoot = ReactDOM.createRoot(component);
+      componentRoot.render(<App />);
+
+    </script>
   </body>
 </html>
