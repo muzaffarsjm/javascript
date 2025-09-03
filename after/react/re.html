@@ -52,9 +52,7 @@
         );
       };
 
-
-      function App(){
-
+      function ChatMessages(){
         const chatMessages = [{
           message : "Hiii! How may I help you?",
           sender : 'bot',
@@ -68,22 +66,29 @@
           sender : 'bot',
           id : 'id3'
         }];
-
-        const chatMessageComponent = chatMessages.map((chatMessage) =>{
-          return (
+        return(
+          <>
+           {chatMessages.map((chatMessage) =>{
+            return (
             <ChatMessage 
               message = {chatMessage.message}
               sender = {chatMessage.sender}
               key = {chatMessage.id}
             />
-          );
-        });
+            );
+          })}
+          
+          </> 
+        )  
+      };
+      function App(){
 
+        
 
         return (
           <>
             <PartOne />
-            {chatMessageComponent}
+            <ChatMessages />
 
           </>);
       };
