@@ -72,12 +72,18 @@
       //added values with event-handling.updater function
       const setChatMessages = array[1];
         function sendHi(){
+          setChatMessages([
+            //spread operator
+            ...chatMessages
+          ]);
+          /*
           chatMessages.push({
             message : 'Can I help you?',
             sender: 'robot',
             id : crypto.randomUUID()
           });
           console.log(chatMessages);
+          */
         };
         return(
           <>
