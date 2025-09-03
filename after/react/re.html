@@ -57,13 +57,16 @@
 
         const chatMessages = [{
           message : "Hiii! How may I help you?",
-          sender : 'bot'
+          sender : 'bot',
+          id : 'id1'
         },{
           message : "How are you today?",
-          sender : 'user'
+          sender : 'user',
+          id : 'id2'
         },{
-          message : "How are you today?",
-          sender : 'user'
+          message : "Thanks. I am always good!",
+          sender : 'bot',
+          id : 'id3'
         }];
 
         const chatMessageComponent = chatMessages.map((chatMessage) =>{
@@ -71,6 +74,7 @@
             <ChatMessage 
               message = {chatMessage.message}
               sender = {chatMessage.sender}
+              key = {chatMessage.id}
             />
           );
         });
