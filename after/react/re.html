@@ -18,8 +18,9 @@
     let paragraph = <p>text</p>
     let button = <button>text</button>
       function PartOne() { 
+        const [inputText, setInputText] = React.useState('');
         function saveInputText(event){
-          event.target.value
+          setInputText(event.target.value)
         };
         return(
           <>
