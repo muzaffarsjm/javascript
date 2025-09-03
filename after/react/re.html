@@ -53,7 +53,7 @@
       };
 
       function ChatMessages(){
-        React.useState([{
+        const array = React.useState([{
           message : "Hiii! How may I help you?",
           sender : 'bot',
           id : 'id1'
@@ -67,7 +67,7 @@
           id : 'id3'
         }]
       );
-        
+        array[0];
 
         function sendHi(){
           chatMessages.push({
