@@ -17,6 +17,15 @@
       //component
       //one component per file
       const button = <button>hi</button>
+      function Paragraph(){
+        return(
+          <>
+            <h1>Futbol</h1>
+            <hr />
+            <p>Futbol haqida hamma gaplar</p>
+          </>
+        );
+      };
       function Component(){
         return(
           <>
@@ -29,7 +38,10 @@
 
       function App(){
         return(
+          <>
           <Component />
+          <Paragraph />
+          </>
         );
       };
 
