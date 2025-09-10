@@ -56,18 +56,18 @@
           }
         ];
           
-        const chatMessageComponents = chatMessages.map((chatMessage) => {
-        return(
-          <ChatMessages 
-            message = {chatMessage.message}
-            sender = {chatMessage.sender}
-          />
-        );
-      });
+        
         return(
           <>
             <ChatTop />
-            {chatMessageComponents}
+            {chatMessages.map((chatMessage) => {
+              return(
+                <ChatMessages 
+                  message = {chatMessage.message}
+                  sender = {chatMessage.sender}
+                />
+              );
+                })};
           </>
         );
       };
