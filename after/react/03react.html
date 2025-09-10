@@ -40,7 +40,7 @@
       };
       
       function ChatMessage(){
-        const array = React.useState([
+        const [chatMessages, setChatMessages] = React.useState([
           {
             message : 'Hello',
             sender : 'robot',
@@ -56,8 +56,8 @@
           }
         ]);
     
-        const chatMessages = array[0];
-        const setChatMessages = array[1];
+        //const chatMessages = array[0];
+        //const setChatMessages = array[1];
 
           function sendMessage(){
            setChatMessages([
