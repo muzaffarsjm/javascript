@@ -26,7 +26,7 @@
         };
 
         function sendMessage(){
-          setChatMessages([
+          const newChatMessage = [
             //spread operator copies preexisting values
             ...chatMessages, 
             {
@@ -34,12 +34,13 @@
               sender : 'user',
               id : crypto.randomUUID()
             }
-           ]);
+           ];
+          setChatMessages(newChatMessages);
 
           const response = Chatbot.getResponse(inputText);
             setChatMessages([
             //spread operator copies preexisting values
-            ...chatMessages, 
+            ...newChatMessages, 
             {
               message : response,
               sender : 'robot',
