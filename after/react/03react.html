@@ -37,6 +37,18 @@
         );
       };
       function App(){
+        const ChatMessages = [
+          {
+            message : 'Hello',
+            sender : 'robot'
+          }, {
+            message : 'Hiii',
+            sender : 'user'
+          }, {
+            sender : 'robot',
+            message : 'How may I help you?'
+          }
+        ];
         return(
           <>
             <ChatTop />
@@ -49,7 +61,7 @@
               sender = 'user'
             />
             <ChatMessages 
-            sender = 'robot'
+              sender = 'robot'
               message = 'How may I help you?'
             />
           </>
