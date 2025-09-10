@@ -39,10 +39,7 @@
         );
       };
       
-
-      
-
-      function App(){
+      function ChatMessage(){
         const chatMessages = [
           {
             message : 'Hello',
@@ -58,20 +55,27 @@
             key : 'id03'
           }
         ];
-          
-        
-        return(
+        return (
           <>
-            <ChatTop />
             {chatMessages.map((chatMessage) => {
               return(
                 <ChatMessages 
                   message = {chatMessage.message}
                   sender = {chatMessage.sender}
-                  key = {chatMessage.id}
+                  key = {chatMessage.key}
                 />
               );
-                })};
+                })}
+          </>
+          );
+      };
+      
+
+      function App(){
+        return(
+          <>
+            <ChatTop />
+            <ChatMessage />
           </>
         );
       };
