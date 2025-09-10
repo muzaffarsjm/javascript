@@ -18,10 +18,20 @@
     <script type = 'text/babel'>
 
       function ChatTop(){
+        const [inputText, setInputText] = React.useState('')
+        
+        function saveInputText(event){
+          setInputText(event.target.value);
+        };
+
         return(
           <>
             <p>Welcome to the Chatbot</p>
-            <p>test</p>
+            <input 
+              type="text" 
+              onChange = {saveInputText}
+            />
+            <button>Send</button>
           </>
         );
       };
