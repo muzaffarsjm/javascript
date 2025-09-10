@@ -26,12 +26,15 @@
           </div>
         );
       };
-      function ChatMessage(props){
+      function ChatMessage({message, sender}){
+
         const message = props.message;
+        const sender = props.sender;
+
         return(
           <>
             {message}
-            <button>User</button>
+            {sender}
           </>
         );
       };
@@ -39,8 +42,15 @@
       function App(){
         return(
           <>
-          <Component />
-          <ChatMessage message = 'heeey, how are you?'/>
+            <Component />
+            <ChatMessage 
+              message = 'heeey, how are you?'
+              sender = 'user'
+            />
+            <ChatMessage 
+              message = 'thanks. I am doing good.'
+              sender = 'robot'
+            />
           </>
         );
       };
