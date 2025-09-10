@@ -21,6 +21,15 @@
           </>
         );
       };
+
+      //2f
+      function ProductDetails({name, price}){
+        return(
+          {name},
+          {price},
+          <button>Add to Cart</button>
+        );
+      };
       function LoginForm(){
         return(
           <>
@@ -48,6 +57,8 @@
           <>
             <Name />
             <LoginForm />
+            <CommerceApp />
+            <ProductDetails />
           </>
         )
       };
