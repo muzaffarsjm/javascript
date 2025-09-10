@@ -26,10 +26,11 @@
           </div>
         );
       };
-      function ChatMessage(){
+      function ChatMessage(props){
+        const message = props.message;
         return(
           <>
-            <p>heeey, how are you?</p>
+            {message}
             <button>User</button>
           </>
         );
@@ -39,7 +40,7 @@
         return(
           <>
           <Component />
-          <ChatMessage />
+          <ChatMessage message = 'heeey, how are you?'/>
           </>
         );
       };
