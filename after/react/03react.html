@@ -17,7 +17,7 @@
 
     <script type = 'text/babel'>
 
-      function ChatTop(){
+      function ChatTop({chatMessages, setChatMessages}){
         const [inputText, setInputText] = React.useState('')
         
         function saveInputText(event){
@@ -63,24 +63,7 @@
       };
       
       function ChatMessage(){
-        const [chatMessages, setChatMessages] = React.useState([
-          {
-            message : 'Hello',
-            sender : 'robot',
-            key : 'id01'
-          }, {
-            message : 'Hiii',
-            sender : 'user',
-            key : 'id02'
-          }, {
-            sender : 'robot',
-            message : 'How may I help you?',
-            key : 'id03'
-          }
-        ]);
-    
-        //const chatMessages = array[0];
-        //const setChatMessages = array[1];
+     
 
         /*
           function sendMessage(){
@@ -115,10 +98,34 @@
       
 
       function App(){
+           const [chatMessages, setChatMessages] = React.useState([
+          {
+            message : 'Hello',
+            sender : 'robot',
+            key : 'id01'
+          }, {
+            message : 'Hiii',
+            sender : 'user',
+            key : 'id02'
+          }, {
+            sender : 'robot',
+            message : 'How may I help you?',
+            key : 'id03'
+          }
+        ]);
+    
+        //const chatMessages = array[0];
+        //const setChatMessages = array[1];
+
         return(
           <>
-            <ChatTop />
-            <ChatMessage />
+            <ChatTop 
+              chatMessages = {chatMessages}
+              setChatMessages = {setChatMessages}
+            />
+            <ChatMessage 
+              chatMessages = {chatMessages}
+            />
           </>
         );
       };
