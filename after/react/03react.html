@@ -14,16 +14,46 @@
     
     <h1>lesson 3</h1>
     <div class="js-main">
-   
-      <div class="root"></div>
-
-      
-
 
     <script type = 'text/babel'>
-      <div class = 'js-cntainer'></div>
-        
-      
+
+      function ChatTop(){
+        return(
+          <>
+            <p>Welcome to the Chatbot</p>
+          </>
+        );
+      };
+      function ChatMessages({message, sender}){
+        return(
+          <div>
+            
+            {sender === 'robot' && <button>robot</button>}
+
+            {message}
+            
+            {sender === 'user' && <button>user</button> }
+          </div>
+        );
+      };
+      function App(){
+        return(
+          <>
+            <ChatTop />
+            <ChatMessages 
+              message = 'Hello'
+              sender = 'robot'
+            />
+            <ChatMessages 
+              message = 'Hello'
+              sender = 'user'
+            />
+          </>
+        );
+      };
+     const container = document.querySelector('.js-main');
+     const reactRoot = ReactDOM.createRoot(container); 
+     reactRoot.render(<App />);
     </script>
   </body>
 </html>
