@@ -23,11 +23,14 @@
       };
 
       //2f
-      function ProductDetails({name, price}){
+      function ProductDetails({name, price, discountPrice}){
+
         return(
-          {name},
-          {price},
-          <button>Add to Cart</button>
+          <div>
+           {name}
+           {discountPrice && (price = '$5.00')}
+            <button>Add to Cart</button>
+          </div>
         );
       };
       function LoginForm(){
@@ -58,7 +61,17 @@
             <Name />
             <LoginForm />
             <CommerceApp />
-            <ProductDetails />
+
+            <ProductDetails 
+              name = 'tennis balls'
+              price = '$6.00'
+            />
+            <ProductDetails 
+              name = 'plain t-shirt'
+              price = '$7.99'
+              discountPrice 
+             
+            />
           </>
         )
       };
