@@ -31,7 +31,7 @@
             {sender === 'robot' && <button>robot</button>}
 
             {message}
-            
+
             {sender === 'user' && <button>user</button> }
           </div>
         );
@@ -45,8 +45,12 @@
               sender = 'robot'
             />
             <ChatMessages 
-              message = 'Hello'
+              message = 'Hiii'
               sender = 'user'
+            />
+            <ChatMessages 
+            sender = 'robot'
+              message = 'How may I help you?'
             />
           </>
         );
