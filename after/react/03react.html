@@ -1,90 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <title>
-    React 2.0
+  <head>
+    <title>
+    React 3.0
   </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  
   <body>
     
-    <h1>Dunyo Sporti</h1>
+    <h1>lesson 3</h1>
     <div class="js-main">
    
       <div class="root"></div>
 
-      <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
 
 
     <script type = 'text/babel'>
-      function Chatbot(){
-        return(
-          <>
-            <input type="text"/>
-            <button>Send</button>
-          </>
-        )
-      };
-      function ChatMessage(props){
-        let message = props.message;
-        let sender = props.sender;
-
-        return(
-
-          <div >
-            {sender === 'robot' && <img src="profileimages/robot.png" alt="" width = '30'/>}
-
-            <p style = {{display: 'inline'}}>{message}</p>
-
-            {sender === 'user' && <img src="profileimages/download.png" alt="" width = '30'/>}
-
-            
-          </div>
-        );
-      };
-      function App (){
-         const chatMessages = [{
-          message: 'Good Morning!',
-          sender : 'user',
-          id: 'id1'
-         }, {
-          sender : 'robot',
-          message : 'Good morning, Sir!',
-          id: 'id2'
-         },{
-          message : 'How are you doing?',
-          sender : 'user',
-          id : 'id3'
-         },{
-          message : 'Great! Thanks. And you?',
-          sender : 'robot',
-          id : 'id4'
-         }];
-         /*
-         important review
-         */
-         const chatMessageComponents = chatMessages.map((chatMessage)=>{
-          return (
-            <ChatMessage 
-              message = {chatMessage.message}
-              sender = {chatMessage.sender}
-              key = {chatMessage.id}
-            />
-          )
-         });
-
-
-        return(
-        <>
-
-          <Chatbot />
-
-          {chatMessageComponents}
-        </>
-      )};
-
-      let rootElement = document.querySelector('.root');
-      ReactDOM.createRoot(rootElement).render(<App />);
+      <div class = 'js-cntainer'></div>
         
       
     </script>
