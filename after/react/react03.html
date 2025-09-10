@@ -32,10 +32,11 @@
         // const sender = props.sender;
 
         return(
-          <>
+          <div>
+            {sender === 'robot' && <button>bot</button>}
             {message}
-            {sender}
-          </>
+            {sender === 'user' && <button>user</button>}
+          </div>
         );
       };
 
@@ -43,12 +44,17 @@
         return(
           <>
             <Component />
+
             <ChatMessage 
               message = 'heeey, how are you?'
+              sender = 'robot'
+            />
+            <ChatMessage 
+              message = 'Thanks. I am doing good. who is messi?'
               sender = 'user'
             />
             <ChatMessage 
-              message = 'thanks. I am doing good.'
+              message = 'messi is a soccer legend. Sometimes referred as the greatest, too.'
               sender = 'robot'
             />
           </>
