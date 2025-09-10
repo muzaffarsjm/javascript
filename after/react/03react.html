@@ -37,7 +37,15 @@
            ]);
 
           const response = Chatbot.getResponse(inputText);
-
+            setChatMessages([
+            //spread operator copies preexisting values
+            ...chatMessages, 
+            {
+              message : response,
+              sender : 'robot',
+              id : crypto.randomUUID()
+            }
+           ]);
            setInputText('');
         };
         return(
