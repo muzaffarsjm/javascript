@@ -33,9 +33,9 @@
 
         return(
           <div>
-            {sender === 'robot' && <button>bot</button>}
+            {sender === 'robot' && (<button>bot</button>)}
             {message}
-            {sender === 'user' && <button>user</button>}
+            {sender === 'user' && (<button>user</button>)}
           </div>
         );
       };
