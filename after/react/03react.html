@@ -55,11 +55,15 @@
             key : 'id03'
           }
         ];
+          function sendMessage(){
+            console.log('Send Message');
+          };
+
         return (
           <>
-          <button>send message</button>
+          <button onClick = {sendMessage}>send message</button>
 
-          
+
             {chatMessages.map((chatMessage) => {
               return(
                 <ChatMessages 
