@@ -35,6 +35,9 @@
               id : crypto.randomUUID()
             }
            ]);
+
+          const response = Chatbot.getResponse(inputText);
+
            setInputText('');
         };
         return(
