@@ -25,7 +25,15 @@
         };
 
         function sendMessage(){
-
+          setChatMessages([
+            //spread operator copies preexisting values
+            ...chatMessages, 
+            {
+              message : 'test',
+              sender : 'user',
+              id : crypto.randomUUID()
+            }
+           ]);
         };
         return(
           <>
@@ -74,6 +82,7 @@
         //const chatMessages = array[0];
         //const setChatMessages = array[1];
 
+        /*
           function sendMessage(){
            setChatMessages([
             //spread operator copies preexisting values
@@ -85,7 +94,7 @@
             }
            ]);
           };
-
+          */
         return (
           <>
           <button onClick = {sendMessage}>send message</button>
