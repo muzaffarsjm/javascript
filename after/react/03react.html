@@ -34,6 +34,7 @@
               id : crypto.randomUUID()
             }
            ]);
+           setInputText('');
         };
         return(
           <>
@@ -41,6 +42,7 @@
             <input 
               type="text" 
               onChange = {saveInputText}
+              value = {inputText}
             />
             <button onClick = {sendMessage}
             
