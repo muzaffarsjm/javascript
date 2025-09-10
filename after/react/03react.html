@@ -21,9 +21,11 @@
         return(
           <>
             <p>Welcome to the Chatbot</p>
+            <p>test</p>
           </>
         );
       };
+      
       function ChatMessages({message, sender}){
         return(
           <div>
@@ -36,8 +38,12 @@
           </div>
         );
       };
+      
+
+      
+
       function App(){
-        const ChatMessages = [
+        const chatMessages = [
           {
             message : 'Hello',
             sender : 'robot'
@@ -49,21 +55,19 @@
             message : 'How may I help you?'
           }
         ];
+          
+        const chatMessageComponents = chatMessages.map((chatMessage) => {
+        return(
+          <ChatMessages 
+            message = {chatMessage.message}
+            sender = {chatMessage.sender}
+          />
+        );
+      });
         return(
           <>
             <ChatTop />
-            <ChatMessages 
-              message = 'Hello'
-              sender = 'robot'
-            />
-            <ChatMessages 
-              message = 'Hiii'
-              sender = 'user'
-            />
-            <ChatMessages 
-              sender = 'robot'
-              message = 'How may I help you?'
-            />
+            {chatMessageComponents}
           </>
         );
       };
