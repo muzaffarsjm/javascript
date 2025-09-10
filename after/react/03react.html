@@ -40,7 +40,7 @@
       };
       
       function ChatMessage(){
-        const chatMessages = [
+        React.useState([
           {
             message : 'Hello',
             sender : 'robot',
@@ -54,7 +54,9 @@
             message : 'How may I help you?',
             key : 'id03'
           }
-        ];
+        ]);
+    
+        
           function sendMessage(){
             chatMessages.push({
               message: 'info',
