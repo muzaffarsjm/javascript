@@ -24,6 +24,9 @@
           setInputText(event.target.value);
         };
 
+        function sendMessage(){
+
+        };
         return(
           <>
             <p>Welcome to the Chatbot</p>
@@ -31,7 +34,9 @@
               type="text" 
               onChange = {saveInputText}
             />
-            <button>Send</button>
+            <button onClick = {sendMessage}
+            
+            >Send</button>
           </>
         );
       };
