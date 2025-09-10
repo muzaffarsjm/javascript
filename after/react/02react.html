@@ -11,26 +11,44 @@
     <div class = "react-container"></div>
 
     <script type="text/babel">
-
+      //2e
+      function CommerceApp(){
+        return(
+          <>
+            <p>Cotton Socks</p>
+            <p>Price: $10.90</p>
+            <button>Add to Cart</button>
+          </>
+        );
+      };
+      function LoginForm(){
+        return(
+          <>
+            <input type="text" 
+                placeholder = 'Email' />
+            <input type="text" 
+                placeholder = 'Password' />
+     
+            <button>Login</button>
+            <button>Sign up</button>
+          </>
+        );
+      };
       function Name(){
         return(
           <>
-            <div>
-              <p>Hello My name is Da</p>
-              <input type="text" 
-                placeholder = 'Email' />
-              <input type="text" 
-                placeholder = 'Password' />
-            </div>
-            <button>Login</button>
-            <button>Sign up</button>
+            <p>Hello My name is Da</p>
+            <p>2nd lesson exercises</p>
           </>
         )
       };
 
       function App(){
         return(
-          <Name />
+          <>
+            <Name />
+            <LoginForm />
+          </>
         )
       };
 
