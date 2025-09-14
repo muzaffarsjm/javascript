@@ -39,22 +39,24 @@
         );
       };
 
-      const app = (
-        <>
-          <Top />
+      function App (){
+        return(
+          <>
+            <Top />
 
-          <MessageComponent 
-            message = 'hello chatbot'
-            sender = 'user' 
-          />
-          <MessageComponent 
-            message = 'hello, user'
-            sender = 'bot'
-          />
-        </>
-      )
+            <MessageComponent 
+              message = 'hello chatbot'
+              sender = 'user' 
+            />
+            <MessageComponent 
+              message = 'hello, user'
+              sender = 'bot'
+            />
+          </>
+        );
+      };
       const reactElement = document.querySelector('.demo-con');
-      ReactDOM.createRoot(reactElement).render(app);
+      ReactDOM.createRoot(reactElement).render(<App />);
     </script>
   </body>
 </html>
