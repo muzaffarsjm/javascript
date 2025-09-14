@@ -14,80 +14,8 @@
 
     <div class="demo-con"></div>
 
-    <script type="text/babel">
+    <script type = 'text/babel'>
 
-      function Sample(){
-        return(
-          <>
-            <input placeholder = 'type...'/>
-            <button>Send</button>
-          </>
-        );
-      };
-      function ChatMessages(props){
-        const message = props.message;
-        const sender = props.sender;
-        return(
-          <div>
-           
-            {sender === 'bot' && 
-              <button>Chatbot</button>
-            }
-            {message}
-           {sender === 'user' &&
-            <button>User</button>
-           }
-          </div>
-        );
-
-      function ChatMessages(){
-        const  chatMessages = [{
-          message : 'heeey',
-          sender : 'user',
-          id : crypto.randomUUID()
-        }, {
-          message : 'hiii',
-          sender : 'bot',
-          id : crypto.randomUUID()
-        }];
-
-        chatMessages.map((chatMessage) => {
-          return(
-            <ChatMessage 
-              message = {chatMessage.message}
-              sender = {chatMessage.sender}
-              key = {chatMessage.id}
-            />
-          );
-        });
-      };
-       
-      };
-      function App(){
-        return(
-          <>
-            <Sample />
-            <ChatMessages 
-              message = 'heeey'
-              sender = 'user'
-            />
-            <ChatMessages 
-              message= 'hiiii'
-              sender = 'bot'
-            />
-            <ChatMessages 
-              message = 'how are you'
-              sender = 'user'
-            />
-            <ChatMessages 
-              message= 'Doing my things, thanks'
-              sender = 'bot'
-            />
-          </>
-        );
-      };
-      const mainElement = document.querySelector('.demo-con');
-      const rootEl = ReactDOM.createRoot(mainElement).render(<App />);
     </script>
   </body>
 </html>
