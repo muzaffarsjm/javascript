@@ -38,8 +38,7 @@
           </div>
         );
       };
-
-      function App (){
+      function ChatMessages(){
         const chatMessages = [{
           message : 'hello,chatbot',
           sender : 'user',
@@ -49,8 +48,7 @@
           sender : 'bot',
           id : 'id02'
         }];
-
-        const chatMessageComponents = chatMessages.map((chatMessage) => {
+        chatMessages.map((chatMessage) => {
           return(
             <>
               <MessageComponent
@@ -61,7 +59,8 @@
             </>
           )
         });
-
+      }
+      function App (){
         return(
           <>
             <Top />
