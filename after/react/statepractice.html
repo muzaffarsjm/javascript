@@ -24,11 +24,12 @@
           </>
         );
       };
-      function ChatMessages(){
+      function ChatMessages(props){
+        const message = props.message;
         return(
-          <>
-            <p>heey</p>
-          </>
+          <div>
+           {message}
+          </div>
         );
         
       };
@@ -36,7 +37,10 @@
         return(
           <>
             <Sample />
-            <ChatMessages />
+            <ChatMessages message = 'heeey'/>
+            <ChatMessages message= 'hiiii'/>
+            <ChatMessages message = 'heeey'/>
+            <ChatMessages message= 'hiiii'/>
           </>
         );
       };
