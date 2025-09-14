@@ -48,17 +48,20 @@
           sender : 'bot',
           id : 'id02'
         }];
-        chatMessages.map((chatMessage) => {
-          return(
-            <>
-              <MessageComponent
-                message = {chatMessage.message}
-                sender = {chatMessage.sender}
-                key = {chatMessage.id}
-              />
-            </>
-          )
-        });
+        return(
+          <>
+            {chatMessages.map((chatMessage) => {
+              return(
+                <>
+                  <MessageComponent
+                    message = {chatMessage.message}
+                    sender = {chatMessage.sender}
+                    key = {chatMessage.id}
+                  />
+                </>
+              );
+            })}
+        </>)
       }
       function App (){
         return(
