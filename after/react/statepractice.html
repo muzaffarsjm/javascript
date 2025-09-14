@@ -15,15 +15,23 @@
     <div class="demo-con"></div>
 
     <script type = 'text/babel'>
+
+      function Top(){
+        return(
+          <>
+            <input />
+            <button>Send</button>
+          </>
+        );
+      };
       const div = (<div>
           <p>hello {5+9}</p>
           <button>send</button>
-          <p>sdfhkhsdfjhasdjkfhkajsdhfjashdfgjkahsdjvhxcnbvakjsfbvgkajsfhvkjxcbvkajdsvikabckjv bakxdjhvakfjhvakjscbvkcjxbvkadfghkvadjsbvkjajabdfvkjaehrgjkadfjbvkasdfjbvgkaj</p>
         </div>);
 
 
       const reactElement = document.querySelector('.demo-con');
-      ReactDOM.createRoot(reactElement).render(div);
+      ReactDOM.createRoot(reactElement).render(<Top />);
     </script>
   </body>
 </html>
