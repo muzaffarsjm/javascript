@@ -43,11 +43,11 @@
         const chatMessages = [{
           message : 'hello,chatbot',
           sender : 'user',
-          id : crypto.randomUUID()
+          key : crypto.randomUUID()
         }, {
           message : 'hello, user. How are you?',
           sender : 'bot',
-          id : crypto.randomUUID()
+          key : crypto.randomUUID()
         }];
 
         const chatMessageComponents = chatMessages.map((chatMessage) => {
@@ -56,7 +56,7 @@
               <MessageComponent
                 message = {chatMessage.message}
                 sender = {chatMessage.sender}
-                id = {crypto.randomUUID()}
+                key = {crypto.randomUUID()}
               />
             </>
           )
