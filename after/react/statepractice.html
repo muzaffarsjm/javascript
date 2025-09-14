@@ -26,11 +26,31 @@
       };
       function ChatMessages(props){
         const message = props.message;
+        const sender = props.sender;
         return(
           <div>
-           {message}
+           
+            {sender === 'bot' && 
+              <button>Chatbot</button>
+            }
+            {message}
+           {sender === 'user' &&
+            <button>User</button>
+           }
           </div>
         );
+
+      function ChatMessages(){
+        const chatMessages = React.useState = [{
+          message : 'heeey',
+          sender : 'user',
+          id : crypto.randomUUID()
+        }, {
+          message : 'hiii',
+          sender : 'bot',
+          id : crypto.randomUUID()
+        }];
+      };
         
       };
       function App(){
