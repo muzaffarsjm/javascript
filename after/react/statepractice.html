@@ -14,7 +14,7 @@
 
     <div class="demo-con"></div>
 
-    <script text="type/babel">
+    <script type="text/babel">
 
       function Sample(){
         return(
@@ -28,7 +28,7 @@
       function App(){
         return(
           <Sample />
-        )
+        );
       };
       const mainElement = document.querySelector('.demo-con');
       const rootEl = ReactDOM.createRoot(mainElement).render(<App />);
