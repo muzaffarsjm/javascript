@@ -40,6 +40,15 @@
       };
 
       function App (){
+        const chatMessages = [{
+          message : 'hello,chatbot',
+          sender : 'user',
+          id : crypto.randomUUID()
+        }, {
+          message : 'hello, user. How are you?',
+          sender : 'bot',
+          id : crypto.randomUUID()
+        }];
         return(
           <>
             <Top />
