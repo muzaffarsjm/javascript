@@ -15,11 +15,14 @@
     <div class="demo-con"></div>
 
     <script type = 'text/babel'>
-
+      const div = <div>
+          <p>hello</p>
+          <button>send</button>
+        </div>
 
 
       const reactElement = document.querySelector('.demo-con');
-      ReactDOM.createRoot(reactElement).render('hiii');
+      ReactDOM.createRoot(reactElement).render(div);
     </script>
   </body>
 </html>
