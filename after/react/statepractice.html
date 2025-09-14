@@ -41,7 +41,7 @@
         );
 
       function ChatMessages(){
-        const chatMessages = React.useState = [{
+        const  chatMessages = [{
           message : 'heeey',
           sender : 'user',
           id : crypto.randomUUID()
@@ -50,8 +50,18 @@
           sender : 'bot',
           id : crypto.randomUUID()
         }];
+
+        chatMessages.map((chatMessage) => {
+          return(
+            <ChatMessage 
+              message = {chatMessage.message}
+              sender = {chatMessage.sender}
+              key = {chatMessage.id}
+            />
+          );
+        });
       };
-        
+       
       };
       function App(){
         return(
