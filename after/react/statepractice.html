@@ -11,6 +11,27 @@
   <body>
     
     <p>test 01</p>
-    <script text="type/babel"></script>
+
+    <div class="demo-con"></div>
+
+    <script text="type/babel">
+
+      function Sample(){
+        return(
+          <>
+            <input />
+            <button >Send</button>
+          </>
+        );
+      };
+
+      function App(){
+        return(
+          <Sample />
+        )
+      };
+      const mainElement = document.querySelector('.demo-con');
+      const rootEl = ReactDOM.createRoot(mainElement).render(<App />);
+    </script>
   </body>
 </html>
