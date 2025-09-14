@@ -24,14 +24,24 @@
           </>
         );
       };
-      const div = (<div>
-          <p>hello {5+9}</p>
-          <button>send</button>
-        </div>);
 
+      function MessageComponent(){
+        return(
+          <>
+            <p>Hiii</p>
+            <button>User</button>
+          </>
+        );
+      };
 
+      const app = (
+        <>
+          <Top />
+          <MessageComponent />
+        </>
+      )
       const reactElement = document.querySelector('.demo-con');
-      ReactDOM.createRoot(reactElement).render(<Top />);
+      ReactDOM.createRoot(reactElement).render(app);
     </script>
   </body>
 </html>
