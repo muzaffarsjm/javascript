@@ -25,19 +25,32 @@
         );
       };
 
-      function MessageComponent(){
+      function MessageComponent(props){
+        const message = props.message;
+        const sender = props.sender;
         return(
-          <>
-            <p>Hiii</p>
-            <button>User</button>
-          </>
+          <div>
+            {sender ==='bot' && <button>Chatbot</button>}
+
+            {message}
+
+            {sender === 'user' && <button>User</button>}
+          </div>
         );
       };
 
       const app = (
         <>
           <Top />
-          <MessageComponent />
+
+          <MessageComponent 
+            message = 'hello chatbot'
+            sender = 'user' 
+          />
+          <MessageComponent 
+            message = 'hello, user'
+            sender = 'bot'
+          />
         </>
       )
       const reactElement = document.querySelector('.demo-con');
