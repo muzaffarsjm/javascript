@@ -101,7 +101,8 @@
         const message = props.message;
         const sender = props.sender;
         return(
-          <div>
+          <div className = {sender === 'user' ? 'chat-message-user' : 'chat-message-bot'}>
+            
             {sender ==='bot' && <button>Chatbot</button>}
 
             {message}
