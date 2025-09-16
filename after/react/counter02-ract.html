@@ -11,8 +11,7 @@
     <div class ='js-container'>h</div>
     <script type="text/babel">
       
-      function CounterComponent(){
-        const [count, setCount] = React.useState(0);
+      function CounterComponent({count, setCount}){
 
         function counter(){
           setCount(count + 1);
@@ -26,10 +25,19 @@
       };
 
       function App(){
+
+         const [count, setCount] = React.useState(0);
+
         return(
           <>
-            <CounterComponent />
-            <CounterComponent />
+            <CounterComponent 
+              count = {count}
+              setCount = {setCount}
+            />
+            <CounterComponent 
+              count = {count}
+              setCount = {setCount}
+            />
           </>
         )
       }
