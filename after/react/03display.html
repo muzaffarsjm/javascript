@@ -15,9 +15,17 @@
 
       
       function App(){
+        const [inputText, setInputText] = React.useState('');
+
+        function saveInput(event){
+          setInputText(event.target.value);
+        }
         return(
           <>
-           <input type = 'text' />
+            <input 
+              type = 'text' placeholder = 'type here' onChange = {saveInput}
+            />
+            <p>Hello, {inputText}</p>
           </>
         )
         
