@@ -55,7 +55,7 @@
         }
         .chat-message-bot{
           display: flex;
-          justify-content: ;
+          justify-content: start;
           align-items: start;
         }
 
@@ -66,10 +66,10 @@
           margin-right: 10px;
           margin-left: 10px;
           margin-bottom: 20px;
-
+          max-width: 300px;
         }
 
-        .sender-button{
+        .chat-message-profile{
           height: 50px;
           width: 70px;
           border-radius: 50%;
@@ -77,7 +77,6 @@
           background-color: rgb(25, 135, 84);
           color: white;
           font-size: 15px;
-
         }
       </style>
   </head>
@@ -140,13 +139,15 @@
               sender === 'user' ? 'chat-message-user' : 'chat-message-bot'
             }>
 
-            {sender ==='bot' && <button className = 'sender-button'>
-              Chatbot</button>}
+            {sender ==='bot' && <img 
+              src = 'profileimages/robot.png'
+              className = 'chat-message-profile'
+              />}
             <div className = 'chat-message-text'>
               {message}
             </div>
 
-            {sender === 'user' && <button className = 'sender-button'>User</button>}
+            {sender === 'user' && <img src = 'profileimages/download.png' className = 'chat-message-profile' /> }
           </div>
         );
       };
