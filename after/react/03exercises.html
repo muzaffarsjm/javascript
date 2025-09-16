@@ -15,13 +15,17 @@
     <script type="text/babel">
 
 
+      function CountButton(){
+        return(
+          <button>Clicked 0 times</button>
+        );
+      };
 
-
-      let button = <button>Clicked 0 times</button>
+     
 
 
       const element = document.querySelector('.demo-react');
-      ReactDOM.createRoot(element).render(button);
+      ReactDOM.createRoot(element).render(<CountButton />);
     </script>
   </body>
 </html>
