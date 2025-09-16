@@ -16,15 +16,22 @@
 
         function counter(){
           setCount(count + 1);
-        };
+        }
 
         return(
-          <button onClick = {counter}>Clicked {count} {count === 1 ? 'time' : 'times'}</button>
+          <button 
+            onClick = {counter}>Clicked {count} {count === 1 ? 'time' : 'times'}
+          </button>
         );
       };
 
       function App(){
-        <CounterComponent />
+        return(
+          <>
+            <CounterComponent />
+            <CounterComponent />
+          </>
+        )
       }
 
       const root = document.querySelector('.js-container');
