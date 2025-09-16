@@ -27,8 +27,15 @@
           cursor: pointer;
         }
         .chat-input{
-          background-color: red;
-          padding: 12px 15px 
+          padding: 12px 15px;
+          border-width: 1px;
+          border-radius: 10px;
+          font-size: 15px;
+          flex-grow: 1; 
+        }
+
+        .top-container{
+          display: flex;
         }
       </style>
   </head>
@@ -71,13 +78,13 @@
             setInputText('');
         }
         return(
-          <>
+          <div className = 'top-container'>
             <input className = 'chat-input'
               onChange = {saveInputText}
               value = {inputText}
               />
             <button onClick = {sendMessage}className = 'send-button'>Send</button>
-          </>
+          </div>
         );
       };
 
