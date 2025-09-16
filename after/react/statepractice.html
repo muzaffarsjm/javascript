@@ -44,6 +44,11 @@
           margin-left: auto;
           margin-right: auto;
         }
+
+        .chat-message-user{
+          display: flex;
+          justify-content: end;
+        }
       </style>
   </head>
   <body>
@@ -101,8 +106,10 @@
         const message = props.message;
         const sender = props.sender;
         return(
-          <div className = {sender === 'user' ? 'chat-message-user' : 'chat-message-bot'}>
-            
+          <div className = {
+              sender === 'user' ? 'chat-message-user' : 'chat-message-bot'
+            }>
+
             {sender ==='bot' && <button>Chatbot</button>}
 
             {message}
