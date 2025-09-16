@@ -68,6 +68,17 @@
           margin-bottom: 20px;
 
         }
+
+        .sender-button{
+          height: 50px;
+          width: 70px;
+          border-radius: 50%;
+          border: none;
+          background-color: rgb(25, 135, 84);
+          color: white;
+          font-size: 15px;
+
+        }
       </style>
   </head>
   <body>
@@ -129,12 +140,13 @@
               sender === 'user' ? 'chat-message-user' : 'chat-message-bot'
             }>
 
-            {sender ==='bot' && <button>Chatbot</button>}
+            {sender ==='bot' && <button className = 'sender-button'>
+              Chatbot</button>}
             <div className = 'chat-message-text'>
               {message}
             </div>
 
-            {sender === 'user' && <button>User</button>}
+            {sender === 'user' && <button className = 'sender-button'>User</button>}
           </div>
         );
       };
