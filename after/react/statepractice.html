@@ -179,11 +179,13 @@
         const setChatMessages = array[1];
         return(
           <div className = 'main-app-container'>
+            
+            <ChatMessages 
+            chatMessages = {chatMessages}/>
+
             <Top chatMessages = {chatMessages}
               setChatMessages = {setChatMessages}
             />
-            <ChatMessages 
-            chatMessages = {chatMessages}/>
           </div>
         );
       };
