@@ -17,9 +17,12 @@
     <script type = 'text/babel'>
 
       function Top(){
+        function saveInputText(event){
+          event.target.value
+        }
         return(
           <>
-            <input />
+            <input onChange = {saveInputText}/>
             <button>Send</button>
           </>
         );
