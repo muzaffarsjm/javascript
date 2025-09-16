@@ -10,12 +10,19 @@
     <p>test</p>
     <div class ='js-container'>h</div>
     <script type="text/babel">
-      <>
-        
-      </>
+      
+      function App(){
+
+
+        return(
+          <button>Click me!</button>
+        );
+      };
+
+
 
       const root = document.querySelector('.js-container');
-      ReactDOM.createRoot(root).render('hsdf');
+      ReactDOM.createRoot(root).render(<App />);
 
     </script>
   </body>
