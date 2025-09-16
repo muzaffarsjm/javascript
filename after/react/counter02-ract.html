@@ -19,7 +19,7 @@
         };
 
         return(
-          <button onClick = {counter}>Clicked {count} times</button>
+          <button onClick = {counter}>Clicked {count} {count === 1 ? 'time' : 'times'}</button>
         );
       };
 
