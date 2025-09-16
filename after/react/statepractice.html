@@ -82,7 +82,9 @@
             <input className = 'chat-input'
               onChange = {saveInputText}
               value = {inputText}
-              />
+              placeholder = 'type your question...'
+            />
+
             <button onClick = {sendMessage}className = 'send-button'>Send</button>
           </div>
         );
@@ -133,13 +135,13 @@
         const chatMessages = array[0];
         const setChatMessages = array[1];
         return(
-          <>
+          <div className = 'main-app-container'>
             <Top chatMessages = {chatMessages}
               setChatMessages = {setChatMessages}
             />
             <ChatMessages 
             chatMessages = {chatMessages}/>
-          </>
+          </div>
         );
       };
       const reactElement = document.querySelector('.demo-con');
