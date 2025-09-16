@@ -14,10 +14,16 @@
 
     <script type="text/babel">
 
+      
+      function counter(){
+        let count = 0;
+        count += 1;
+        console.log(count)
+      }
 
       function CountButton(){
         return(
-          <button>Clicked 0 times</button>
+          <button onClick = {counter}>Clicked 0 times</button>
         );
       };
 
