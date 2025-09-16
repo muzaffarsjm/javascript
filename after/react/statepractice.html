@@ -8,10 +8,27 @@
 
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
       <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+      <style>
+        .test{
+          color: rgb(177, 154, 154);
+          font-size: 23px;
+          text-align: center;
+          letter-spacing: 0.5;
+        }
+        .send-button{
+          background-color: rgb(68, 173, 98);
+          color: white;
+          border: none;
+          border-radius: 6px;
+          height: 30px;
+          width: 60px;
+        }
+      </style>
   </head>
   <body>
     
-    <p>Simple chatbot</p>
+    <p class = 'test'>Simple chatbot</p>
 
     <div class="demo-con"></div>
 
@@ -53,7 +70,7 @@
               onChange = {saveInputText}
               value = {inputText}
               />
-            <button onClick = {sendMessage}>Send</button>
+            <button onClick = {sendMessage}className = 'send-button'>Send</button>
           </>
         );
       };
