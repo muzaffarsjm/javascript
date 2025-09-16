@@ -15,23 +15,26 @@
     <script type="text/babel">
 
       
-      function counter(){
-        let count = 0;
-        count += 1;
-        console.log(count)
+      function App(){
+         const [count, setCount]  = React.useState(0);
+
+         function increaseCount(){
+          setCount(count + 1);
+         }
       }
 
-      function CountButton(){
         return(
-          <button onClick = {counter}>Clicked 0 times</button>
+          <button onClick = {increaseCount}>
+            Clicked {count} times
+          </button>
         );
-      };
+
 
      
 
 
       const element = document.querySelector('.demo-react');
-      ReactDOM.createRoot(element).render(<CountButton />);
+      ReactDOM.createRoot(element).render(<App />);
     </script>
   </body>
 </html>
