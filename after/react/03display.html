@@ -20,14 +20,22 @@
         function saveInput(event){
           setInputText(event.target.value);
         }
+
+        function inputCleaner(){
+          setInputText('');
+        }
+
+        function exampleInput(){
+          setInputText('Alice');
+        }
         return(
           <>
             <input 
               type = 'text' placeholder = 'type here' onChange = {saveInput}
             />
             <p>Hello, {inputText}</p>
-            <button>Reset</button>
-            <button>Example</button>
+            <button onClick = {inputCleaner}>Reset</button>
+            <button onClick = {exampleInput}>Example</button>
           </>
         )
         
