@@ -12,10 +12,14 @@
     <script type="text/babel">
       
       function App(){
+        const [count, setCount] = React.useState(0);
 
+        function counter(){
+          setCount(count + 1);
+        };
 
         return(
-          <button>Click me!</button>
+          <button onClick = {counter}>Click me!</button>
         );
       };
 
