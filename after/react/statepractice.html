@@ -48,10 +48,13 @@
           sender : 'bot',
           id : 'id02'
         }];
-        return(
-          
+
+        function sendMessage(){
+          console.log('send message')
+        };
+        return( 
           <>
-            <button>commit</button>
+            <button onClick = {sendMessage}>commit</button>
             {chatMessages.map((chatMessage) => {
               return(
                 <>
