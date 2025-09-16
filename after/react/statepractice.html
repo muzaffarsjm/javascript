@@ -17,14 +17,25 @@
     <script type = 'text/babel'>
 
       function Top(){
+        //userinput state
         const [inputtext, setInputText] = React.useState('')
+
         function saveInputText(event){
-          event.target.value
+          setInputText(event.target.value);
+        }
+        function sendMessage(){
+          setChatMessages([
+              ...chatMessages,
+              {message : 'test',
+                sender : 'user',
+                id : crypto.randomUUID()
+              }
+            ]);
         }
         return(
           <>
             <input onChange = {saveInputText}/>
-            <button>Send</button>
+            <button onClick = {sendMessage}>Send</button>
           </>
         );
       };
@@ -56,18 +67,9 @@
         const chatMessages = array[0];
         const setChatMessages = array[1];
 
-        function sendMessage(){
-            setChatMessages([
-              ...chatMessages,
-              {message : 'test',
-                sender : 'user',
-                id : crypto.randomUUID()
-              }
-            ]);
-          }
+        
         return( 
           <>
-            <button onClick = {sendMessage}>commit</button>
             {chatMessages.map((chatMessage) => {
               return(
                 <>
