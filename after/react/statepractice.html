@@ -16,9 +16,9 @@
 
     <script type = 'text/babel'>
 
-      function Top(){
+      function Top({chatMessages, setChatMessages}){
         //userinput state
-        const [inputtext, setInputText] = React.useState('')
+        const [inputText, setInputText] = React.useState('')
 
         function saveInputText(event){
           setInputText(event.target.value);
@@ -26,7 +26,7 @@
         function sendMessage(){
           setChatMessages([
               ...chatMessages,
-              {message : 'test',
+              {message : inputText,
                 sender : 'user',
                 id : crypto.randomUUID()
               }
@@ -53,20 +53,7 @@
           </div>
         );
       };
-      function ChatMessages(){
-        const array = React.useState([{
-          message : 'hello,chatbot',
-          sender : 'user',
-          id : 'id01'
-        }, {
-          message : 'hello, user. How are you?',
-          sender : 'bot',
-          id : 'id02'
-        }]);
-
-        const chatMessages = array[0];
-        const setChatMessages = array[1];
-
+      function ChatMessages({chatMessages}){
         
         return( 
           <>
@@ -84,10 +71,26 @@
         </>)
       }
       function App (){
+
+         const array = React.useState([{
+          message : 'hello,chatbot',
+          sender : 'user',
+          id : 'id01'
+        }, {
+          message : 'hello, user. How are you?',
+          sender : 'bot',
+          id : 'id02'
+        }]);
+
+        const chatMessages = array[0];
+        const setChatMessages = array[1];
         return(
           <>
-            <Top />
-            <ChatMessages />
+            <Top chatMessages = {chatMessages}
+              setChatMessages = {setChatMessages}
+            />
+            <ChatMessages 
+            chatMessages = {chatMessages}/>
           </>
         );
       };
