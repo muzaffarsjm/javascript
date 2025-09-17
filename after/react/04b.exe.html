@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      04 exercises
+    </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+      <style>
+        .on-button{
+          background-color: rgb(25, 135, 84);
+          border: none;
+          color: white;
+          border-radius: 10px;
+          width: 60px;
+          height: 40px;
+          font-weight: bold;
+          font-size: 17px;
+          letter-spacing: 1px;
+        }
+      </style>
+  </head>
+  <body>
+    
+    <p>04 exercises</p>
+    <div class="js-container"></div>
+
+    <script type="text/babel">
+
+      function App(){
+
+        const [isButtonOn, setIsButtonOn] = React.useState(true);
+        
+        return(
+          <button className = 'on-button'>ON</button>
+        )
+      }
+      const reactElement = document.querySelector('.js-container');
+      ReactDOM.createRoot(reactElement).render(<App />);
+    </script>
+  </body>
+</html>
