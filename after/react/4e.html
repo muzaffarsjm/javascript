@@ -41,14 +41,26 @@
     <script type="text/babel">
 
       function App(){
+        const [showPassword, setShowPassword] = React.useState(false);
+
+        function showPasswordF(){
+          if(showPassword){
+            setShowPassword(false)
+          }else{
+            setShowPassword(true)
+          }
+        };
         return(
           <div className = 'app-main'>
 
-            <input type="text" 
+            <input type={showPassword ? 'text' : 'password'} 
               className = 'input-password'
               placeholder = 'Password'
             />
-            <button className = 'show-button'>Show</button>
+            <button 
+              className = 'show-button'
+              onClick = {showPasswordF}
+            >{showPassword ? 'hide' : 'show'}</button>
           </div>
         );
       };
