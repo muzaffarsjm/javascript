@@ -33,21 +33,20 @@
     <script type="text/babel">
 
       function App(){
+        const [isButtonOn, setIsButtonOn] = React.useState();
 
-        const [isButtonOn, setIsButtonOn] = React.useState(true);
-        function switchButtonOn(){
+        function buttonOn(){
           if(isButtonOn){
             setIsButtonOn(false);
           }else{
-            setIsButtonOn(true)
+            setIsButtonOn(true);
           }
         };
         return(
-          <button 
+          <button
             className = 'on-button'
-            onClick = {switchButtonOn}
-          >{isButtonOn ? 'ON' : 'OFF'}
-          </button>
+            onClick = {buttonOn}
+          >{isButtonOn ? 'ON' : 'OFF'}</button>
         )
       }
       const reactElement = document.querySelector('.js-container');
