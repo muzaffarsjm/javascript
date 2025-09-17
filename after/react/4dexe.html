@@ -8,6 +8,41 @@
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+      <style>
+        .main-app{
+          width: 400px;
+          height: 400px;
+          background-color: rgb(238, 235, 57);
+          padding: 20px 20px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .login-button,
+        .signup-button{
+          background-color: rgb(0, 123, 255);
+          border: none;
+          color: white;
+          margin-right: 10px;
+
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+
+        .intro-text{
+          font-size: 20px;
+        }
+
+        .input-field{
+          width: 210px;
+          height: 25px;
+          margin-bottom: 9px;
+          border-radius: 5px;
+          border: 1px solid black;
+          padding-left: 8px;
+          font-size: 15px;
+        }
+        
+      </style>
   </head>
 
   <body>
@@ -17,21 +52,27 @@
 
       function App(){
         return(
-          <div>
-            <p>Hello, welcome to my Website</p>
+          <div className = 'main-app'>
 
-            <input 
+            <p className = 'intro-text'>
+              Hello, welcome to my Website
+            </p>
+
+            <div>
+              <input 
               type="text" 
               placeholder = 'Email'
               className = 'input-field'
             />
+            </div>
 
-            <input type="text" 
-              placeholder = 'Email'
+            <div>
+              <input type="text" 
+              placeholder = 'Login'
               className = 'input-field'
             />
-
-            <button classNane = 'login-button'>Login</button>
+            </div>
+            <button className = 'login-button'>Login</button>
             <button className = 'signup-button'>Sign up</button>
           </div>
         );
