@@ -44,7 +44,7 @@
         };
         return(
           <button
-            className = 'on-button'
+            className = {isButtonOn ? 'on-button' : 'off-button'}
             onClick = {buttonOn}
           >{isButtonOn ? 'ON' : 'OFF'}</button>
         )
