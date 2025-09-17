@@ -11,7 +11,18 @@
   </head>
 
   <body>
-    
-    <p>test</p>
+    <h1>4d exercise with React</h1>
+    <div class="react-container"></div>
+    <script type="text/babel">
+
+      function App(){
+        return(
+          <button>test</button>
+        );
+      };
+
+      const container = document.querySelector('.react-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
   </body>
 </html>
