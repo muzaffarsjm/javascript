@@ -18,13 +18,11 @@
     <script type="text/babel">
       const currentTime = <p> Current time :{dayjs().format('HH:mm:ss')}</p>
      
-      setInterval(() =>{
-           currentTime
-        }, 1000)
+      
      
 
       //console.log(currentTime);
-      function App(){
+      /*function App(){
         return(
           <>
             {currentTime}
@@ -32,12 +30,16 @@
           </>
         )
       }
-
-
-
+        */
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(<App />);
+      const root  = ReactDOM.createRoot(container);
+      root.render(currentTime);
+
+      setInterval(() =>{
+           const currentTime = <p> Current time :{dayjs().format('HH:mm:ss')}</p>
+           root.render(currentTime)
+        }, 1000)
     </script>
   </body>
 </html>
