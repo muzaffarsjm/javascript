@@ -8,14 +8,17 @@
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-      <script src = "https://unpkg.com/supersimpledev/day.js"></script>
+
+      <script src = "https://unpkg.com/supersimpledev/dayjs.js"></script>
   </head>
   <body>
     <p>hi</p>
     <div class="js-container"></div>
 
     <script type="text/babel">
-
+      
+      const now = dayjs()
+      console.log(now)
       function App(){
         return(
           <>
