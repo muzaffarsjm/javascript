@@ -16,14 +16,18 @@
     <div class="js-container"></div>
 
     <script type="text/babel">
-      
-      const currentTime = dayjs().format('HH:mm:ss')
+
+     
+      setInterval(() =>{
+          const currentTime =  dayjs().format('HH:mm:ss')
+        }, 1000)
+     
 
       //console.log(currentTime);
       function App(){
         return(
           <>
-            {currentTime}
+            {timer}
             <button>CLICK</button>
           </>
         )
