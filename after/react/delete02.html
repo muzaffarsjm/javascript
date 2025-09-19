@@ -24,8 +24,24 @@
           </>
         )
       }
+      function ChatMessage(){
+        return(
+          <>
+            <p>Hello</p>
+            <button>Sender</button>
+          </>
+        )
+      }
+      function App (){
+        return(
+          <>
+            <ChatInput />
+            <ChatMessage />
+          </>
+        )      
+      }
       const container = document.querySelector('.demo2-container');
-      ReactDOM.createRoot(container).render(<ChatInput />)
+      ReactDOM.createRoot(container).render(<App />)
     </script>
   </body>
 </html>
