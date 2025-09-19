@@ -27,6 +27,8 @@
       }
 
       */
+
+      /*
       const shippingCost  = 5;
       const productCost = 13;
       const totalCost = shippingCost + productCost;
@@ -41,9 +43,14 @@
           </>
         )
       }
+      */
+
+      const today = dayjs().format('MMMM D');
+      
+
 
       const container = document.querySelector('.delete-demo');
-      ReactDOM.createRoot(container).render(<CalculateCost />);
+      ReactDOM.createRoot(container).render(today);
     </script>
   </body>
 </html>
