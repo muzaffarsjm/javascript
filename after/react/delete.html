@@ -15,7 +15,8 @@
     <script type="text/babel">
 
       //const button = <button>Good job!</button>
-      function App(){
+      /*
+        function App(){
         return(
           <>
             <p>Cotton Socks</p>
@@ -25,10 +26,24 @@
         )
       }
 
-      
+      */
+      const shippingCost  = 5;
+      const productCost = 13;
+      const totalCost = shippingCost + productCost;
+
+      function CalculateCost(){
+        return(
+          <>
+            <p>Product Cost : $ {productCost}
+            </p>
+            <p>Shipping Cost : ${shippingCost}</p>
+            <p>Total cost : $ {totalCost}</p>
+          </>
+        )
+      }
 
       const container = document.querySelector('.delete-demo');
-      container = ReactDOM.createRoot(container).render(<App />);
+      ReactDOM.createRoot(container).render(<CalculateCost />);
     </script>
   </body>
 </html>
