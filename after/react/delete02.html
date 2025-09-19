@@ -24,11 +24,13 @@
           </>
         )
       }
-      function ChatMessage(){
+      function ChatMessage(props){
+        const message = props.message;
+        const sender = props.sender;
         return(
           <>
-            <p>Hello</p>
-            <button>Sender</button>
+            <p>{message}</p>
+            <button>{sender}</button>
           </>
         )
       }
@@ -36,7 +38,18 @@
         return(
           <>
             <ChatInput />
-            <ChatMessage />
+            <ChatMessage 
+              message = 'hello, chatbot'
+              sender = 'user'
+            />
+            <ChatMessage 
+              message = 'hii, ricardo'
+              sender = 'robot'
+            />
+            <ChatMessage 
+              message = 'teach me programming'
+              sender = 'user'
+            />
           </>
         )      
       }
