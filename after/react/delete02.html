@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      basic 2
+    </title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+      <script src = "https://unpkg.com/supersimpledev/dayjs.js"></script>
+  </head>
+  <body>
+    <div class="demo2-container"></div>
+
+    <script type="text/babel">
+
+      function ChatInput(){
+        return(
+          <>
+            <input placeholder = 'your text'/>
+            <button>Send</button>
+          </>
+        )
+      }
+      const container = document.querySelector('.demo2-container');
+      ReactDOM.createRoot(container).render(<ChatInput />)
+    </script>
+  </body>
+</html>
