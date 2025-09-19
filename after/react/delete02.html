@@ -37,9 +37,7 @@
           </div>
         )
       }
-
-      function App (){
-
+      function ChatMessages(){
         let chatMessages = [{
           message : 'hello, chatbot',
           sender : 'user',
@@ -57,20 +55,28 @@
           sender : 'robot',
           id : 'id4'
         }];
-
-        const chatMessageComponents = chatMessages.map((chatMessage) => {
-          return(
-            <ChatMessage 
-              message = {chatMessage.message}
-              sender = {chatMessage.sender}
-              key = {chatMessage.id}
-            />
-          )
+        return(
+          <>
+            {
+              chatMessages.map((chatMessage) => {
+              return(
+                <ChatMessage 
+                  message = {chatMessage.message}
+                  sender = {chatMessage.sender}
+                  key = {chatMessage.id}
+                />
+              )
         })
+            }
+          
+          </>
+        )
+      }
+      function App (){
         return(
           <>
             <ChatInput />
-            {chatMessageComponents}
+            <ChatMessages />
           </>
         )      
       }
