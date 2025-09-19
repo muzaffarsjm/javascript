@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>delte</title>
+  </head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <body>
+    <div class="js-con"></div>
+
+    <script type="text/babel">
+      function Product({product, price, discount}){
+        return(
+          <>
+            <p>{product}</p>
+            <p>Price: ${price}</p>
+            {discount && <p>Discount Price: $ {discount}</p>}
+            <button>Add to cart</button>
+          </>
+        )
+      }
+      function App(){
+        return(
+          <>
+            <Product 
+              product = 'Cotton Socks'
+              price = '10.90'
+              discount = '5.45'
+            />
+            <Product 
+              product = 'Tennis Balls'
+              price = '6.00'
+            />
+            <Product 
+              product = 'Plain T-shirt'
+              price = '7.99'
+            />
+          </>
+        )
+      }
+
+      const elem = document.querySelector('.js-con');
+      ReactDOM.createRoot(elem).render(<App />)
+    </script>
+  </body>
+</html>
