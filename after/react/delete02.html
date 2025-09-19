@@ -42,16 +42,20 @@
 
         let chatMessages = [{
           message : 'hello, chatbot',
-          sender : 'user'
+          sender : 'user',
+          id : 'id1'
         },{
           message : 'hiii, Ricardo',
-          sender : 'robot'
+          sender : 'robot',
+          id : 'id2'
         },{
           message : 'teach me programming',
-          sender : 'user'
+          sender : 'user',
+          id : 'id3'
         },{
           message : 'Sure! What language, in particular?',
-          sender : 'robot'
+          sender : 'robot',
+          id : 'id4'
         }];
 
         const chatMessageComponents = chatMessages.map((chatMessage) => {
@@ -59,6 +63,7 @@
             <ChatMessage 
               message = {chatMessage.message}
               sender = {chatMessage.sender}
+              key = {chatMessage.id}
             />
           )
         })
