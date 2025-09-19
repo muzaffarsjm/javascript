@@ -14,9 +14,21 @@
     <div class="delete-demo"></div>
     <script type="text/babel">
 
-      const button = <button>Good job!</button>
+      //const button = <button>Good job!</button>
+      function App(){
+        return(
+          <>
+            <p>Cotton Socks</p>
+            <p>Price : $10</p>
+            <button>Add to Cart</button>
+          </>
+        )
+      }
+
+      
+
       const container = document.querySelector('.delete-demo');
-      container = ReactDOM.createRoot(container).render(button);
+      container = ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
 </html>
