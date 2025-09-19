@@ -46,11 +46,11 @@
       */
 
       const today = <p>{dayjs().format('MMMM D')}</p>
-      
+      const currentTime = <p>{dayjs().format('HH:mm:ss')}</p>;
 
 
       const container = document.querySelector('.delete-demo');
-      ReactDOM.createRoot(container).render(today);
+      ReactDOM.createRoot(container).render(currentTime);
     </script>
   </body>
 </html>
