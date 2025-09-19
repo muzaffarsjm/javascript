@@ -23,19 +23,24 @@
             <button>Send</button>
           </>
         )
-      }
+      };
+      
       function ChatMessage(props){
         const message = props.message;
         const sender = props.sender;
         return(
           <div>
-            {sender === 'robot' && <button>{sender}</button>}
+            {sender === 'robot' && <button>robot</button>}
+
             <p>{message}</p>
-            {sender === 'user' && <button>{sender}</button>}
+
+            {sender === 'user' && <button>user</button>}
           </div>
         )
       }
+
       function App (){
+
         let chatMessages = [{
           message : 'hello, chatbot',
           sender : 'user'
@@ -49,21 +54,19 @@
           message : 'Sure! What language, in particular?',
           sender : 'robot'
         }];
+
+        const chatMessageComponents = chatMessages.map((chatMessage) => {
+          return(
+            <ChatMessage 
+              message = {chatMessage.message}
+              sender = {chatMessages.sender}
+            />
+          )
+        })
         return(
           <>
             <ChatInput />
-            <ChatMessage 
-              {info.message} 
-              sender = 'user'
-            />
-            <ChatMessage 
-              message = 'hii, ricardo'
-              sender = 'robot'
-            />
-            <ChatMessage 
-              message = 'teach me programming'
-              sender = 'user'
-            />
+            {chatMessageComponents}
           </>
         )      
       }
