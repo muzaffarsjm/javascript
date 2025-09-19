@@ -24,10 +24,9 @@
           </>
         )
       };
-      
-      function ChatMessage(props){
-        const message = props.message;
-        const sender = props.sender;
+
+      function ChatMessage({message, sender}){
+        
         return(
           <div>
             {sender === 'robot' && <button>robot</button>}
