@@ -28,10 +28,11 @@
         const message = props.message;
         const sender = props.sender;
         return(
-          <>
+          <div>
+            {sender === 'robot' && <button>{sender}</button>}
             <p>{message}</p>
-            <button>{sender}</button>
-          </>
+            {sender === 'user' && <button>{sender}</button>}
+          </div>
         )
       }
       function App (){
