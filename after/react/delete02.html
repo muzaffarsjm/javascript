@@ -20,7 +20,7 @@
         return(
           <>
             <input placeholder = 'your text'/>
-            <button>Send</button>
+            <button onClick = {sendMessage}>Send</button>
           </>
         )
       };
@@ -55,17 +55,25 @@
           sender : 'robot',
           id : 'id4'
         }];
+        function sendMessage(){
+          chatMessages.push({
+            message : 'test',
+            sender : 'user',
+            id : crypto.randomUUID()
+          }
+          )
+        }
         return(
           <>
             {
               chatMessages.map((chatMessage) => {
-              return(
-                <ChatMessage 
-                  message = {chatMessage.message}
-                  sender = {chatMessage.sender}
-                  key = {chatMessage.id}
-                />
-              )
+                return(
+                  <ChatMessage 
+                    message = {chatMessage.message}
+                    sender = {chatMessage.sender}
+                    key = {chatMessage.id}
+                  />
+                )
         })
             }
           
