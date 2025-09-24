@@ -17,8 +17,10 @@
     <script type="text/babel">
 
       function ChatInput(){
+        const [input, setInput] = React.useState('');
         function saveInputText(event){
-          console.log(event.target.value);
+
+          setInput(event.target.value);
         }
         return(
           <>
