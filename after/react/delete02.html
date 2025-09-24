@@ -22,13 +22,17 @@
 
           setInput(event.target.value);
         }
+
+        function sendMessage(){
+          console.log(input)
+        }
         return(
           <>
             <input 
               placeholder = 'your text'
               onChange = {saveInputText}
             />
-            <button >Send</button>
+            <button onClick = {sendMessage}>Send</button>
           </>
         )
       };
