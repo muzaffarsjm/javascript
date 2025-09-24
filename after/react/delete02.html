@@ -16,7 +16,7 @@
 
     <script type="text/babel">
 
-      function ChatInput(chatMessages, setChatMessages){
+      function ChatInput({chatMessages, setChatMessages}){
         const [input, setInput] = React.useState('');
         function saveInputText(event){
 
@@ -57,7 +57,7 @@
           </div>
         )
       }
-      function ChatMessages(){
+      function ChatMessages({chatMessages}){
         //comment
         return(
           <>
