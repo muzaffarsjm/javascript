@@ -17,9 +17,15 @@
     <script type="text/babel">
 
       function ChatInput(){
+        function saveInputText(event){
+          console.log(event.target.value);
+        }
         return(
           <>
-            <input placeholder = 'your text'/>
+            <input 
+              placeholder = 'your text'
+              onChange = {saveInputText}
+            />
             <button >Send</button>
           </>
         )
@@ -63,7 +69,8 @@
         function sendMessage(){
           setChatMessages([
             ...chatMessages,
-            {message: 'test',
+            {
+              message: 'test',
               sender : 'user',
               id: crypto.randomUUID()
             }
