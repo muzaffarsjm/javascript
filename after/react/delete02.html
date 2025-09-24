@@ -40,7 +40,7 @@
       }
       function ChatMessages(){
         //comment
-        React.useState([{
+        const array = React.useState([{
           message : 'hello, chatbot',
           sender : 'user',
           id : 'id1'
@@ -56,8 +56,8 @@
           message : 'Sure! What language, in particular?',
           sender : 'robot',
           id : 'id4'
-        }];);
-        let chatMessages = 
+        }]);
+       
         function sendMessage(){
           chatMessages.push({
             message : 'test',
