@@ -61,12 +61,13 @@
        const setChatMessages = array[1];
 
         function sendMessage(){
-          chatMessages.push({
-            message : 'test',
-            sender : 'user',
-            id : crypto.randomUUID()
-          }
-          )
+          setChatMessages([
+            ...chatMessages,
+            {message: 'test',
+              sender : 'user',
+              id: crypto.randomUUID()
+            }
+          ]);
         }
         return(
           <>
