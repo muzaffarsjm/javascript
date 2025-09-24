@@ -59,7 +59,25 @@
       }
       function ChatMessages(){
         //comment
-        const [chatMessages, setChatMessages] = React.useState([{
+        return(
+          <>
+            {
+              chatMessages.map((chatMessage) => {
+                return(
+                  <ChatMessage 
+                    message = {chatMessage.message}
+                    sender = {chatMessage.sender}
+                    key = {chatMessage.id}
+                  />
+                )
+        })
+        }
+          
+          </>
+        )
+      }
+      function App (){
+          const [chatMessages, setChatMessages] = React.useState([{
           message : 'hello, chatbot',
           sender : 'user',
           id : 'id1'
@@ -79,28 +97,12 @@
        //const chatMessages = array[0];
        //const setChatMessages = array[1];
 
-        
         return(
           <>
-            {
-              chatMessages.map((chatMessage) => {
-                return(
-                  <ChatMessage 
-                    message = {chatMessage.message}
-                    sender = {chatMessage.sender}
-                    key = {chatMessage.id}
-                  />
-                )
-        })
-        }
-          
-          </>
-        )
-      }
-      function App (){
-        return(
-          <>
-            <ChatInput />
+            <ChatInput 
+              chatMessages = {chatMessages}
+              setChatMessages = {setChatMessages}
+            />
             <ChatMessages />
           </>
         )      
