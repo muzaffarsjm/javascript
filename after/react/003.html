@@ -12,7 +12,7 @@
      <div class="js-con"></div>
 
     <script type="text/babel">
-      function App(){
+      function Counter(){
         const [count, setCount] = React.useState(0)
         function counter(){
           setCount(count + 1);
@@ -20,6 +20,15 @@
 
         return(
           <button onClick = {counter}>clicked {count} {count === 1 ? 'time' : 'times'}</button>
+        )
+      }
+
+      function App(){
+        return(
+          <>
+            <Counter />
+            <Counter />
+          </>
         )
       }
       const con = document.querySelector('.js-con');
