@@ -12,6 +12,9 @@
      <div class="js-con"></div>
 
     <script type="text/babel">
+      function resetCount(count){
+        console.log(count = 0);
+      }
       function Counter({count, setCount}){
         
         function counter(){
@@ -39,7 +42,7 @@
               setCount= {setCount}
               
             />
-            <button> Reset</ button>
+            <button onClick = {resetCount}> Reset</ button>
           </>
         )
       }
