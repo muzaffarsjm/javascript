@@ -16,13 +16,13 @@
       function App(){
         const [text, setText] = React.useState('');
 
-        function displayerfunction(){
-          setText(event.target.value);
+        function displayerFunction(){
+          console.log(setText(event.target.value));
         }
         return(
           <>
             <input type="text" 
-              onChange = {displayerfunction}
+              onChange = {displayerFunction}
               placeholder = 'type your name'
             />
             <p>Hello, {setText}</p>
