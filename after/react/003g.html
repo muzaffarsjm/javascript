@@ -17,7 +17,7 @@
         const [text, setText] = React.useState('');
 
         function displayerFunction(event){
-          console.log(setText(event.target.value));
+          setText(event.target.value);
         }
         return(
           <>
@@ -25,7 +25,7 @@
               onChange = {displayerFunction}
               placeholder = 'type your name'
             />
-            <p>Hello, {setText}</p>
+            <p>Hello {text}</p>
           </>
         )
       }
