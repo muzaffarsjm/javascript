@@ -12,9 +12,7 @@
      <div class="js-con"></div>
 
     <script type="text/babel">
-      function resetCount(count){
-        console.log(count = 0);
-      }
+      
       function Counter({count, setCount}){
         
         function counter(){
@@ -30,6 +28,9 @@
       function App(){
         const [count, setCount] = React.useState(0);
 
+        function resetCount(count){
+        console.log(count = 0);
+        };
         return(
           <>
             <Counter 
