@@ -19,14 +19,29 @@
         function displayerFunction(event){
           setText(event.target.value);
         }
+
+        function resetButton(event){
+          setText('');
+        }
+
+        function exampleButton(){
+          setText('Alice');
+        }
+
         return(
           <>
             <input type="text" 
               onChange = {displayerFunction}
               placeholder = 'type your name'
             />
-            <button>Reset</button>
-            <button>Example</button>
+            <button
+              onClick = {resetButton}
+            >Reset</button>
+
+            <button 
+              onClick = {exampleButton}
+            >Example</button>
+            
             <p>Hello {text}</p>
           </>
         )
