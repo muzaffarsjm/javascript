@@ -16,7 +16,7 @@
       function App(){
         const [text, setText] = React.useState('');
 
-        function displayerFunction(){
+        function displayerFunction(event){
           console.log(setText(event.target.value));
         }
         return(
