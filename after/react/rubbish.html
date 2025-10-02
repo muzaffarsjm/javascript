@@ -17,9 +17,7 @@
       
     <script type="text/babel">
 
-      function Counter(){
-        let [count, setCount] = React.useState(0);
-
+      function Counter({count, setCount}){
         function counterFunction(){
           setCount(count + 1);
         }
@@ -32,12 +30,21 @@
             </button>
           </>
         )
-      }
+      };
+
       function App(){
+        let [count, setCount] = React.useState(0);
+
         return(
           <>
-            <Counter />
-            <Counter />
+            <Counter 
+              count = {count}
+              setCount = {setCount}
+            />
+            <Counter 
+              count = {count}
+              setCount = {setCount}
+            />
           </>
         )
       }
