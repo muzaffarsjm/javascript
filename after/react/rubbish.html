@@ -18,11 +18,20 @@
     <script type="text/babel">
 
       function App(){
+
+        let [count, setCount] = React.useState(0);
+
+        function counterFunction(){
+          setCount(count + 1);
+        }
         
         return(
           <>
             <p>counter</p>
-            <button>Clicked {count} times</button>
+            <button
+              onClick = {counterFunction}
+            >Clicked {count} times
+            </button>
           </>
         )
       }
