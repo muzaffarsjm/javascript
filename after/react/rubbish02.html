@@ -17,15 +17,19 @@
     <script type="text/babel">
      
       function App(){
-        
+        const [inputText, setInputText] = React.useState('');
 
+        function inputTextGetter(event){
+          setInputText(event.target.value)
+        };
         return(
           <>
             <input 
               type="text" 
               placeholder = 'name'
+              onChange = {inputTextGetter}
             />
-            <p>Hello</p>
+            <p>Hello, {inputText}</p>
           </>
         )
       }
