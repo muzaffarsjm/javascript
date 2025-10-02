@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      4f exercises
+      3 lesson exercises
     </title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
@@ -16,22 +16,26 @@
     <div class="js-container"></div>
 
     <script type="text/babel">
-
-      function App(){
-
+      function Counter(){
         let [count, setCount] = React.useState(0);
 
         function counterFunction(){
           setCount(count + 1);
         }
-        
         return(
           <>
-            <p>counter</p>
+           <p>counter</p>
             <button
               onClick = {counterFunction}
             >Clicked {count} {count === 1 ? 'time' : 'times'}
             </button>
+          </>
+        )
+      }
+      function App(){
+        return(
+          <>
+            <Counter />
           </>
         )
       }
