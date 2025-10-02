@@ -22,6 +22,9 @@
         function inputTextGetter(event){
           setInputText(event.target.value)
         };
+        function example(){
+          setInputText('Alice');
+        };
         return(
           <>
             <input 
@@ -31,7 +34,7 @@
             />
             <p>Hello, {inputText}</p>
             <button>Reset</button>
-            <button>Example</button>
+            <button onClick = {example}>Example</button>
           </>
         )
       }
