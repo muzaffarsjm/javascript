@@ -19,13 +19,13 @@
 
       function App(){
         const [count, setCount] = React.useState(0);
-        
-        function counter(){
 
+        function counter(){
+          setCount(count + 1);
         }
         return(
           <>
-            <p>test</p>
+            <p>{count}</p>
           </>
         )
       }
