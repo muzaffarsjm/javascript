@@ -62,6 +62,21 @@
 
           font-size: 16px;
         }
+
+        .timer-div{
+          height: 200px;
+          width: 400px;
+
+          background-color: rgb(148, 155, 165);
+        }
+
+        .intro-pro{
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          font-weight: bold;
+          padding-top: 12px;
+        }
       </style>
   </head>
   
@@ -70,11 +85,20 @@
     <div class="js-main">
 
     <script type = 'text/babel'>
+
       function Timer(){
+        const [time, setTime] = React.useState(dayjs().format('HH:mm:ss'));
+        //console.log(time)
+        React.useEffect(()=> {
+          setInterval(() => {
+          setTime(dayjs().format('HH:mm:ss'))
+        },1000);
+      }, [])
         return(
-          <>
-            <p>check</p>
-          </>
+          <div className = 'timer-div'>
+            <p className = 'intro-pro'>Timer</p>
+            <p className = 'time-display'>{time}</p>
+          </div>
         )
       }
       function LoginForm(){
@@ -116,8 +140,8 @@
       function App(){
         return(
           <>
-            <LoginForm />
             <Timer />
+            <LoginForm />
           </>
         )
       }
