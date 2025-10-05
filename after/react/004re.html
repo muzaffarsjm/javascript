@@ -9,20 +9,42 @@
       <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
 
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
+      <style>
+        .button-on{
+          background-color: rgb(25, 135, 84);
+          height: 50px;
+          width: 70px;
+
+          border: none;
+          border-radius: 7px;
+          color: white;
+          font-size: 17px;
+        }
+      </style>
   </head>
   
   <body>
-    
    
     <div class="js-main">
 
     <script type = 'text/babel'>
 
       function App(){
+        const [isButtonOn, setIsButtonOn] = React.useState(false);
+
+        function buttonSwitch(event){
+          setIsButtonOn(() =>{
+            isButtonOn === true;
+          });
+        };
         return(
           <>
             <p>Salom</p>
-            <button>ON</button>
+            <button
+              className = 'button-on'
+              onClick = {buttonSwitch}
+            >{isButtonOn ? 'ON' : 'OFF'}</button>
           </>
         );
       };
