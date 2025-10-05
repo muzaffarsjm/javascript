@@ -32,7 +32,8 @@
          const buttonRef = React.useRef(null);
 
          React.useEffect(() => {
-          console.log('yemadi');
+          console.log(`button clicked ${count} times`);
+          document.title = (` ${count}`);
          }, [count]);
          
 
