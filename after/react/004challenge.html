@@ -11,7 +11,11 @@
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
       
       <style>
-        
+        .main-container{
+          background-color: rgb(177, 187, 198);
+          width: 400px;
+          height: 400px;
+        }
       </style>
   </head>
   
@@ -23,17 +27,25 @@
 
       function App(){
         return(
-          <>
+          <div className = 'main-container'>
             <p>hello, welcome to my website</p>
-            <input type="text" 
-              placeholder = 'Email'
-            />
-            <input type="text" 
-              placeholder = 'Password'
-            />
-            <button>Login</button>
-            <button>Sign up</button>
-          </>
+            <div>
+              <input type="text" 
+                placeholder = 'Email'
+                className = 'input-user'
+              />
+              <input type="text" 
+                placeholder = 'Password'
+                className = 'input-user'
+              />
+            </div>
+            
+            <div>
+              <button>Login</button>
+              <button>Sign up</button>
+            </div>
+            
+          </div>
         );
       };
      const container = document.querySelector('.js-main');
