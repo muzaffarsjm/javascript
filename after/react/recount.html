@@ -23,13 +23,17 @@
         function counter(){
           setCount(count + 1);
           //console.log(count)
-        }
+        };
+
+        function resetCount(){
+          setCount(0);
+        };
         return(
           <>
             <button onClick = {counter}>
              Clicked {count} {count ===1 ? 'time' : 'times'}
             </button>
-            <button >Reset</button>
+            <button onClick = {resetCount}>Reset</button>
           </>
         )
       }
