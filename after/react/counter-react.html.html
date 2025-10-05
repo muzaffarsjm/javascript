@@ -8,6 +8,17 @@
       <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
 
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <style>
+        .button-a{
+          background-color: red;
+          border: none;
+        }
+
+        .button-b{
+          background-color: rgb(205, 242, 43);
+          border: none;
+        }
+      </style>
   </head>
   <body>
     <div class="demo-react"></div>
@@ -18,9 +29,11 @@
       function App(){
          const [count, setCount]  = React.useState(0);  
 
+         const buttonRef = React.useRef(null);
+
          React.useEffect(() => {
-          console.log({count});
-         });
+          console.log('yemadi');
+         }, [count]);
          
 
          function increaseCount(){
@@ -30,8 +43,9 @@
 
         return(
           <button 
+          ref = {buttonRef}
             onClick = {increaseCount}
-            className = 'button'
+            className = 'button-a'
           >
             Clicked {count} {count === 1 ? 'time' : 'times'}
           </button>
