@@ -71,7 +71,10 @@
 
       function App(){
         const [showPassword, setShowPassword] = React.useState(true);
-        
+
+        function passwordCheck(event){
+          
+        }
 
         return(
           <div className = 'main-container'>
@@ -85,7 +88,10 @@
                 placeholder = 'Password'
                 className = 'input-user'
               />
-              <button className = 'show-button'>show</button>
+              <button 
+                className = 'show-button'
+                onClick = {passwordCheck}
+                >show</button>
             </div>
             
             <div className = 'buttons'>
