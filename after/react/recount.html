@@ -28,12 +28,27 @@
         function resetCount(){
           setCount(0);
         };
+
+        function autoClickFunction(){
+          setInterval(() =>{
+
+          }, 1000);
+        };
         return(
           <>
             <button onClick = {counter}>
              Clicked {count} {count ===1 ? 'time' : 'times'}
             </button>
-            <button onClick = {resetCount}>Reset</button>
+
+            <button onClick = {resetCount}>
+                Reset
+            </button>
+
+            <button
+              onClick = {autoClickFunction}
+            >
+              Auto Clicke
+            </button>
           </>
         )
       }
