@@ -31,13 +31,14 @@
     <script type = 'text/babel'>
 
       function App(){
-        const [isButtonOn, setIsButtonOn] = React.useState(false);
+        const [isButtonOn, setIsButtonOn] = React.useState(true);
 
         function buttonSwitch(event){
-          setIsButtonOn(() =>{
-            isButtonOn === true;
-          });
-        };
+            console.log(56);
+            setIsButtonOn(
+              !isButtonOn);
+          };
+
         return(
           <>
             <p>Salom</p>
