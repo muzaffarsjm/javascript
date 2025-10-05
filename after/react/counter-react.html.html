@@ -29,7 +29,10 @@
       
 
         return(
-          <button onClick = {increaseCount}>
+          <button 
+            onClick = {increaseCount}
+            className = 'button'
+          >
             Clicked {count} {count === 1 ? 'time' : 'times'}
           </button>
         );
