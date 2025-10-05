@@ -19,6 +19,8 @@
 
       function App(){
         const [count, setCount] = React.useState(0);
+        const refElem = React.useRef(null);
+        console.log(refElem);
         //console.log(count)
         function counter(){
           setCount(count + 1);
@@ -45,6 +47,7 @@
             </button>
 
             <button
+             ref = {refElem}
               onClick = {autoClickFunction}
             >
               Auto Clicke
