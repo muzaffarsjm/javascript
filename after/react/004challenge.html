@@ -70,17 +70,18 @@
     <script type = 'text/babel'>
 
       function App(){
-        const [showPassword, setShowPassword] = React.useState(true);
+        const [showPassword, setShowPassword] = React.useState(false);
 
         function passwordCheck(event){
-          
+            setShowPassword(!showPassword);
         }
 
         return(
           <div className = 'main-container'>
             <p>hello, welcome to my website</p>
             <div className = 'inputs'>
-              <input type="text" 
+              <input 
+                type = {showPassword ? 'text' : 'password'} 
                 placeholder = 'Email'
                 className = 'input-user'
               />
@@ -91,7 +92,7 @@
               <button 
                 className = 'show-button'
                 onClick = {passwordCheck}
-                >show</button>
+                >{showPassword ? 'show' : 'hide'}</button>
             </div>
             
             <div className = 'buttons'>
