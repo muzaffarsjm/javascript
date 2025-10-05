@@ -26,9 +26,23 @@
           margin-bottom: 10px;
           
         }
-        .inputs{display: flex;
+        .inputs{
+          display: flex;
           flex-direction: column;
           align-items: center;
+        }
+        .buttons{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button-log,
+        .button-sign{
+          background-color: aqua;
+          border: none;
+          
         }
       </style>
   </head>
@@ -55,8 +69,8 @@
             </div>
             
             <div className = 'buttons'>
-              <button>Login</button>
-              <button>Sign up</button>
+              <button className = 'button-log'>Login</button>
+              <button className = 'button-sign'>Sign up</button>
             </div>
             
           </div>
