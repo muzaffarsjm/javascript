@@ -21,6 +21,16 @@
           color: white;
           font-size: 17px;
         }
+        .button-off{
+          background-color: rgb(235, 51, 42);
+          height: 50px;
+          width: 70px;
+
+          border: none;
+          border-radius: 7px;
+          color: white;
+          font-size: 17px;
+        }
       </style>
   </head>
   
@@ -43,7 +53,8 @@
           <>
             <p>Salom</p>
             <button
-              className = 'button-on'
+              className = 
+              {isButtonOn ? 'button-on' : 'button-off'}
               onClick = {buttonSwitch}
             >{isButtonOn ? 'ON' : 'OFF'}</button>
           </>
