@@ -8,6 +8,8 @@
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
       <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
 
+      <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
       
       <style>
@@ -68,8 +70,14 @@
     <div class="js-main">
 
     <script type = 'text/babel'>
-
-      function App(){
+      function Timer(){
+        return(
+          <>
+            <p>check</p>
+          </>
+        )
+      }
+      function LoginForm(){
         const [showPassword, setShowPassword] = React.useState(true);
 
         function passwordCheck(){
@@ -105,6 +113,14 @@
           </div>
         );
       };
+      function App(){
+        return(
+          <>
+            <LoginForm />
+            <Timer />
+          </>
+        )
+      }
      const container = document.querySelector('.js-main');
      const reactRoot = ReactDOM.createRoot(container); 
      reactRoot.render(<App />);
